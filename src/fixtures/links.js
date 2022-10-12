@@ -1,4 +1,4 @@
-const linkList = [
+const appList = [
     {
         name: 'Austin FC Kit Creator',
         desc: 'Retro-style kit designer for true Verde ATXFC supporters',
@@ -37,4 +37,4 @@ const linkList = [
     },
 ]
 
-export default linkList;
+export default appList;

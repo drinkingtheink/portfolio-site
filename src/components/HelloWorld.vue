@@ -8,7 +8,7 @@
     <section class="main-stage">
       <h3>Links to my stuff:</h3>
       <div class="link-list-wrapper">
-        <div v-for="link in linkList" class="link-list" :key="link.href">
+        <div v-for="link in appList" class="link-list" :key="link.href">
           <h4 class="name"><a :href="link.href" target="_blank">{{ link.name }}</a></h4>
           <p class="desc">{{ link.desc }}</p>
           <section class="tech-display">
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import linkList from '../fixtures/links'
+import appList from '../fixtures/links'
 import Me from './Me.vue'
 
 export default {
@@ -35,7 +35,7 @@ export default {
   data() {
     return {
       stuff: 'ynwa',
-      linkList: linkList,
+      appList: appList,
     }
   },
 }
@@ -46,6 +46,10 @@ export default {
 
 @mixin panelBg {
   background: rgba(0,0,0,0.2);
+}
+
+@mixin panelBgDarker {
+  background: rgba(0,0,0,0.4);
 }
 
 .app-stage {
@@ -78,6 +82,15 @@ export default {
   @include panelBg;
   margin-bottom: 0.5rem;
   padding: 1rem;
+  transition: all 0.2s;
+
+  &:hover {
+    @include panelBgDarker;
+
+    .name, .desc {
+      color: white;
+    }
+  }
 
   .name {
     text-transform: uppercase;
