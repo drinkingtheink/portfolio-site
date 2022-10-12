@@ -3,7 +3,7 @@
     <section class="side-menu">
       <Me class="me" />
       <h1>Jason M. Harrison </h1>
-      <h2>Working Where Art + Science Meet</h2>
+      <h2>Over a Decade Working Where Art + Science Meet</h2>
     </section>
     <section class="main-stage">
       <h3>Links to my stuff:</h3>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import appList from '../fixtures/links'
+import { appList } from '../fixtures/links'
 import Me from './Me.vue'
 
 export default {
@@ -64,15 +64,21 @@ export default {
 
 .side-menu {
   padding: 2rem 2rem 1rem;
+  max-width: 20rem;
 
   .me {
     max-width: 225px;
+    transition: all 0.2s;
+
+    &:hover {
+      filter: blur(3px);
+    }
   }
 }
 
 .link-list-wrapper {
   padding-bottom: 40rem;
-  max-height: 65vh;
+  max-height: 85vh;
   overflow-x: auto;
   padding: 1rem;
 }
@@ -96,6 +102,10 @@ export default {
     text-transform: uppercase;
     padding: 0;
     margin: 0;
+  }
+
+  .desc {
+    color: lightgoldenrodyellow;
   }
 }
 </style>

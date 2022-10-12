@@ -20,7 +20,7 @@ html, body {
 
 body {
   background: rgb(2,0,36);
-  background: linear-gradient(351deg, rgba(2,0,36,1) 0%, rgba(106,9,121,0.21194415266106448) 35%, rgba(0,212,255,1) 100%);
+  background: #222;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -33,5 +33,14 @@ body {
 
 a {
   color: white !important;
+}
+
+.pill {
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  background: white;
+  color: black;
+  padding: 0.25rem 0.5rem;
 }
 </style>

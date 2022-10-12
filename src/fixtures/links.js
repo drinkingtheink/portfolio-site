@@ -37,4 +37,19 @@ const appList = [
     },
 ]
 
-export default appList;
+const social = [
+    {
+        name: 'github',
+        href: '',
+    },
+    {
+        name: 'behance',
+        href: '',
+    },
+    {
+        name: 'dribbble',
+        href: '',
+    },
+]
+
+export { appList, social };
