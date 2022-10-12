@@ -13,10 +13,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+html, body {
+  height: 100vh;
+}
+
 body {
   background: rgb(2,0,36);
-background: linear-gradient(351deg, rgba(2,0,36,1) 0%, rgba(106,9,121,0.21194415266106448) 35%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(351deg, rgba(2,0,36,1) 0%, rgba(106,9,121,0.21194415266106448) 35%, rgba(0,212,255,1) 100%);
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -25,5 +29,9 @@ background: linear-gradient(351deg, rgba(2,0,36,1) 0%, rgba(106,9,121,0.21194415
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+a {
+  color: white !important;
 }
 </style>
