@@ -1,6 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld />
 </template>
 
 <script>
@@ -15,6 +14,10 @@ export default {
 </script>
 
 <style>
+body {
+  background: rgb(2,0,36);
+background: linear-gradient(351deg, rgba(2,0,36,1) 0%, rgba(106,9,121,0.21194415266106448) 35%, rgba(0,212,255,1) 100%);
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
