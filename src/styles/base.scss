@@ -13,7 +13,7 @@ html, body {
 
 /** FORMS **/
 button {
-    background-color: $primary;
+    background-color: $color3;
     color: white;
     text-transform: uppercase;
     padding: 1rem;
@@ -23,14 +23,18 @@ button {
     filter: saturate(1);
     transition: all 0.3s;
     font-family: $fancyFont;
+    color: $primary;
+    border: 2px solid $color3;
 
     &:hover {
         cursor: pointer;
         filter: saturate(2);
+        border-color: $secondary;
     }
 
     &.active {
-        background-color: $accent;
+        color: $accent;
+        border-color: $accent;
     }
 }
 

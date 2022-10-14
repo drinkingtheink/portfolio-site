@@ -151,6 +151,7 @@ export default {
       position: relative;
       transition: all 0.4s;
       text-decoration: none;
+      display: block;
     }
 
     a::before {
@@ -159,8 +160,8 @@ export default {
       width: 100%;
       height: 4px;
       border-radius: 4px;
-      background-color: $accent;
-      bottom: 0;
+      background-color: rgba($accent, 0.5);
+      bottom: -10px;
       left: 0;
       transform-origin: right;
       transform: scaleX(0);
@@ -199,10 +200,10 @@ export default {
     top: 0;
     left: 0;
     z-index: 1;
-    filter: saturate(3);
+    filter: saturate(5);
     transition: all 0.4s;
     background-size: cover;
-    scale: 1.2;
+    scale: 1.1;
   }
 }
 

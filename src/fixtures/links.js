@@ -32,14 +32,14 @@ const appList = [
         desc: 'SVG-driven generative art',
         href: 'https://circler.netlify.com/',
         tech: ['React', 'SVG'],
-        img: 'https://i.ibb.co/DY3ZBwQ/Screen-Shot-2022-10-13-at-11-00-49-PM.png',
+        img: 'https://i.ibb.co/zPQXgGj/Screen-Shot-2022-10-14-at-4-11-59-PM.png',
     },
     {
         name: 'Subbreddit Surfer',
         desc: 'Explore Reddit content via quick search and browse',
         href: 'https://subreddit-surfer.netlify.com/',
         tech: ['React', 'APIs'],
-        img: '',
+        img: 'https://i.ibb.co/v4djTBm/Screen-Shot-2022-10-14-at-4-13-56-PM.png',
     },
 ]
 
