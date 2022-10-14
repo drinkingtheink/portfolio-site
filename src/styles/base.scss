@@ -10,6 +10,32 @@ html, body {
     padding: 0;
 }
   
+
+/** FORMS **/
+button {
+    background-color: $primary;
+    color: white;
+    text-transform: uppercase;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    filter: saturate(1);
+    transition: all 0.3s;
+    font-family: $fancyFont;
+
+    &:hover {
+        cursor: pointer;
+        filter: saturate(2);
+    }
+
+    &.active {
+        background-color: $accent;
+    }
+}
+
+
+/** UI COMPONENTS **/
 .pill {
     border-radius: 20px;
     font-size: 0.8rem;
@@ -17,6 +43,7 @@ html, body {
     background: $secondary;
     color: $primaryDark;
     padding: 0.25rem 0.5rem;
+    transition: all 0.4s;
 }
 
 .arrow-right {

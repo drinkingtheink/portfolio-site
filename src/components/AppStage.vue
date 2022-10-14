@@ -6,6 +6,14 @@
       <Me class="me" />
     </section>
     <section class="main-stage">
+      <div class="topic-selection">
+        <button 
+          v-for="topic in topics" 
+          :key="topic" 
+          :class="{ active: topic === currentTopic }"
+          @click="setTopic(topic)"
+        >{{ topic }}</button>
+      </div>
       <div class="link-list-wrapper">
         <div v-for="link in appList" class="link-list" :key="link.href">
           <div class="arrow-right"></div>
@@ -40,8 +48,21 @@ export default {
     return {
       stuff: 'ynwa',
       appList: appList,
+      currentTopic: null,
+      topics: [
+        'software',
+        'design',
+      ],
     }
   },
+  mounted() {
+    this.currentTopic = this.topics[0];
+  },
+  methods: {
+    setTopic: function(topic) {
+      this.currentTopic = topic;
+    },
+  }
 }
 </script>
 
@@ -99,10 +120,10 @@ export default {
 .link-list {
   position: relative;
   text-align: left;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   transition: all 0.2s;
   border-left: 10px solid $primary;
-  box-shadow: -1px 7px 19px -3px rgba(0,0,0,0.75);
+  box-shadow: -1px 7px 19px -3px rgba(0,0,0,0.5);
 
   &:hover {
     border-color: $accent;
@@ -110,6 +131,11 @@ export default {
     .name a {
       color: $accent;
       text-decoration: none;
+    }
+
+    .pill {
+      color: white;
+      background-color: $accent;
     }
   }
 
@@ -211,5 +237,15 @@ export default {
   height: 100%;
   width: 100%;
   background-image: linear-gradient(to left, rgba(255,0,0,0) 0%, rgba(255,255,255,1) 60%);
+}
+
+.topic-selection {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0 1rem 0;
+
+  button {
+    width: 48%;
+  }
 }
 </style>
