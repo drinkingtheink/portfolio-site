@@ -8,11 +8,14 @@
     <section class="main-stage">
       <div class="link-list-wrapper">
         <div v-for="link in appList" class="link-list" :key="link.href" :style="{ backgroundImage: `url(${link.img})` }">
-          <h4 class="name"><a :href="link.href" target="_blank">{{ link.name }}</a></h4>
-          <p class="desc fancy">{{ link.desc }}</p>
-          <section class="tech-display">
-            <span v-for="tech in link.tech" :key="tech" class="pill">{{ tech }}</span>
-          </section>
+          <div class="fade-over" />
+          <div class="link-info">
+            <h4 class="name"><a :href="link.href" target="_blank">{{ link.name }}</a></h4>
+            <p class="desc fancy">{{ link.desc }}</p>
+            <section class="tech-display">
+              <span v-for="tech in link.tech" :key="tech" class="pill">{{ tech }}</span>
+            </section>
+          </div>
         </div>
       </div>
     </section>
@@ -46,6 +49,7 @@ export default {
 @import '../styles/typog';
 
 .app-stage {
+  // background: linear-gradient(to bottom left, $primary 50%, $secondary 50%);
   height: 100vh;
   padding: 0 5rem;
   display: flex;
@@ -100,9 +104,12 @@ export default {
   border-left: 10px solid transparent;
   background-size: cover;
   background-position: 20% 10%;
+  filter: saturate(2.2);
 
   &:hover {
     border-color: $accent;
+    filter: saturate(1);
+    background-position: 30% 80%;
 
     .name a {
       color: $accent;
@@ -115,6 +122,7 @@ export default {
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
+    z-index: 10;
 
     a {
       color: $primary;
@@ -146,6 +154,23 @@ export default {
   .desc {
     color: $primaryDark;
     font-size: 1.25rem;
+    z-index: 10;
+    padding-right: 20rem;
   }
+}
+
+.link-info {
+  position: relative;
+  z-index: 10;
+}
+
+.fade-over {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to left, rgba(255,0,0,0) 0%, rgba(255,255,255,1) 60%);
 }
 </style>

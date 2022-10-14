@@ -22,7 +22,7 @@ const appList = [
     },
     {
         name: 'Annihil·ipsum Generator',
-        desc: 'Dummy text generator inspired by "The Southern Reach" Trilogy by Jeff VanderMeer',
+        desc: 'Dummy text generator of the creepiest caliber',
         href: 'https://annihilipsum.netlify.app/',
         tech: ['Vue.js'],
         img: 'https://i.ibb.co/HttBmLT/Screen-Shot-2022-10-13-at-10-56-29-PM.png',
