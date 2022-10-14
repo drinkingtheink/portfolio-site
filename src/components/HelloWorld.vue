@@ -1,12 +1,11 @@
 <template>
   <main class="app-stage">
     <section class="side-menu">
-      <Me class="me" />
       <h1>Jason M. Harrison </h1>
-      <h2>Over a Decade Working Where Art + Science Meet</h2>
+      <h2 class="fancy">Over a Decade Working Where Art + Science Meet</h2>
+      <Me class="me" />
     </section>
     <section class="main-stage">
-      <h3>Links to my stuff:</h3>
       <div class="link-list-wrapper">
         <div v-for="link in appList" class="link-list" :key="link.href">
           <h4 class="name"><a :href="link.href" target="_blank">{{ link.name }}</a></h4>
@@ -43,18 +42,23 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+@import '../styles/palette';
 
 @mixin panelBg {
-  background: rgba(0,0,0,0.2);
+  background: rgba($primary ,0.2);
 }
 
 @mixin panelBgDarker {
-  background: rgba(0,0,0,0.4);
+  background: rgba($primary ,0.4);
 }
 
 .app-stage {
+  height: 100vh;
   padding: 0 5rem;
   display: flex;
+  background-color: $color2;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%233d5a80' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  border-top: 10px solid $accent;
 
   h3 {
     padding: 0;
@@ -66,9 +70,24 @@ export default {
   padding: 2rem 2rem 1rem;
   max-width: 20rem;
 
-  .me {
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    color: $primaryDark;
+  }
+
+  .fancy {
+    margin: 0;
+    padding: 0;
+    color: $accent;
+  }
+
+  #me {
     max-width: 225px;
     transition: all 0.2s;
+    margin: 0 auto;
 
     &:hover {
       filter: blur(3px);
@@ -102,10 +121,15 @@ export default {
     text-transform: uppercase;
     padding: 0;
     margin: 0;
+    font-size: 1.5rem;
+
+    a {
+      text-decoration: none;
+    }
   }
 
   .desc {
-    color: lightgoldenrodyellow;
+    color: $color5;
   }
 }
 </style>
