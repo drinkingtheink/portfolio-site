@@ -7,14 +7,15 @@
     </section>
     <section class="main-stage">
       <div class="link-list-wrapper">
-        <div v-for="link in appList" class="link-list" :key="link.href" :style="{ backgroundImage: `url(${link.img})` }">
-          <div class="fade-over" />
+        <div v-for="link in appList" class="link-list" :key="link.href">
           <div class="link-info">
             <h4 class="name"><a :href="link.href" target="_blank">{{ link.name }}</a></h4>
             <p class="desc fancy">{{ link.desc }}</p>
             <section class="tech-display">
               <span v-for="tech in link.tech" :key="tech" class="pill">{{ tech }}</span>
             </section>
+            <div class="fade-over" />
+            <img :style="{ backgroundImage: `url(${link.img})` }" class="link-img" />
           </div>
         </div>
       </div>
@@ -99,17 +100,11 @@ export default {
   position: relative;
   text-align: left;
   margin-bottom: 0.5rem;
-  padding: 1rem;
   transition: all 0.2s;
   border-left: 10px solid transparent;
-  background-size: cover;
-  background-position: 20% 10%;
-  filter: saturate(2.2);
 
   &:hover {
     border-color: $accent;
-    filter: saturate(1);
-    background-position: 30% 80%;
 
     .name a {
       color: $accent;
@@ -162,11 +157,37 @@ export default {
 .link-info {
   position: relative;
   z-index: 10;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+
+  .desc, .name {
+    position: relative;
+    z-index: 10;
+  }
+
+  .link-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: saturate(3);
+    transition: all 0.4s;
+    background-size: cover;
+  }
+}
+
+.link-list:hover {
+  .link-img {
+    filter: saturate(1);
+    background-position: 20%;
+  }
 }
 
 .fade-over {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   left: 0;
   top: 0;
   height: 100%;
