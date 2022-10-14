@@ -1,25 +1,5 @@
 @import './palette.scss';
-
-/** TYPOG **/
-@import url('https://fonts.googleapis.com/css2?family=Righteous:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,900;1,400;1,900&family=Permanent+Marker&display=swap');
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: 'Righteous', serif;
-}
-
-p,
-span,
-div {
-    font-family: 'Lato', sans-serif;
-}
-
-.fancy {
-    font-family: 'Permanent Marker', cursive;
-}
+@import './typog.scss';
 
 /** BASE **/
 

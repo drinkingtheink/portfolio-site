@@ -1,14 +1,14 @@
 <template>
-  <HelloWorld />
+  <AppStage />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppStage from './components/AppStage.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AppStage
   }
 }
 </script>

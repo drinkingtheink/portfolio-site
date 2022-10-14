@@ -7,9 +7,9 @@
     </section>
     <section class="main-stage">
       <div class="link-list-wrapper">
-        <div v-for="link in appList" class="link-list" :key="link.href">
+        <div v-for="link in appList" class="link-list" :key="link.href" :style="{ backgroundImage: `url(${link.img})` }">
           <h4 class="name"><a :href="link.href" target="_blank">{{ link.name }}</a></h4>
-          <p class="desc">{{ link.desc }}</p>
+          <p class="desc fancy">{{ link.desc }}</p>
           <section class="tech-display">
             <span v-for="tech in link.tech" :key="tech" class="pill">{{ tech }}</span>
           </section>
@@ -24,7 +24,7 @@ import { appList } from '../fixtures/links'
 import Me from './Me.vue'
 
 export default {
-  name: 'HelloWorld',
+  name: 'AppStage',
   props: {
     msg: String
   },
@@ -43,14 +43,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 @import '../styles/palette';
-
-@mixin panelBg {
-  background: rgba($primary ,0.2);
-}
-
-@mixin panelBgDarker {
-  background: rgba($primary ,0.4);
-}
+@import '../styles/typog';
 
 .app-stage {
   height: 100vh;
@@ -81,17 +74,13 @@ export default {
   .fancy {
     margin: 0;
     padding: 0;
-    color: $accent;
+    color: $primary;
   }
 
   #me {
     max-width: 225px;
     transition: all 0.2s;
     margin: 0 auto;
-
-    &:hover {
-      filter: blur(3px);
-    }
   }
 }
 
@@ -103,17 +92,21 @@ export default {
 }
 
 .link-list {
+  position: relative;
   text-align: left;
-  @include panelBg;
   margin-bottom: 0.5rem;
   padding: 1rem;
   transition: all 0.2s;
+  border-left: 10px solid transparent;
+  background-size: cover;
+  background-position: 20% 10%;
 
   &:hover {
-    @include panelBgDarker;
+    border-color: $accent;
 
-    .name, .desc {
-      color: white;
+    .name a {
+      color: $accent;
+      text-decoration: none;
     }
   }
 
@@ -124,12 +117,35 @@ export default {
     font-size: 1.5rem;
 
     a {
+      color: $primary;
+      position: relative;
+      transition: all 0.4s;
       text-decoration: none;
+    }
+
+    a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      background-color: $accent;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+    }
+
+    a:hover::before {
+      transform-origin: left;
+      transform: scaleX(1);
     }
   }
 
   .desc {
-    color: $color5;
+    color: $primaryDark;
+    font-size: 1.25rem;
   }
 }
 </style>
