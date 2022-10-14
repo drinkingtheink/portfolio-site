@@ -1,9 +1,21 @@
 <template>
-  <main class="app-stage">
+  <main class="app-stage" :class="[currentInterest]">
     <section class="side-menu">
       <h1>Jason M. Harrison </h1>
       <h2 class="fancy">Over a Decade Working Where Art + Science Meet</h2>
-      <Me class="me" />
+      <div class="me-wrapper">
+        <Me class="me" />
+      </div>
+      <h3>Interests:</h3>
+      <div class="interests-wrapper">
+        <button 
+          v-for="int in interests" 
+          :key="int" 
+          class="int"
+          :class="{ active: int === currentInterest }"
+          @click="setInterest(int)"
+        >{{ int }}</button>
+      </div>
     </section>
     <section class="main-stage">
       <div class="topic-selection">
@@ -53,14 +65,25 @@ export default {
         'software',
         'design',
       ],
+      currentInterest: null,
+      interests: [
+        'coding',
+        'sci-fi',
+        'futbol',
+        'music',
+      ]
     }
   },
   mounted() {
     this.currentTopic = this.topics[0];
+    this.currentInterest = this.interests[0];
   },
   methods: {
     setTopic: function(topic) {
       this.currentTopic = topic;
+    },
+    setInterest: function(int) {
+      this.currentInterest = int;
     },
   }
 }
@@ -71,17 +94,36 @@ export default {
 @import '../styles/palette';
 @import '../styles/typog';
 
+.interests-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  button {
+    width: 45%;
+    margin: 5px;
+  }
+}
+
 .app-stage {
-  // background: linear-gradient(to bottom left, $primary 50%, $secondary 50%);
   height: 100vh;
   padding: 0 5rem;
   display: flex;
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2398c1d9' fill-opacity='0.8' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");  border-top: 10px solid $accent;
-
+  transition: all 0.5s;
+  border-top: 10px solid var(--accent);
+  
   h3 {
     padding: 0;
     margin: 0;
+  }
+
+  &.coding {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2398c1d9' fill-opacity='0.8' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");  
+  }
+
+  &.sci-fi {
+    background-color: black !important;
   }
 }
 
@@ -94,19 +136,28 @@ export default {
     margin: 0;
     padding: 0;
     text-transform: uppercase;
-    color: $primaryDark;
+    color: var(--primaryDark);
   }
 
   .fancy {
     margin: 0;
     padding: 0;
-    color: $primary;
+    color: var(--primary);
+    font-size: 1.25rem;
   }
 
-  #me {
-    max-width: 225px;
-    transition: all 0.2s;
-    margin: 0 auto;
+  h3 {
+    text-align: center;
+  }
+
+  .me-wrapper {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+
+    #me {
+      max-width: 225px;
+    }
   }
 }
 
@@ -122,20 +173,20 @@ export default {
   text-align: left;
   margin-bottom: 1rem;
   transition: all 0.2s;
-  border-left: 10px solid $primary;
+  border-left: 10px solid var(--primary);
   box-shadow: -1px 7px 19px -3px rgba(0,0,0,0.5);
 
   &:hover {
-    border-color: $accent;
+    border-color: var(--accent);
 
     .name a {
-      color: $accent;
+      color: var(--accent);
       text-decoration: none;
     }
 
     .pill {
       color: white;
-      background-color: $accent;
+      background-color: var(--accent);
     }
   }
 
@@ -147,7 +198,7 @@ export default {
     z-index: 10;
 
     a {
-      color: $primary;
+      color: var(--primary);
       position: relative;
       transition: all 0.4s;
       text-decoration: none;
@@ -160,7 +211,7 @@ export default {
       width: 100%;
       height: 4px;
       border-radius: 4px;
-      background-color: rgba($accent, 0.5);
+      background-color: rgba(var(--accent), 0.5);
       bottom: -10px;
       left: 0;
       transform-origin: right;
@@ -175,7 +226,7 @@ export default {
   }
 
   .desc {
-    color: $primaryDark;
+    color: var(--primaryDark);
     font-size: 1.25rem;
     z-index: 10;
     padding-right: 20rem;
@@ -218,7 +269,7 @@ export default {
     opacity: 1;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid $accent;
+    border-left: 15px solid var(--accent);
   }
 }
 

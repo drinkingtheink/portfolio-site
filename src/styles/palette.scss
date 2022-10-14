@@ -1,11 +1,14 @@
-$color1: #3d5a80;
-$color2: #98c1d9;
-$color3: #e0fbfc;
-$color4: #ee6c4d;
-$color5: #293241;
-$color6: #142741;
+:root {
+    --color1: #3d5a80;
+    --color2: #98c1d9;
+    --color3: #e0fbfc;
+    --color4: #ee6c4d;
+    --color5: #293241;
+    --color6: #142741;
 
-$primary: $color1;
-$primaryDark: $color6;
-$secondary: $color2;
-$accent: $color4;
+    --primary: var(--color1);
+    --primaryDark: var(--color6);
+    --secondary: var(--color2);
+    --accent: var(--color4);
+}
+

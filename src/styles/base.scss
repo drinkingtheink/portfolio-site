@@ -9,11 +9,13 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+h1, h2, h3, h4, h5 { color: var(--primaryDark) };
   
 
 /** FORMS **/
 button {
-    background-color: $color3;
+    background-color: var(--color3);
     color: white;
     text-transform: uppercase;
     padding: 1rem;
@@ -23,18 +25,18 @@ button {
     filter: saturate(1);
     transition: all 0.3s;
     font-family: $fancyFont;
-    color: $primary;
-    border: 2px solid $color3;
+    color: var(--primary);
+    border: 2px solid var(--color3);
 
     &:hover {
         cursor: pointer;
         filter: saturate(2);
-        border-color: $secondary;
+        border-color: var(--secondary);
     }
 
     &.active {
-        color: $accent;
-        border-color: $accent;
+        color: var(--accent);
+        border-color: var(--accent);
     }
 }
 
@@ -44,8 +46,8 @@ button {
     border-radius: 20px;
     font-size: 0.8rem;
     margin-right: 0.5rem;
-    background: $secondary;
-    color: $primaryDark;
+    background: var(--secondary);
+    color: var(--primaryDark);
     padding: 0.25rem 0.5rem;
     transition: all 0.4s;
 }
@@ -59,5 +61,5 @@ button {
     height: 0; 
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid $accent;
+    border-left: 15px solid var(--accent);
 }
