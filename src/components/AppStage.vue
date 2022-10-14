@@ -8,6 +8,7 @@
     <section class="main-stage">
       <div class="link-list-wrapper">
         <div v-for="link in appList" class="link-list" :key="link.href">
+          <div class="arrow-right"></div>
           <div class="link-info">
             <h4 class="name"><a :href="link.href" target="_blank">{{ link.name }}</a></h4>
             <p class="desc fancy">{{ link.desc }}</p>
@@ -54,9 +55,8 @@ export default {
   height: 100vh;
   padding: 0 5rem;
   display: flex;
-  background-color: $color2;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%233d5a80' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-  border-top: 10px solid $accent;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2398c1d9' fill-opacity='0.8' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");  border-top: 10px solid $accent;
 
   h3 {
     padding: 0;
@@ -101,7 +101,8 @@ export default {
   text-align: left;
   margin-bottom: 0.5rem;
   transition: all 0.2s;
-  border-left: 10px solid transparent;
+  border-left: 10px solid $primary;
+  box-shadow: -1px 7px 19px -3px rgba(0,0,0,0.75);
 
   &:hover {
     border-color: $accent;
@@ -158,9 +159,9 @@ export default {
   position: relative;
   z-index: 10;
   overflow: hidden;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
 
-  .desc, .name {
+  .desc, .name, .tech-display {
     position: relative;
     z-index: 10;
   }
@@ -175,6 +176,7 @@ export default {
     filter: saturate(3);
     transition: all 0.4s;
     background-size: cover;
+    scale: 1.2;
   }
 }
 
@@ -182,7 +184,23 @@ export default {
   .link-img {
     filter: saturate(1);
     background-position: 20%;
+    scale: 1;
   }
+
+  .arrow-right {
+    opacity: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid $accent;
+  }
+}
+
+.arrow-right {
+  transition: all 0.3s;
+  opacity: 0;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
 }
 
 .fade-over {
