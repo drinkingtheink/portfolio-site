@@ -1,14 +1,39 @@
-:root {
-    --color1: #3d5a80;
-    --color2: #98c1d9;
-    --color3: #e0fbfc;
-    --color4: #ee6c4d;
-    --color5: #293241;
-    --color6: #142741;
+$colora1: #1A535C;
+$colora2: #4ECDC4;
+$colora3: #F7FFF7;
+$colora4: #e9722c;
+$colora5: #FFE66D;
+$colora6: #0B2B31;
 
-    --primary: var(--color1);
-    --primaryDark: var(--color6);
-    --secondary: var(--color2);
-    --accent: var(--color4);
+$colorb1: #141520;
+$colorb2: #2B2D42;
+$colorb3: #EDF2F4;
+$colorb4: #8D99AE;
+$colorb5: #EF233C;
+$colorb6: #F3E75C;
+
+.app-stage {
+    &.coding {
+        --primary: #{$colora1};
+        --primaryDark: #{$colora6};
+        --accent: #{$colora4};
+        --color1: #{$colora1};
+        --color2: #{$colora2};
+        --color3: #{$colora3};
+        --color4: #{$colora4};
+        --color5: #{$colora5};
+        --color6: #{$colora6};
+    }
+
+    &.sci-fi {
+        --primary: #{$colorb1};
+        --primaryDark: #{$colorb1};
+        --accent: #{$colorb5};
+        --color1: #{$colorb1};
+        --color2: #{$colorb2};
+        --color3: #{$colorb3};
+        --color4: #{$colorb4};
+        --color5: #{$colorb5};
+        --color6: #{$colorb6};
+    }
 }
-
