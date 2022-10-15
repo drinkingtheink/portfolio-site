@@ -12,6 +12,13 @@ $colorb4: #8D99AE;
 $colorb5: #EF233C;
 $colorb6: #F3E75C;
 
+$colorc1: #00B140;
+$colorc2: #000000;
+$colorc3: #80D8A0;
+$colorc4: #cc66cd;
+$colorc5: #7A491F;
+$colorc6: #005920;
+
 .app-stage {
     &.coding {
         --primary: #{$colora1};
@@ -37,5 +44,18 @@ $colorb6: #F3E75C;
         --color4: #{$colorb4};
         --color5: #{$colorb5};
         --color6: #{$colorb6};
+    }
+
+    &.futbol {
+        --primary: #{$colorc1};
+        --primaryDark: #{$colorc6};
+        --accent: #{$colorc4};
+        --secondary: #{$colorc2};
+        --color1: #{$colorc1};
+        --color2: #{$colorc2};
+        --color3: #{$colorc3};
+        --color4: #{$colorc4};
+        --color5: #{$colorc5};
+        --color6: #{$colorc6};
     }
 }
