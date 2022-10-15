@@ -138,6 +138,14 @@ export default {
     h2.fancy {
       color: $colorb6;
     }
+
+    .pill {
+      color: white;
+    }
+
+    .side-menu h3 {
+      color: var(--color4);
+    }
   }
 }
 
@@ -241,7 +249,7 @@ export default {
   }
 
   .desc {
-    color: var(--primaryDark);
+    color: var(--secondary);
     font-size: 1.25rem;
     z-index: 10;
     padding-right: 20rem;
