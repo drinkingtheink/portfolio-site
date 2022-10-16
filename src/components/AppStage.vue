@@ -37,18 +37,7 @@
         >{{ topic }}</button>
       </div>
       <div class="link-list-wrapper">
-        <div v-for="link in appList" class="link-list" :key="link.href">
-          <div class="arrow-right"></div>
-          <div class="link-info">
-            <h4 class="name"><a :href="link.href" target="_blank">{{ link.name }}</a></h4>
-            <p class="desc fancy">{{ link.desc }}</p>
-            <section class="tech-display">
-              <span v-for="tech in link.tech" :key="tech" class="pill">{{ tech }}</span>
-            </section>
-            <div class="fade-over" />
-            <img :style="{ backgroundImage: `url(${link.img})` }" class="link-img" />
-          </div>
-        </div>
+        <AppList :appList="appList" />
       </div>
     </section>
   </main>
@@ -57,11 +46,13 @@
 <script>
 import { appList, social } from '../fixtures/links'
 import Me from './Me.vue'
+import AppList from './AppList.vue'
 
 export default {
   name: 'AppStage',
   components: {
     Me,
+    AppList,
   },
   data() {
     return {
@@ -183,7 +174,7 @@ export default {
   }
 
   &.sci-fi {
-    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='59.428' patternTransform='scale(1) rotate(25)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(235, 23%, 10%, 1)'/><path d='M0 70.975V47.881m20-1.692L8.535 52.808v13.239L20 72.667l11.465-6.62V52.808zm0-32.95l11.465-6.62V-6.619L20-13.24 8.535-6.619V6.619L20 13.24m8.535 4.927v13.238L40 38.024l11.465-6.62V18.166L40 11.546zM20 36.333L0 47.88m0 0v23.094m0 0l20 11.548 20-11.548V47.88m0 0L20 36.333m0 0l20 11.549M0 11.547l-11.465 6.619v13.239L0 38.025l11.465-6.62v-13.24L0 11.548v-23.094l20-11.547 20 11.547v23.094M20 36.333V13.24'  stroke-linecap='square' stroke-width='0.5' stroke='hsla(235, 21%, 21%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,-0.856)' fill='url(%23a)'/></svg>");
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(235, 23%, 10%, 1)'/><path d='M14.5 6.628L8.886 3.372v-6.515L14.502-6.4l5.612 3.257-.001 6.514zm0 50.06l-5.613-3.256v-6.515l5.614-3.258 5.612 3.257-.001 6.515zm14.497-25.117l-5.612-3.257v-6.515L29 18.541l5.612 3.257-.001 6.515zm-29 0l-5.612-3.257v-6.515L0 18.541l5.612 3.257v6.515zM14.5 11.82L4.36 5.967l.002-11.706 10.14-5.855L24.638-5.74l-.001 11.707zm0 50.06L4.36 56.028l.002-11.706 10.14-5.855 10.137 5.852-.001 11.707zm14.498-25.118L18.858 30.91l.002-11.707L29 13.349l10.137 5.853-.001 11.706zm-29 0l-10.139-5.852.002-11.707L0 13.349l10.138 5.853-.002 11.706zm14.501-19.905L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z'  stroke-linejoin='round' stroke-linecap='round' stroke-width='0.5' stroke='hsla(55, 2%, 29%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
 
     h1 {
       color: var(--accent);
@@ -256,130 +247,6 @@ export default {
   max-height: 100vh;
   overflow-x: auto;
   padding: 1rem;
-}
-
-.link-list {
-  position: relative;
-  text-align: left;
-  margin-bottom: 1rem;
-  transition: all 0.2s;
-  border-left: 10px solid var(--primary);
-  box-shadow: -1px 7px 19px -3px rgba(0,0,0,0.5);
-
-  &:hover {
-    border-color: var(--accent);
-
-    .name a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .pill {
-      color: white;
-      background-color: var(--accent);
-    }
-  }
-
-  .name {
-    text-transform: uppercase;
-    padding: 0;
-    margin: 0;
-    font-size: 1.5rem;
-    z-index: 10;
-
-    a {
-      color: var(--primary);
-      position: relative;
-      transition: all 0.4s;
-      text-decoration: none;
-      display: block;
-    }
-
-    a::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 4px;
-      border-radius: 4px;
-      background-color: var(--accent);
-      bottom: -10px;
-      left: 0;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform .3s ease-in-out;
-      opacity: 0.5;
-    }
-
-    a:hover::before {
-      transform-origin: left;
-      transform: scaleX(1);
-    }
-  }
-
-  .desc {
-    color: var(--secondary);
-    font-size: 1.25rem;
-    z-index: 10;
-    padding-right: 20rem;
-  }
-}
-
-.link-info {
-  position: relative;
-  z-index: 10;
-  overflow: hidden;
-  padding: 1rem 2rem;
-
-  .desc, .name, .tech-display {
-    position: relative;
-    z-index: 10;
-  }
-
-  .link-img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    filter: saturate(5);
-    transition: all 0.4s;
-    background-size: cover;
-    scale: 1.1;
-  }
-}
-
-.link-list:hover {
-  .link-img {
-    filter: saturate(1);
-    background-position: 20%;
-    scale: 1;
-  }
-
-  .arrow-right {
-    opacity: 1;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-    border-left: 15px solid var(--accent);
-  }
-}
-
-.arrow-right {
-  transition: all 0.3s;
-  opacity: 0;
-  border-top-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
-}
-
-.fade-over {
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(to left, rgba(255,0,0,0) 0%, rgba(255,255,255,1) 60%);
 }
 
 .topic-selection {
