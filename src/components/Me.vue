@@ -1,13 +1,13 @@
 <template>
   <div class="me-stage">
-    <MeCode v-show="currentInterest === 'coding'" class="me" />
+    <MeCode v-show="currentInterest === 'coding' || currentInterest === 'music'" class="me" />
     <MeSciFi v-show="currentInterest === 'sci-fi'" class="me" />
     <MeFB v-show="currentInterest === 'futbol'" class="me" />
     <div class="nametag">
       {{ currentInterest === 'coding' ? 'Console Cowboy' : null }}
       {{ currentInterest === 'sci-fi' ? 'Explorer' : null }}
       {{ currentInterest === 'futbol' ? 'Futbolero' : null }}
-      {{ currentInterest === 'music' ? 'Musician' : null }}
+      {{ currentInterest === 'music' ? 'ACL Headliner' : null }}
     </div>
   </div>
 </template>
@@ -80,6 +80,13 @@ export default {
   &.futbol {
     .nametag {
       background-color: var(--secondary);
+      color: white;
+    }
+  }
+
+  &.music {
+    .nametag {
+      background-color: var(--primary);
       color: white;
     }
   }

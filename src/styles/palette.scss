@@ -19,6 +19,13 @@ $colorc4: #ee9229;
 $colorc5: #7A491F;
 $colorc6: #005920;
 
+$colord1: #8CBEB2;
+$colord2: #F3B562;
+$colord3: #F2EBBF;
+$colord4: #5C4B51;
+$colord5: #F06060;
+$colord6: #748582;
+
 .app-stage {
     &.coding {
         --primary: #{$colora1};
@@ -60,5 +67,19 @@ $colorc6: #005920;
         --color4: #{$colorc4};
         --color5: #{$colorc5};
         --color6: #{$colorc6};
+    }
+
+    &.music {
+        --primary: #{$colord1};
+        --primaryDark: #{$colord6};
+        --accent: #{$colord5};
+        --secondary: #{$colord2};
+        --tertiary: #{$colord1};
+        --color1: #{$colord1};
+        --color2: #{$colord2};
+        --color3: #{$colord3};
+        --color4: #{$colord4};
+        --color5: #{$colord5};
+        --color6: #{$colord6};
     }
 }
