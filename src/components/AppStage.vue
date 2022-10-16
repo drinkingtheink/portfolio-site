@@ -119,6 +119,7 @@ export default {
 .socials-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
   .social {
     text-transform: uppercase;
@@ -157,10 +158,10 @@ export default {
   border-top: 15px solid var(--accent);
   
   h3 {
-    padding: 0 0 0.5rem 0;
-    margin: 0 0 0 0.5rem 0;
+    padding: 0 0 0.25rem 0;
+    margin: 0 0 0 0.25rem 0;
     border-bottom: 2px solid var(--secondary);
-    color: var(--color2);
+    color: var(--primaryDark);
   }
 
   &.coding {

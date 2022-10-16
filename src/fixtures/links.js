@@ -60,6 +60,18 @@ const social = [
         name: 'goodreads',
         href: 'https://www.goodreads.com/user/show/124215009-jason-harrison',
     },
+    {
+        name: 'twitter',
+        href: 'https://twitter.com/DrinkingtheInk',
+    },
+    {
+        name: 'soundcloud',
+        href: 'https://soundcloud.com/grandephemeris',
+    },
+    {
+        name: 'spotify',
+        href: 'https://open.spotify.com/artist/3f6p4SQJXhJGWdPHL8NoKF?si=e8MCRaubQxaSKKmNwiZjZA',
+    },
 ]
 
 export { appList, social };
