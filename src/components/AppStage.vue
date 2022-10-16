@@ -243,6 +243,10 @@ export default {
   &.futbol {
     background-color: var(--primary);
 
+    h2.fancy {
+      color: white;
+    }
+
     .pill {
       color: white;
     }
@@ -250,6 +254,8 @@ export default {
 
   &.music {
     background-color: var(--secondary);
+    background-color: #f3b562;
+    background-image: url("../assets/wood-pattern.png");  
   }
 
   .main-stage {
@@ -258,6 +264,16 @@ export default {
 
   &.music {
 
+    .side-menu {
+      h1 {
+        color: var(--color4);
+      }
+    }
+
+    .social {
+      background-color: var(--color4);
+      color: white;
+    }
   }
 }
 
