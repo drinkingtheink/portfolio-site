@@ -252,21 +252,22 @@ export default {
     }
   }
 
-  &.music {
-    background-color: var(--secondary);
-    background-color: #f3b562;
-    background-image: url("../assets/wood-pattern.png");  
-  }
-
   .main-stage {
     width: 100%;
   }
 
   &.music {
-
+    background-color: var(--secondary);
+    background-color: #f3b562;
+    background-image: url("../assets/wood-pattern.png");      
+    
     .side-menu {
       h1 {
         color: var(--color4);
+      }
+
+      h2.fancy {
+        color: var(--accent);
       }
     }
 

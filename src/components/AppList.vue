@@ -160,5 +160,29 @@ export default {
             }
         }
     }
+
+    &.music {
+        .link-list {
+            .desc {
+              color: var(--color4);
+            }
+
+            .pill {
+              background-color: var(--primary);
+              color: var(--accent);
+            }
+
+            &:hover {
+              .desc {
+                color: var(--color4);
+              }
+
+              .pill {
+                color: white;
+                background-color: var(--accent);
+              }
+            }
+        }
+    }
 }
 </style>
