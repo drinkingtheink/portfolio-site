@@ -171,7 +171,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  height: 3px;
+  height: 5px;
   width: 100%;
   display: block;
   background-color: var(--tertiary)
@@ -259,8 +259,8 @@ export default {
   &.music {
     background-color: var(--secondary);
     background-color: #f3b562;
-    background-image: url("../assets/wood-pattern.png");      
-    
+    background: radial-gradient(circle, rgba(243,181,98,1) 45%, rgba(238,146,41,1) 81%);    
+
     .side-menu {
       h1 {
         color: var(--color4);
@@ -276,11 +276,24 @@ export default {
       color: white;
     }
   }
+
+  &.music::before {
+    background-color: var(--secondary);
+    content: '';
+    position: absolute;
+    top: 15px; left: 0;
+    width: 100%; height: 150vh;
+    background-image: url("../assets/woodgrain.svg");
+    border-top: 5px solid var(--tertiary);
+    filter:opacity(0.5);
+  }
 }
 
 .side-menu {
   padding: 2rem 2rem 1rem;
   max-width: 20rem;
+  position: relative;
+  z-index: 10;
 
   h1 {
     font-size: 2rem;
