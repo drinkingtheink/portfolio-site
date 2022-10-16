@@ -1,7 +1,15 @@
 <template>
-  <MeCode v-show="currentInterest === 'coding'" class="me" />
-  <MeSciFi v-show="currentInterest === 'sci-fi'" class="me" />
-  <MeFB v-show="currentInterest === 'futbol'" class="me" />
+  <div class="me-stage">
+    <MeCode v-show="currentInterest === 'coding'" class="me" />
+    <MeSciFi v-show="currentInterest === 'sci-fi'" class="me" />
+    <MeFB v-show="currentInterest === 'futbol'" class="me" />
+    <div class="nametag">
+      {{ currentInterest === 'coding' ? 'Console Cowboy' : null }}
+      {{ currentInterest === 'sci-fi' ? 'Explorer' : null }}
+      {{ currentInterest === 'futbol' ? 'Futbolero' : null }}
+      {{ currentInterest === 'music' ? 'Musician' : null }}
+    </div>
+  </div>
 </template>
 
 <script>
@@ -22,6 +30,57 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.cls-1{fill:#fff;}.cls-2{fill:#d19477;}.cls-3{fill:#f2ccb7;}.cls-4{fill:#281305;}.cls-5{fill:#84522c;}.cls-6{fill:#fee3d4;}.cls-7{fill:#b78b6e;}.cls-8{fill:#72b776;}.cls-9{fill:#19601b;}
+<style lang="scss">
+@import '../styles/typog';
+
+.me-stage {
+  position: relative;
+  height: 100%;
+}
+
+.me-img {
+  position: absolute;
+  width: 100%;
+}
+
+#MeSciFi {
+  width: 110%;
+}
+
+.nametag {
+  position: absolute;
+  bottom: 25px;
+  height: 2rem;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  left: -1rem;
+  right: 0;
+  padding: 0.25rem 1rem 0.5rem 1rem;
+  font-family: $fancyFont;
+  font-size: 1.5rem;
+}
+
+.app-stage {
+  &.coding {
+    .nametag {
+      background-color: var(--secondary);
+      color: var(--primaryDark);
+    }
+  }
+
+  &.sci-fi {
+    .nametag {
+      background-color: var(--accent);
+      color: var(--color6);
+    }
+  }
+
+  &.futbol {
+    .nametag {
+      background-color: var(--secondary);
+      color: white;
+    }
+  }
+}
 </style>

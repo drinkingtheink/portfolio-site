@@ -1,5 +1,12 @@
 const appList = [
     {
+        name: 'Watchful Eye',
+        desc: 'Visualizing near-Earth objects using NASA APIs',
+        href: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
+        tech: ['Vue.js', 'APIs', 'SVG'],
+        img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
+    },
+    {
         name: 'Austin FC Kit Creator',
         desc: 'Retro-style kit designer for true Verde ATXFC supporters',
         href: 'https://austin-fc-kit-creator.netlify.app/',
@@ -12,13 +19,6 @@ const appList = [
         href: 'https://dogtastic.netlify.app/',
         tech: ['Vue.js', 'APIs'],
         img: 'https://i.ibb.co/ZTgwnzg/Screen-Shot-2022-10-13-at-10-54-59-PM.png',
-    },
-    {
-        name: 'Watchful Eye',
-        desc: 'Visualizing near-Earth objects using NASA APIs',
-        href: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
-        tech: ['Vue.js', 'APIs', 'SVG'],
-        img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
     },
     {
         name: 'Annihil·ipsum Generator',
@@ -46,15 +46,19 @@ const appList = [
 const social = [
     {
         name: 'github',
-        href: '',
+        href: 'https://github.com/drinkingtheink',
     },
     {
         name: 'behance',
-        href: '',
+        href: 'https://www.behance.net/drinkingtheink',
     },
     {
         name: 'dribbble',
-        href: '',
+        href: 'https://dribbble.com/DrinkingtheInk',
+    },
+    {
+        name: 'goodreads',
+        href: 'https://www.goodreads.com/user/show/124215009-jason-harrison',
     },
 ]
 

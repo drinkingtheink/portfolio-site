@@ -4,7 +4,7 @@
       <h1>Jason M. Harrison </h1>
       <h2 class="fancy">Over a Decade Working Where Art + Science Meet</h2>
       <div class="me-wrapper">
-        <Me :currentInterest="currentInterest" />
+        <Me class="me-img" :currentInterest="currentInterest" />
       </div>
       <h3>Interests:</h3>
       <div class="interests-wrapper">
@@ -17,6 +17,15 @@
         >{{ int }}</button>
       </div>
       <h3>Find Me:</h3>
+
+      <div class="socials-wrapper">
+        <a 
+          v-for="link in socialLinks" 
+          :key="link.href"
+          :href="link.href"
+          class="social"
+        >{{ link.name }}</a>
+      </div>
     </section>
     <section class="main-stage">
       <div class="topic-selection">
@@ -46,7 +55,7 @@
 </template>
 
 <script>
-import { appList } from '../fixtures/links'
+import { appList, social } from '../fixtures/links'
 import Me from './Me.vue'
 
 export default {
@@ -58,6 +67,7 @@ export default {
     return {
       stuff: 'ynwa',
       appList: appList,
+      socialLinks: social,
       currentTopic: null,
       topics: [
         'web',
@@ -102,7 +112,41 @@ export default {
     width: 45%;
     margin: 5px;
     font-size: 0.9rem;
+    padding: 0.5rem;
   }
+}
+
+.socials-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  .social {
+    text-transform: uppercase;
+    border-radius: 20px;
+    color: var(--primary);
+    background-color: var(--secondary);
+    padding: 0.25rem 1rem;
+    font-size: 0.8rem;
+    margin: 10px 10px 0 0;
+    text-decoration: none;
+    transition: all .2s;
+
+    &:hover {
+      background-color: var(--primary);
+      color: var(--secondary);
+    }
+  }
+}
+
+.app-stage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  display: block;
+  background-color: var(--tertiary)
 }
 
 .app-stage {
@@ -110,7 +154,7 @@ export default {
   padding: 0 5rem;
   display: flex;
   transition: all 0.5s;
-  border-top: 10px solid var(--accent);
+  border-top: 15px solid var(--accent);
   
   h3 {
     padding: 0 0 0.5rem 0;
@@ -129,6 +173,11 @@ export default {
 
     .me {
       max-width: 210px;
+    }
+
+    .nametag {
+      background-color: var(--secondary);
+      color: var(--primaryDark);
     }
   }
 
@@ -149,6 +198,22 @@ export default {
 
     .side-menu h3 {
       color: var(--color4);
+    }
+
+    .social {
+      background-color: var(--accent);
+      color: var(--color6);
+
+      &:hover {
+        background-color: var(--color6);
+        color: var(--accent);
+      }
+    }
+  }
+
+  &.futbol {
+    .pill {
+      color: white;
     }
   }
 }
@@ -177,13 +242,11 @@ export default {
   }
 
   .me-wrapper {
+    position: relative;
     padding: 1rem 0;
     display: flex;
     justify-content: center;
-
-    .me {
-      max-width: 200px;
-    }
+    height: 20rem;
   }
 }
 
