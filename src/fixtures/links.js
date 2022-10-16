@@ -49,6 +49,10 @@ const social = [
         href: 'https://github.com/drinkingtheink',
     },
     {
+        name: 'linkedin',
+        href: 'https://www.linkedin.com/in/jasonmharrison/',
+    },
+    {
         name: 'behance',
         href: 'https://www.behance.net/drinkingtheink',
     },

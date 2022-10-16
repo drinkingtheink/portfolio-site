@@ -36,8 +36,14 @@
           @click="setTopic(topic)"
         >{{ topic }}</button>
       </div>
-      <div class="link-list-wrapper">
+      <div class="link-list-wrapper" v-show="currentTopic === 'web'" >
         <AppList :appList="appList" />
+      </div>
+      <div class="art-gallery-wrapper" v-show="currentTopic === 'art'">
+        <ArtGallery />
+      </div>
+      <div class="about-wrapper" v-show="currentTopic === 'about'">
+        <About />
       </div>
     </section>
   </main>
@@ -47,12 +53,16 @@
 import { appList, social } from '../fixtures/links'
 import Me from './Me.vue'
 import AppList from './AppList.vue'
+import ArtGallery from './ArtGallery.vue'
+import About from './About.vue'
 
 export default {
   name: 'AppStage',
   components: {
     Me,
     AppList,
+    ArtGallery,
+    About,
   },
   data() {
     return {
@@ -91,8 +101,8 @@ export default {
       let intQuery = queryParams.get('interest');
       let topicQuery = queryParams.get('topic');
       if (intQuery) this.currentInterest = intQuery;
-      else if (topicQuery) this.currentTopic = topicQuery;
-      else if (!intQuery && !topicQuery) { 
+      if (topicQuery) this.currentTopic = topicQuery;
+      if (!intQuery && !topicQuery) { 
         this.currentTopic = this.topics[0]; 
         this.currentInterest = this.interests[0];
       }
@@ -152,6 +162,10 @@ export default {
   }
 }
 
+.art-gallery-wrapper {
+  display: flex;
+}
+
 .app-stage::before {
   content: '';
   position: absolute;
@@ -164,7 +178,7 @@ export default {
 }
 
 .app-stage {
-  height: 120vh;
+  height: 150vh;
   padding: 0 5rem;
   display: flex;
   transition: all 0.5s;
@@ -229,6 +243,10 @@ export default {
     .pill {
       color: white;
     }
+  }
+
+  .main-stage {
+    width: 100%;
   }
 }
 
