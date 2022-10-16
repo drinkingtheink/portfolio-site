@@ -45,6 +45,7 @@ export default {
 
 #MeSciFi {
   width: 110%;
+  margin-left: -18px;
 }
 
 .nametag {

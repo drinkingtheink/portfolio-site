@@ -71,19 +71,41 @@ export default {
         'sci-fi',
         'futbol',
         'music',
-      ]
+      ],
     }
   },
   mounted() {
-    this.currentTopic = this.topics[0];
-    this.currentInterest = this.interests[0];
+    this.checkForQueryStrings();
   },
   methods: {
     setTopic: function(topic) {
       this.currentTopic = topic;
+      this.updateTopicUrlQueryStrings(topic);
     },
     setInterest: function(int) {
       this.currentInterest = int;
+      this.updateIntUrlQueryStrings(int);
+    },
+    checkForQueryStrings: function() {
+      let queryParams = new URLSearchParams(window.location.search);
+      let intQuery = queryParams.get('interest');
+      let topicQuery = queryParams.get('topic');
+      if (intQuery) this.currentInterest = intQuery;
+      else if (topicQuery) this.currentTopic = topicQuery;
+      else if (!intQuery && !topicQuery) { 
+        this.currentTopic = this.topics[0]; 
+        this.currentInterest = this.interests[0];
+      }
+    },
+    updateIntUrlQueryStrings: function(val) {
+      let queryParams = new URLSearchParams(window.location.search);
+      queryParams.set(`interest`, val);
+      history.replaceState(null, null, `?${queryParams.toString()}`);
+    },
+    updateTopicUrlQueryStrings: function(val) {
+      let queryParams = new URLSearchParams(window.location.search);
+      queryParams.set(`topic`, val);
+      history.replaceState(null, null, `?${queryParams.toString()}`);
     },
   }
 }

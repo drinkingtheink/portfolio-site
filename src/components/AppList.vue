@@ -24,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/typog';
+@import '../styles/palette';
 
 .link-list {
   position: relative;
@@ -148,5 +148,17 @@ export default {
   height: 100%;
   width: 100%;
   background-image: linear-gradient(to left, rgba(255,0,0,0) 0%, rgba(255,255,255,1) 60%);
+}
+
+.app-stage {
+    &.sci-fi {
+        .link-list {
+            border-left-color: var(--color4);
+
+            &:hover {
+                border-left-color: var(--accent);
+            }
+        }
+    }
 }
 </style>
