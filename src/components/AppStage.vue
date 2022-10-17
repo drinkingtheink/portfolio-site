@@ -180,17 +180,16 @@ export default {
 
 .app-stage {
   height: 150vh;
-  padding: 0 5rem;
   display: flex;
   transition: all 0.5s;
   border-top: 15px solid var(--accent);
 
   @media (max-width: 1200px) {
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 
-  @media (min-width: 1500px) {
-    padding: 0 12%;
+  @media (min-width: 1200px) {
+    padding: 0 10%;
   }
   
   h3 {
