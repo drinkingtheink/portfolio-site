@@ -1,7 +1,9 @@
 /** TYPOG **/
 @import url('https://fonts.googleapis.com/css2?family=Righteous:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,400;0,900;1,400;1,900&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 $fancyFont: 'Permanent Marker', cursive;
+$compFont: 'VT323', monospace;
 
 h1,
 h2,
@@ -20,4 +22,9 @@ div {
 
 .fancy {
     font-family: $fancyFont;
+}
+
+.comp {
+    font-family: $compFont;
+    font-size: 1.5rem;
 }

@@ -157,6 +157,16 @@ export default {
 
             &:hover {
                 border-left-color: var(--accent);
+
+                .pill {
+                  color: white;
+                  background-color: var(--accent);
+                }
+            }
+
+            .pill {
+              color: white;
+              background-color: var(--primary);
             }
         }
     }
@@ -169,7 +179,7 @@ export default {
 
             .pill {
               background-color: var(--primary);
-              color: var(--accent);
+              color: white;
             }
 
             &:hover {
@@ -183,6 +193,10 @@ export default {
               }
             }
         }
+    }
+
+    .pill {
+      color: white;
     }
 }
 </style>

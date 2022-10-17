@@ -60,6 +60,7 @@ export default {
   padding: 0.25rem 1rem 0.5rem 1rem;
   font-family: $fancyFont;
   font-size: 1.5rem;
+  transition: all 0.5s;
 }
 
 .app-stage {

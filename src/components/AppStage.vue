@@ -24,6 +24,7 @@
           :key="link.href"
           :href="link.href"
           class="social"
+          target="_blank"
         >{{ link.name }}</a>
       </div>
     </section>
@@ -43,7 +44,7 @@
         <ArtGallery />
       </div>
       <div class="about-wrapper" v-show="currentTopic === 'about'">
-        <About />
+        <About :needsCompFont="currentInterest === 'sci-fi'" />
       </div>
     </section>
   </main>
@@ -221,10 +222,6 @@ export default {
       color: $colorb6;
     }
 
-    .pill {
-      color: white;
-    }
-
     .side-menu h3 {
       color: var(--color4);
     }
@@ -278,11 +275,11 @@ export default {
   }
 
   &.music::before {
-    background-color: var(--secondary);
+    background-color: transparent;
     content: '';
     position: absolute;
     top: 15px; left: 0;
-    width: 100%; height: 150vh;
+    width: 100%; height: calc(150vh - 15px);
     background-image: url("../assets/woodgrain.svg");
     border-top: 5px solid var(--tertiary);
     filter:opacity(0.5);
