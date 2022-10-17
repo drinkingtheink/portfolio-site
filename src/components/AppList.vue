@@ -89,6 +89,10 @@ export default {
     font-size: 1.25rem;
     z-index: 10;
     padding-right: 20rem;
+
+    @media (max-width: 1200px) {
+      padding-right: 10rem;
+    }
   }
 }
 

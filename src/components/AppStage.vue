@@ -184,6 +184,14 @@ export default {
   display: flex;
   transition: all 0.5s;
   border-top: 15px solid var(--accent);
+
+  @media (max-width: 1200px) {
+    padding: 0 2rem;
+  }
+
+  @media (min-width: 1500px) {
+    padding: 0 12%;
+  }
   
   h3 {
     padding: 0 0 0.25rem 0;
