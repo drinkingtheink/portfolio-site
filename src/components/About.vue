@@ -49,4 +49,18 @@ export default {
     }
 }
 
+.app-stage.music .about-stage, .app-stage.futbol .about-stage {
+    p {
+        color: var(--color4);
+    }
+}
+
+.app-stage.futbol .about-stage {
+    background-color: white;
+
+    p {
+        color: var(--secondary);
+    }
+}
+
 </style>

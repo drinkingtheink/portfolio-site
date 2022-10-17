@@ -69,6 +69,10 @@ const social = [
         href: 'https://twitter.com/DrinkingtheInk',
     },
     {
+        name: 'my band',
+        href: 'https://grandephemeris.com/',
+    },
+    {
         name: 'soundcloud',
         href: 'https://soundcloud.com/grandephemeris',
     },
