@@ -1,31 +1,38 @@
 <template>
   <main class="app-stage" :class="[currentInterest]">
+    <h1 class="name mobile-display">Jason M. Harrison </h1>
+    <h2 class="fancy tagline  mobile-display">Over a Decade Working Where Art + Science Meet</h2>
+    
     <section class="side-menu">
-      <h1>Jason M. Harrison </h1>
-      <h2 class="fancy">Over a Decade Working Where Art + Science Meet</h2>
-      <div class="me-wrapper">
-        <Me class="me-img" :currentInterest="currentInterest" />
+      <div class="side-menu-display first">
+        <h1 class="name">Jason M. Harrison </h1>
+        <h2 class="fancy tagline">Over a Decade Working Where Art + Science Meet</h2>
+        <div class="me-wrapper">
+          <Me class="me-img" :currentInterest="currentInterest" />
+        </div>
       </div>
-      <h3>Interests:</h3>
-      <div class="interests-wrapper">
-        <button 
-          v-for="int in interests" 
-          :key="int" 
-          class="int"
-          :class="{ active: int === currentInterest }"
-          @click="setInterest(int)"
-        >{{ int }}</button>
-      </div>
-      <h3>Find Me:</h3>
+      <div class="side-menu-display second">
+        <h3>Interests:</h3>
+        <div class="interests-wrapper">
+          <button 
+            v-for="int in interests" 
+            :key="int" 
+            class="int"
+            :class="{ active: int === currentInterest }"
+            @click="setInterest(int)"
+          >{{ int }}</button>
+        </div>
+        <h3>Find Me:</h3>
 
-      <div class="socials-wrapper">
-        <a 
-          v-for="link in socialLinks" 
-          :key="link.href"
-          :href="link.href"
-          class="social"
-          target="_blank"
-        >{{ link.name }}</a>
+        <div class="socials-wrapper">
+          <a 
+            v-for="link in socialLinks" 
+            :key="link.href"
+            :href="link.href"
+            class="social"
+            target="_blank"
+          >{{ link.name }}</a>
+        </div>
       </div>
     </section>
     <section class="main-stage">
@@ -102,10 +109,14 @@ export default {
       let intQuery = queryParams.get('interest');
       let topicQuery = queryParams.get('topic');
       if (intQuery) this.currentInterest = intQuery;
-      if (topicQuery) this.currentTopic = topicQuery;
-      if (!intQuery && !topicQuery) { 
-        this.currentTopic = this.topics[0]; 
+      else { 
         this.currentInterest = this.interests[0];
+        this.updateIntUrlQueryStrings(this.interests[0]);
+      }
+      if (topicQuery) this.currentTopic = topicQuery;
+      else {  
+        this.currentTopic = this.topics[0] 
+        this.updateTopicUrlQueryStrings(this.topics[0]);
       }
     },
     updateIntUrlQueryStrings: function(val) {
@@ -186,12 +197,28 @@ $appHeight: 150vh;
   transition: all 0.5s;
   border-top: 15px solid var(--accent);
 
+  @media (max-width: 1000px) {
+    display: block;
+    height: 100%;
+  }
+
   @media (max-width: 1200px) {
     padding: 0 2rem;
   }
 
   @media (min-width: 1200px) {
     padding: 0 6%;
+  }
+
+  .mobile-display {
+    display: none;
+    position: relative;
+
+    @media (max-width: 1000px) {
+      display: block;
+      width: 100%;
+      z-index: 10;
+    }
   }
   
   h3 {
@@ -303,6 +330,22 @@ $appHeight: 150vh;
     background-image: url("../assets/woodgrain.svg");
     border-top: 5px solid var(--tertiary);
     filter:opacity(0.5);
+
+     @media (max-width: 1000px) {
+      background-size: cover;
+    }
+  }
+}
+
+h1.name {
+  margin-bottom: 0;
+}
+
+h2.tagline {
+  margin-top: 0;
+
+  @media (max-width: 850px) {
+    font-size: 1.25rem;
   }
 }
 
@@ -312,12 +355,34 @@ $appHeight: 150vh;
   position: relative;
   z-index: 10;
 
+  @media (max-width: 1000px) {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 0;
+
+    .side-menu-display {
+      width: 50%;
+      padding-right: 2rem;
+
+      &.first {
+        h1.name, h2.tagline {
+          display: none;
+        }
+      }
+    }
+  }
+
   h1 {
     font-size: 2rem;
     margin: 0;
     padding: 0;
     text-transform: uppercase;
     color: var(--primaryDark);
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 
   .fancy {
@@ -325,6 +390,12 @@ $appHeight: 150vh;
     padding: 0;
     color: var(--primary);
     font-size: 1.25rem;
+  }
+
+  h2.tagline {
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 
   h3 {
