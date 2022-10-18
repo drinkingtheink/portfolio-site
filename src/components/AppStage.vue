@@ -213,7 +213,7 @@ $appHeight: 150vh;
     padding: 0 6%;
   }
 
-  @media (min-width: 12600px) {
+  @media (min-width: 1600px) {
     padding: 0 12%;
   }
 
@@ -442,7 +442,7 @@ h2.tagline {
 }
 
 .link-list-wrapper {
-  padding-bottom: 40rem;
+  padding-bottom: 100rem;
   max-height: 120vh;
   overflow-x: auto;
   padding: 1rem;
