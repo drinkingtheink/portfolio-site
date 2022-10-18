@@ -209,8 +209,12 @@ $appHeight: 150vh;
     padding: 0 2rem;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1201px) {
     padding: 0 6%;
+  }
+
+  @media (min-width: 12600px) {
+    padding: 0 12%;
   }
 
   .mobile-display {
