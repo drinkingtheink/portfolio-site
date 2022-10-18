@@ -61,6 +61,7 @@ export default {
   font-family: $fancyFont;
   font-size: 1.5rem;
   transition: all 0.5s;
+  border-bottom: 3px solid var(--tertiary);
 }
 
 .app-stage {
@@ -82,6 +83,7 @@ export default {
     .nametag {
       background-color: var(--secondary);
       color: white;
+      border-color: white;
     }
   }
 
@@ -89,6 +91,7 @@ export default {
     .nametag {
       background-color: var(--primary);
       color: white;
+      border-color: var(--accent);
     }
   }
 }

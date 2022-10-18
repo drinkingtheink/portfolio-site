@@ -187,11 +187,11 @@ $appHeight: 150vh;
   border-top: 15px solid var(--accent);
 
   @media (max-width: 1200px) {
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
 
   @media (min-width: 1200px) {
-    padding: 0 10%;
+    padding: 0 6%;
   }
   
   h3 {
