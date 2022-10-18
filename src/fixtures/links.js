@@ -88,30 +88,35 @@ const artList = [
         desc: 'Artwork to accompany musical releases of many generes',
         href: 'https://www.behance.net/gallery/153105507/ALBUM-EP-COVERS',
         img: '../../banners/music-banner.png',
+        tech: ['Illustration', 'Digital', 'Printing', 'Typography'],
     },
     {
         name: 'Illustrations',
         desc: 'Character studies of some of my favorite people/things/entities',
         href: 'https://www.behance.net/gallery/155058821/Identity-Design',
         img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
+        tech: ['Handdrawn', 'Analog', 'Old School'],
     },
     {
         name: 'Austin FC Matchday Poster Collection',
         desc: 'Bespoke ATXFC matchday posters paying homage to COMICS',
         href: 'https://www.behance.net/gallery/152850805/Austin-FC-Matchday-Poster-Gallery',
         img: '../../banners/atxfc-banner.png',
+        tech: ['Digital', 'Animation', 'SVG'],
     },
     {
         name: 'Warpchitecture Digital Collages',
         desc: 'Digital photographic collage collection documenting my travels',
         href: 'https://www.behance.net/gallery/155075669/Warpchitecture-Digital-Collage-Collection',
         img: '../../banners/warp-banner.png',
+        tech: ['Photography', 'Digital'],
     },
     {
         name: 'Identity Design',
         desc: 'Branding and other ephemera for mamy different industries',
         href: 'https://www.behance.net/gallery/155058821/Identity-Design',
         img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
+        tech: ['Digital', 'Illustration', 'Typography'],
     },
 ]
 
