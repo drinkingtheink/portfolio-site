@@ -36,7 +36,7 @@ const appList = [
     },
     {
         name: 'Grand Ephemeris Website',
-        desc: 'Website for my band with quite a few FE Easter Eggs',
+        desc: 'Website for my band with a few FE Easter Eggs',
         href: 'https://grandephemeris.com/',
         tech: ['Vue', 'Animation', 'SVG'],
         img: '../../banners/ge-banner.png',

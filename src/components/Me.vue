@@ -45,6 +45,10 @@ export default {
   @media (max-width: 1000px) {
     bottom: 0;
   }
+
+  @media (max-width: 700px) {
+    max-width: 22rem;
+  }
 }
 
 #MeSciFi {

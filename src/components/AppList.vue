@@ -34,6 +34,10 @@ export default {
   border-left: 10px solid var(--primary);
   box-shadow: -1px 7px 19px -3px rgba(0,0,0,0.5);
 
+  @media (max-width: 700px) {
+    max-width: 100%;
+  }
+
   &:hover {
     border-color: var(--accent);
 
@@ -96,7 +100,7 @@ export default {
   }
 
   .name, .desc {
-    text-shadow: 4px 4px 2px rgba(white, 0.6);
+    text-shadow: 0 0px 9px rgb(255, 255, 255, 1.0);
   }
 }
 

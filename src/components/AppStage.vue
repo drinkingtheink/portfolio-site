@@ -196,6 +196,10 @@ $appHeight: 150vh;
   transition: all 0.5s;
   border-top: 15px solid var(--accent);
 
+  @media (max-width: 700px) {
+    padding: 0 1rem;
+  }
+
   @media (max-width: 1000px) {
     display: block;
     height: 100%;
@@ -302,7 +306,15 @@ $appHeight: 150vh;
   &.music {
     background-color: var(--secondary);
     background-color: #f3b562;
-    background: radial-gradient(circle, rgba(243,181,98,1) 45%, rgba(238,146,41,1) 81%);    
+    background: radial-gradient(circle, rgba(243,181,98,1) 45%, rgba(238,146,41,1) 81%); 
+    
+    h1.name {
+      color: var(--color4);
+    }
+
+    h2.tagline {
+      color: var(--accent);
+    }
 
     .side-menu {
       h1 {
@@ -328,7 +340,7 @@ $appHeight: 150vh;
     width: 100%; height: calc($appHeight - 15px);
     background-image: url("../assets/woodgrain.svg");
     border-top: 5px solid var(--tertiary);
-    filter:opacity(0.5);
+    filter: opacity(0.5);
 
      @media (max-width: 1000px) {
       background-size: cover;
@@ -377,6 +389,16 @@ h2.tagline {
     }
   }
 
+  @media (max-width: 700px) {
+    display: block;
+    padding: 0;
+
+    .side-menu-display {
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+
   h1 {
     font-size: 2rem;
     margin: 0;
@@ -420,6 +442,10 @@ h2.tagline {
   max-height: 120vh;
   overflow-x: auto;
   padding: 1rem;
+
+  @media (max-width: 700px) {
+    padding: 1rem 0;
+  }
 }
 
 .topic-selection {
