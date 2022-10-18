@@ -339,13 +339,18 @@ $appHeight: 150vh;
 
 h1.name {
   margin-bottom: 0;
+
+  @media (max-width: 800px) {
+    text-align: center;
+  }
 }
 
 h2.tagline {
   margin-top: 0;
 
-  @media (max-width: 850px) {
+  @media (max-width: 800px) {
     font-size: 1.25rem;
+    text-align: center;
   }
 }
 
