@@ -47,8 +47,8 @@
       <div class="link-list-wrapper" v-show="currentTopic === 'web'" >
         <AppList :appList="appList" />
       </div>
-      <div class="art-gallery-wrapper" v-show="currentTopic === 'art'">
-        <ArtGallery />
+      <div class="link-list-wrapper" v-show="currentTopic === 'art'">
+        <AppList :appList="artList" />
       </div>
       <div class="about-wrapper" v-show="currentTopic === 'about'">
         <About :needsCompFont="currentInterest === 'sci-fi'" />
@@ -58,10 +58,9 @@
 </template>
 
 <script>
-import { appList, social } from '../fixtures/links'
+import { appList, social, artList } from '../fixtures/links'
 import Me from './Me.vue'
 import AppList from './AppList.vue'
-import ArtGallery from './ArtGallery.vue'
 import About from './About.vue'
 
 export default {
@@ -69,7 +68,6 @@ export default {
   components: {
     Me,
     AppList,
-    ArtGallery,
     About,
   },
   data() {
@@ -78,6 +76,7 @@ export default {
       appList: appList,
       socialLinks: social,
       currentTopic: null,
+      artList: artList,
       topics: [
         'web',
         'art',

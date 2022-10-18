@@ -2,7 +2,7 @@ const appList = [
     {
         name: 'Watchful Eye',
         desc: 'Visualizing near-Earth objects using NASA APIs',
-        href: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
+        href: 'https://watchful-eye.netlify.app/',
         tech: ['Vue.js', 'APIs', 'SVG'],
         img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
     },
@@ -82,4 +82,37 @@ const social = [
     },
 ]
 
-export { appList, social };
+const artList = [
+    {
+        name: 'Album/Release Artwork',
+        desc: 'Artwork to accompany musical releases of many generes',
+        href: 'https://www.behance.net/gallery/153105507/ALBUM-EP-COVERS',
+        img: '../../banners/music-banner.png',
+    },
+    {
+        name: 'Illustrations',
+        desc: 'Character studies of some of my favorite people/things/entities',
+        href: 'https://www.behance.net/gallery/155058821/Identity-Design',
+        img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
+    },
+    {
+        name: 'Austin FC Matchday Poster Collection',
+        desc: 'Bespoke ATXFC matchday posters paying homage to COMICS',
+        href: 'https://www.behance.net/gallery/152850805/Austin-FC-Matchday-Poster-Gallery',
+        img: '../../banners/atxfc-banner.png',
+    },
+    {
+        name: 'Warpchitecture Digital Collages',
+        desc: 'Digital photographic collage collection documenting my travels',
+        href: 'https://www.behance.net/gallery/155075669/Warpchitecture-Digital-Collage-Collection',
+        img: '../../banners/warp-banner.png',
+    },
+    {
+        name: 'Identity Design',
+        desc: 'Branding and other ephemera for mamy different industries',
+        href: 'https://www.behance.net/gallery/155058821/Identity-Design',
+        img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
+    },
+]
+
+export { appList, social, artList };
