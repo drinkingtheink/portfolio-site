@@ -93,8 +93,8 @@ const artList = [
     {
         name: 'Illustrations',
         desc: 'Character studies of some of my favorite people/things/entities',
-        href: 'https://www.behance.net/gallery/155058821/Identity-Design',
-        img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
+        href: 'https://www.behance.net/gallery/155077365/Illustrations',
+        img: '../../banners/illu-banner.png',
         tech: ['Handdrawn', 'Analog', 'Old School'],
     },
     {
