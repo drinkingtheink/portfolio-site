@@ -86,8 +86,8 @@ export default {
       interests: [
         'coding',
         'sci-fi',
-        'futbol',
         'music',
+        'futbol',
       ],
     }
   },

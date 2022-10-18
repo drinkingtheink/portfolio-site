@@ -94,6 +94,10 @@ export default {
       padding-right: 10rem;
     }
   }
+
+  .name, .desc {
+    text-shadow: 4px 4px 2px rgba(white, 0.6);
+  }
 }
 
 .link-info {

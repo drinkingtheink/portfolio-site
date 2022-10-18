@@ -41,6 +41,10 @@ export default {
 .me-img {
   position: absolute;
   width: 100%;
+
+  @media (max-width: 1000px) {
+    bottom: 0;
+  }
 }
 
 #MeSciFi {
