@@ -160,6 +160,10 @@ export default {
   height: 100%;
   width: 100%;
   background-image: linear-gradient(to left, rgba(255,0,0,0) 0%, rgba(255,255,255,1) 60%);
+
+  @media (max-width: 700px) {
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0) 20%, rgb(255, 255, 255) 50%);
+  }
 }
 
 .app-stage {
