@@ -210,19 +210,19 @@ $appHeight: 150vh;
   border-top: 15px solid var(--accent);
   position: relative;
 
-  @media (min-width: 1700px) {
+  @media (min-width: 1501px) {
     padding: 0 15%;
   }
 
-  @media (max-width: 1500px) {
+  @media (min-width: 1201px) and (max-width: 1500px) {
     padding: 0 6%;
   }
 
-  @media (max-width: 1200px) {
+  @media (min-width: 1001px) and (max-width: 1200px) {
     padding: 0 2rem;
   }  
 
-  @media (max-width: 1000px) {
+  @media (min-width: 701px) and (max-width: 1000px) {
     display: block;
     height: 100%;
   }
