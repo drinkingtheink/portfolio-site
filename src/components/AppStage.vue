@@ -56,6 +56,9 @@
         </div>
       </section>
     </main>
+
+    <!-- Img Preload List -->
+    <img src="../assets/bg/woodgrain.svg" style="display: none;" />
   </div>
 </template>
 
