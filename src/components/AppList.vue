@@ -97,6 +97,11 @@ export default {
     @media (max-width: 1200px) {
       padding-right: 10rem;
     }
+
+    @media (max-width: 700px) {
+      font-size: 1rem;
+      padding-right: 5rem;
+    }
   }
 
   .name, .desc {

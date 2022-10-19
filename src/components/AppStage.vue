@@ -196,25 +196,25 @@ $appHeight: 150vh;
   transition: all 0.5s;
   border-top: 15px solid var(--accent);
 
-  @media (max-width: 700px) {
-    padding: 0 1rem;
-  }
-
-  @media (max-width: 1000px) {
-    display: block;
-    height: 100%;
-  }
-
-  @media (max-width: 1200px) {
-    padding: 0 2rem;
+   @media (min-width: 1600px) {
+    padding: 0 12%;
   }
 
   @media (min-width: 1201px) {
     padding: 0 6%;
   }
 
-  @media (min-width: 1600px) {
-    padding: 0 12%;
+  @media (max-width: 1200px) {
+    padding: 0 2rem;
+  }  
+
+  @media (max-width: 1000px) {
+    display: block;
+    height: 100%;
+  }
+
+  @media (max-width: 700px) {
+    padding: 0 1rem;
   }
 
   .mobile-display {
@@ -233,6 +233,10 @@ $appHeight: 150vh;
     margin: 0 0 0 0.25rem 0;
     border-bottom: 2px solid var(--secondary);
     color: var(--primaryDark);
+
+    @media (max-width: 500px) {
+      margin-top: 0.5rem;
+    }
   }
 
   &.coding {
@@ -438,6 +442,10 @@ h2.tagline {
     display: flex;
     justify-content: center;
     height: 20rem;
+
+    @media (max-width: 1000px) {
+      padding: 0;
+    }
   }
 }
 
