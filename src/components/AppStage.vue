@@ -188,7 +188,7 @@ export default {
   background-color: var(--tertiary)
 }
 
-$appHeight: 150vh;
+$appHeight: 170%;
 
 .app-stage {
   height: $appHeight;
@@ -455,7 +455,7 @@ h2.tagline {
 
 .link-list-wrapper {
   padding-bottom: 100rem;
-  max-height: 120vh;
+  max-height: 50rem;
   overflow-x: auto;
   padding: 1rem;
 
