@@ -35,6 +35,13 @@ const appList = [
         img: 'https://i.ibb.co/zPQXgGj/Screen-Shot-2022-10-14-at-4-11-59-PM.png',
     },
     {
+        name: 'Quality of Life Report',
+        desc: 'Exploring Quality of Life metrics for cities all over the world. How does yours rank?',
+        href: 'https://qol-report.surge.sh/',
+        tech: ['Vue', 'Animation', 'APIs'],
+        img: '../../banners/qol-banner.png',
+    },
+    {
         name: 'Grand Ephemeris Website',
         desc: 'Website for my band with a few FE Easter Eggs',
         href: 'https://grandephemeris.com/',
