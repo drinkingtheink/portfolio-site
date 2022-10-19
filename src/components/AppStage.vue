@@ -196,10 +196,13 @@ $appHeight: 150vh;
   transition: all 0.5s;
   border-top: 15px solid var(--accent);
 
-  @media (min-width: 1600px) {
-    padding: 0 15%;
+  @media (max-width: 2000px) {
+    padding: 0 20%;
   }
 
+  @media (max-width: 1600px) {
+    padding: 0 15%;
+  }
 
   @media (max-width: 1200px) {
     padding: 0 2rem;
