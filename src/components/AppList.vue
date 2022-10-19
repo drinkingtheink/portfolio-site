@@ -15,6 +15,7 @@
             <div class="fade-over" />
             <img :style="{ backgroundImage: `url(${link.img})` }" class="link-img" />
         </div>
+        <img :src="link.img" style="display: none;" />
     </div>
 </template>
 
