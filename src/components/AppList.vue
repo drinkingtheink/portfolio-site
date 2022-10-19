@@ -1,5 +1,10 @@
 <template>
-  <div v-for="link in appList" class="link-list" :key="link.href">
+  <div 
+    v-for="(link, index) in appList" 
+    class="link-list fade" 
+    :key="link.href"
+    :style="{ animationDelay: `0.${index}s` }"
+  >
         <div class="arrow-right" />
         <div class="link-info">
             <h4 class="name"><a :href="link.href" target="_blank">{{ link.name }}</a></h4>
@@ -25,6 +30,7 @@ export default {
 
 <style lang="scss">
 @import '../styles/palette';
+@import '../styles/animations';
 
 .link-list {
   position: relative;

@@ -1,5 +1,5 @@
 <template>
-  <div class="about-stage">
+  <div class="about-stage fade">
     <h2>About Me</h2>
     <p class="intro" :class="{ 'comp' : needsCompFont }">{{ intro }}</p>
     <p class="body" :class="{ 'comp' : needsCompFont }">{{ body }}</p>
@@ -23,6 +23,7 @@ export default {
 
 <style lang="scss">
 @import '../styles/palette';
+@import '../styles/animations';
 
 .about-stage {
     padding: 1rem 2rem;
@@ -32,6 +33,7 @@ export default {
     position: relative;
     z-index: 10;
     min-height: 30rem;
+    animation-delay: 0.1s;
 }
 
 .app-stage.sci-fi .about-stage {
