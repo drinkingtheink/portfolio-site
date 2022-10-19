@@ -1,61 +1,62 @@
 <template>
-  <main class="app-stage" :class="[currentInterest]">
-    <ScifiBG class="sci-fi-bg" v-show="currentInterest === 'sci-fi'" />
-    <h1 class="name mobile-display">Jason M. Harrison </h1>
-    <h2 class="fancy tagline  mobile-display">Over a Decade Working Where Art + Science Meet</h2>
-    
-    <section class="side-menu">
-      <div class="side-menu-display first">
-        <h1 class="name">Jason M. Harrison </h1>
-        <h2 class="fancy tagline">Over a Decade Working Where Art + Science Meet</h2>
-        <div class="me-wrapper">
-          <Me class="me-img" :currentInterest="currentInterest" />
+  <div>
+    <main class="app-stage" :class="[currentInterest]">
+      <h1 class="name mobile-display">Jason M. Harrison </h1>
+      <h2 class="fancy tagline  mobile-display">Over a Decade Working Where Art + Science Meet</h2>
+      
+      <section class="side-menu">
+        <div class="side-menu-display first">
+          <h1 class="name">Jason M. Harrison </h1>
+          <h2 class="fancy tagline">Over a Decade Working Where Art + Science Meet</h2>
+          <div class="me-wrapper">
+            <Me class="me-img" :currentInterest="currentInterest" />
+          </div>
         </div>
-      </div>
-      <div class="side-menu-display second">
-        <h3>Interests:</h3>
-        <div class="interests-wrapper">
-          <button 
-            v-for="int in interests" 
-            :key="int" 
-            class="int"
-            :class="{ active: int === currentInterest }"
-            @click="setInterest(int)"
-          >{{ int }}</button>
-        </div>
-        <h3>Find Me:</h3>
+        <div class="side-menu-display second">
+          <h3>Interests:</h3>
+          <div class="interests-wrapper">
+            <button 
+              v-for="int in interests" 
+              :key="int" 
+              class="int"
+              :class="{ active: int === currentInterest }"
+              @click="setInterest(int)"
+            >{{ int }}</button>
+          </div>
+          <h3>Find Me:</h3>
 
-        <div class="socials-wrapper">
-          <a 
-            v-for="link in socialLinks" 
-            :key="link.href"
-            :href="link.href"
-            class="social"
-            target="_blank"
-          >{{ link.name }}</a>
+          <div class="socials-wrapper">
+            <a 
+              v-for="link in socialLinks" 
+              :key="link.href"
+              :href="link.href"
+              class="social"
+              target="_blank"
+            >{{ link.name }}</a>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="main-stage">
-      <div class="topic-selection">
-        <button 
-          v-for="topic in topics" 
-          :key="topic" 
-          :class="{ active: topic === currentTopic }"
-          @click="setTopic(topic)"
-        >{{ topic }}</button>
-      </div>
-      <div class="link-list-wrapper" v-show="currentTopic === 'web'" >
-        <AppList :appList="appList" />
-      </div>
-      <div class="link-list-wrapper" v-show="currentTopic === 'art'">
-        <AppList :appList="artList" />
-      </div>
-      <div class="about-wrapper" v-show="currentTopic === 'about'">
-        <About :needsCompFont="currentInterest === 'sci-fi'" />
-      </div>
-    </section>
-  </main>
+      </section>
+      <section class="main-stage">
+        <div class="topic-selection">
+          <button 
+            v-for="topic in topics" 
+            :key="topic" 
+            :class="{ active: topic === currentTopic }"
+            @click="setTopic(topic)"
+          >{{ topic }}</button>
+        </div>
+        <div class="link-list-wrapper" v-show="currentTopic === 'web'" >
+          <AppList :appList="appList" />
+        </div>
+        <div class="link-list-wrapper" v-show="currentTopic === 'art'">
+          <AppList :appList="artList" />
+        </div>
+        <div class="about-wrapper" v-show="currentTopic === 'about'">
+          <About :needsCompFont="currentInterest === 'sci-fi'" />
+        </div>
+      </section>
+    </main>
+  </div>
 </template>
 
 <script>
@@ -63,7 +64,6 @@ import { appList, social, artList } from '../fixtures/links'
 import Me from './Me.vue'
 import AppList from './AppList.vue'
 import About from './About.vue'
-import ScifiBG from './ScifiBG.vue'
 
 export default {
   name: 'AppStage',
@@ -71,7 +71,6 @@ export default {
     Me,
     AppList,
     About,
-    ScifiBG,
   },
   data() {
     return {
@@ -144,6 +143,7 @@ export default {
   position: absolute;
   top: 0; left: 0;
   height: 100%; width: 100%;
+  z-index: 0;
 }
 
 .interests-wrapper {
@@ -296,16 +296,16 @@ $appHeight: 150vh;
       }
     }
 
-    // &.sci-fi::before {
-    //   background-color: transparent;
-    //   content: '';
-    //   position: absolute;
-    //   top: 15px; left: 0;
-    //   width: 100%; height: calc($appHeight - 15px);
-    //   // background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(235, 23%, 10%, 1)'/><path d='M14.5 6.628L8.886 3.372v-6.515L14.502-6.4l5.612 3.257-.001 6.514zm0 50.06l-5.613-3.256v-6.515l5.614-3.258 5.612 3.257-.001 6.515zm14.497-25.117l-5.612-3.257v-6.515L29 18.541l5.612 3.257-.001 6.515zm-29 0l-5.612-3.257v-6.515L0 18.541l5.612 3.257v6.515zM14.5 11.82L4.36 5.967l.002-11.706 10.14-5.855L24.638-5.74l-.001 11.707zm0 50.06L4.36 56.028l.002-11.706 10.14-5.855 10.137 5.852-.001 11.707zm14.498-25.118L18.858 30.91l.002-11.707L29 13.349l10.137 5.853-.001 11.706zm-29 0l-10.139-5.852.002-11.707L0 13.349l10.138 5.853-.002 11.706zm14.501-19.905L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z'  stroke-linejoin='round' stroke-linecap='round' stroke-width='0.5' stroke='hsla(55, 2%, 29%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
-    //   border-top: 5px solid white;
-    //   filter:opacity(1);
-    // }
+    &.sci-fi::before {
+      background-color: transparent;
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: calc($appHeight - 15px);
+      background-image: url("../assets/bg/sci-fi-pattern.svg");
+      border-top: 5px solid white;
+      filter:opacity(1);
+    }
   }
 
   &.futbol {
@@ -360,7 +360,7 @@ $appHeight: 150vh;
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: calc($appHeight - 20px);
-    background-image: url("../assets/woodgrain.svg");
+    background-image: url("../assets/bg/woodgrain.svg");
     border-top: 5px solid var(--tertiary);
     filter: opacity(0.5);
 
