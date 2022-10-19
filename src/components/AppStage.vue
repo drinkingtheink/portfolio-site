@@ -222,7 +222,7 @@ $appHeight: 150vh;
     padding: 0 2rem;
   }  
 
-  @media (min-width: 701px) and (max-width: 1000px) {
+  @media (max-width: 1000px) {
     display: block;
     height: 100%;
   }
