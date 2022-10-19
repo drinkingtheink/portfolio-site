@@ -59,6 +59,7 @@
 
     <!-- Img Preload List -->
     <img src="../assets/bg/woodgrain.svg" style="display: none;" />
+    <img src="../assets/bg/sci-fi-pattern.svg" style="display: none;" />
   </div>
 </template>
 

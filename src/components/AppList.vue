@@ -1,22 +1,29 @@
 <template>
-  <div 
-    v-for="(link, index) in appList" 
-    class="link-list fade" 
-    :key="link.href"
-    :style="{ animationDelay: `0.${index}s` }"
-  >
-        <div class="arrow-right" />
-        <div class="link-info">
-            <h4 class="name"><a :href="link.href" target="_blank">{{ link.name }}</a></h4>
-            <p class="desc fancy">{{ link.desc }}</p>
-            <section class="tech-display">
-                <span v-for="tech in link.tech" :key="tech" class="pill">{{ tech }}</span>
-            </section>
-            <div class="fade-over" />
-            <img :style="{ backgroundImage: `url(${link.img})` }" class="link-img" />
-        </div>
-        <img :src="link.img" style="display: none;" />
-    </div>
+  <div>
+    <div 
+      v-for="(link, index) in appList" 
+      class="link-list fade" 
+      :key="link.href"
+      :style="{ animationDelay: `0.${index}s` }"
+    >
+          <div class="arrow-right" />
+          <div class="link-info">
+              <h4 class="name"><a :href="link.href" target="_blank">{{ link.name }}</a></h4>
+              <p class="desc fancy">{{ link.desc }}</p>
+              <section class="tech-display">
+                  <span v-for="tech in link.tech" :key="tech" class="pill">{{ tech }}</span>
+              </section>
+              <div class="fade-over" />
+              <img :style="{ backgroundImage: `url(${link.img})` }" class="link-img" />
+          </div>
+      </div>
+      <img src="/banners/atxfc-banner.png" style="display:none;" />
+      <img src="/banners/ge-banner.png" style="display:none;" />
+      <img src="/banners/illu-banner.png" style="display:none;" />
+      <img src="/banners/music-banner.png" style="display:none;" />
+      <img src="/banners/qol-banner.png" style="display:none;" />
+      <img src="/banners/warp-banner.png" style="display:none;" />
+  </div>
 </template>
 
 <script>
