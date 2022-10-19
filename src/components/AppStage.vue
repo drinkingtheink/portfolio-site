@@ -196,10 +196,6 @@ $appHeight: 150vh;
   transition: all 0.5s;
   border-top: 15px solid var(--accent);
 
-   @media (max-width: 1600px) {
-    padding: 0 12%;
-  }
-
   @media (min-width: 1201px) {
     padding: 0 6%;
   }
@@ -215,6 +211,10 @@ $appHeight: 150vh;
 
   @media (max-width: 700px) {
     padding: 0 1rem;
+  }
+
+  @media (max-width: 1600px) {
+    padding: 0 12%;
   }
 
   .mobile-display {
