@@ -200,8 +200,12 @@ $appHeight: 150vh;
     padding: 0 20%;
   }
 
-  @media (max-width: 1600px) {
+  @media (max-width: 1700px) {
     padding: 0 15%;
+  }
+
+  @media (max-width: 1500px) {
+    padding: 0 6%;
   }
 
   @media (max-width: 1200px) {
