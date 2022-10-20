@@ -404,7 +404,7 @@ h2.tagline {
 }
 
 .side-menu {
-  padding: 2rem 2rem 1rem;
+  padding: 2rem 2rem 1rem 0;
   max-width: 20rem;
   position: relative;
   z-index: 10;
