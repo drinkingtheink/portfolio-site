@@ -1,5 +1,5 @@
 <template>
-    <svg id="JH-monogram" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.06 318.32">
+    <svg class="JH-monogram" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285.06 318.32">
         <polygon
             class="cls-1"
             points="257.18 73.95 285.06 63.13 218.06 63.13 218.06 89.13 218.08 89.12 218.08 132.85 203.06 132.85 203.06 157.5 218.08 157.5 218.08 209.13 218.06 209.13 218.06 235.13 218.08 235.13 257.18 235.13 285.06 235.13 257.18 224.31 257.18 73.95"
@@ -22,7 +22,7 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/palette';
 .cls-1{fill:var(--tertiary);} 
-#JH-monogram * {
+.JH-monogram * {
     transition: all .3s;
 }
 </style>

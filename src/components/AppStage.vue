@@ -6,8 +6,13 @@
       
       <section class="side-menu">
         <div class="side-menu-display first">
-          <h1 class="name">Jason M. Harrison </h1>
-          <h2 class="fancy tagline">Over a Decade Working Where Art + Science Meet</h2>
+          <div class="flexer">
+            <JHMonogram class="logo side-menu" />
+            <div class="header-text">
+              <h1 class="name">Jason M. Harrison </h1>
+              <h2 class="fancy tagline">Over a Decade Working Where Art + Science Meet</h2>
+            </div>
+          </div>
           <div class="me-wrapper">
             <Me class="me-img" :currentInterest="currentInterest" />
           </div>
@@ -68,6 +73,7 @@ import { appList, social, artList } from '../fixtures/links'
 import Me from './Me.vue'
 import AppList from './AppList.vue'
 import About from './About.vue'
+import JHMonogram from './JHMonogram.vue'
 
 export default {
   name: 'AppStage',
@@ -75,6 +81,7 @@ export default {
     Me,
     AppList,
     About,
+    JHMonogram,
   },
   data() {
     return {
@@ -229,6 +236,10 @@ $appHeight: 150vh;
 
   @media (max-width: 700px) {
     padding: 0 1rem;
+  }
+
+  header {
+    display: flex;
   }
 
   .mobile-display {
@@ -418,8 +429,23 @@ h2.tagline {
     }
   }
 
+  .logo.side-menu {
+    width: 3rem;
+    padding: 0.5rem 0.5rem 0 0;
+    position: absolute;
+    border-right: 1px solid var(--primary);
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  .header-text {
+    padding-left: 4.5rem;
+  }
+
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0;
     padding: 0;
     text-transform: uppercase;
@@ -434,7 +460,7 @@ h2.tagline {
     margin: 0;
     padding: 0;
     color: var(--primary);
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   h2.tagline {

@@ -4,7 +4,6 @@
     <MeSciFi v-show="currentInterest === 'sci-fi'" class="me" />
     <MeFB v-show="currentInterest === 'futbol'" class="me" />
     <div class="nametag">
-      <JHMonogram class="logo" />
       {{ currentInterest === 'coding' ? 'Console Cowboy' : null }}
       {{ currentInterest === 'sci-fi' ? 'Explorer' : null }}
       {{ currentInterest === 'futbol' ? 'Futbolero' : null }}
@@ -17,7 +16,6 @@
 import MeCode from './MeCode.vue'
 import MeSciFi from './MeSciFi.vue'
 import MeFB from './MeFB.vue'
-import JHMonogram from './JHMonogram.vue'
 
 export default {
   name: 'Me',
@@ -28,7 +26,6 @@ export default {
     MeCode,
     MeSciFi,
     MeFB,
-    JHMonogram,
   },
 }
 </script>
@@ -73,13 +70,6 @@ export default {
   font-size: 1.5rem;
   transition: all 0.5s;
   border-bottom: 3px solid var(--tertiary);
-
-  .logo {
-    max-width: 70px;
-    position: absolute;
-    top: -10px;
-    left: 20px;
-  }
 }
 
 .app-stage {
@@ -103,10 +93,6 @@ export default {
       color: white;
       border-color: white;
     }
-
-    .logo * {
-        fill: white;
-      }
   }
 
   &.music {
@@ -114,10 +100,6 @@ export default {
       background-color: var(--primary);
       color: white;
       border-color: var(--accent);
-
-      .logo * {
-        fill: var(--accent);
-      }
     }
   }
 }
