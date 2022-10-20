@@ -23,6 +23,7 @@
       <img src="/banners/music-banner.png" style="display:none;" />
       <img src="/banners/qol-banner.png" style="display:none;" />
       <img src="/banners/warp-banner.png" style="display:none;" />
+      <img src="/banners/non-public-banner.png" style="display:none;" />
   </div>
 </template>
 
