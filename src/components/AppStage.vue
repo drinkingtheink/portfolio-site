@@ -376,6 +376,7 @@ h1.name {
 
 h2.tagline {
   margin-top: 0;
+  color: var(--color3);
 
   @media (max-width: 800px) {
     font-size: 1.25rem;
