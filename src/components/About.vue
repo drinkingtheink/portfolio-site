@@ -81,4 +81,12 @@ export default {
     }
 }
 
+.app-stage.music .about-stage {
+    background-color: white;
+
+    h2 {
+        color: var(--color4);
+    }
+}
+
 </style>
