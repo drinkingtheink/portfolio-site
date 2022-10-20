@@ -47,7 +47,8 @@ export default {
         width: 7rem;
         bottom: 2rem;
         right: 2rem;
-        opacity: 0.75;
+        opacity: 0.25;
+        color: var(--accent);
     }
 }
 
