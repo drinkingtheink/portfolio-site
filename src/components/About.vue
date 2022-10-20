@@ -3,14 +3,20 @@
     <h2>About Me</h2>
     <p class="intro" :class="{ 'comp' : needsCompFont }">{{ intro }}</p>
     <p class="body" :class="{ 'comp' : needsCompFont }">{{ body }}</p>
+    <JHMonogram class="about-logo" />
   </div>
 </template>
 
 <script>
+import JHMonogram from './JHMonogram.vue'
+
 export default {
   name: 'About',
   props: {
     needsCompFont: Boolean,
+  },
+  components: {
+    JHMonogram,
   },
   data() {
       return {
@@ -26,6 +32,7 @@ export default {
 @import '../styles/animations';
 
 .about-stage {
+    position: relative;
     padding: 1rem 2rem;
     background-color: var(--color3);
     color: white;
@@ -34,6 +41,14 @@ export default {
     z-index: 10;
     min-height: 30rem;
     animation-delay: 0.1s;
+
+    .about-logo {
+        position: absolute;
+        width: 7rem;
+        bottom: 2rem;
+        right: 2rem;
+        opacity: 0.75;
+    }
 }
 
 .app-stage.sci-fi .about-stage {

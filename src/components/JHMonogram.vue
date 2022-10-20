@@ -20,5 +20,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.cls-1{fill:#a6a6a6;}
+@import '../styles/palette';
+.cls-1{fill:var(--tertiary);} 
+#JH-monogram * {
+    transition: all .3s;
+}
 </style>

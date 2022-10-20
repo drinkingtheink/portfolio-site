@@ -334,17 +334,13 @@ $appHeight: 150vh;
       color: var(--color4);
     }
 
-    h2.tagline {
-      color: var(--accent);
-    }
-
     .side-menu {
       h1 {
         color: var(--color4);
       }
 
       h2.fancy {
-        color: var(--accent);
+        color: var(--color3);
       }
     }
 
