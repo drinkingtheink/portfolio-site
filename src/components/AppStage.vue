@@ -330,6 +330,14 @@ $appHeight: 150vh;
     .pill {
       color: white;
     }
+
+    .JH-monogram.logo.side-menu {
+      border-color: var(--secondary);
+
+      .cls-1 {
+        fill: var(--secondary) !important;
+      }
+    }
   }
 
   .main-stage {
@@ -431,7 +439,7 @@ h2.tagline {
 
   .logo.side-menu {
     width: 3rem;
-    padding: 0.5rem 0.5rem 0 0;
+    padding: 0.5rem 0.5rem 0.5rem 0;
     position: absolute;
     border-right: 1px solid var(--primary);
 
