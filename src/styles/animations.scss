@@ -7,10 +7,30 @@
         opacity: 1; 
         transform: translateY(0px);
     }
-  }
+}
 
-  .fade {
+.fade {
     animation-duration: 0.5s;
     animation-name: fade;
     animation-fill-mode: backwards;
-  }
+}
+
+@keyframes hover {
+    0% { 
+        transform: translateY(-5px);
+    }
+    100% { 
+        transform: translateY(5px);
+    }
+}
+
+.hover {
+
+    &:hover {
+        animation-name: hover;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+    }
+}
+
+  
