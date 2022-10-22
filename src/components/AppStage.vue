@@ -1,8 +1,13 @@
 <template>
   <div>
     <main class="app-stage" :class="[currentInterest]">
-      <h1 class="name mobile-display">Jason M. Harrison </h1>
-      <h2 class="fancy tagline  mobile-display">Over a Decade Working Where Art + Science Meet</h2>
+      <div class="small-screen-title">
+        <JHMonogram class="logo small-screen" />
+        <div>
+          <h1 class="name mobile-display">Jason M. Harrison </h1>
+          <h2 class="fancy tagline  mobile-display">Over a Decade Working Where Art + Science Meet</h2>
+        </div>
+      </div>
       
       <section class="side-menu">
         <div class="side-menu-display first">
@@ -149,6 +154,34 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/palette';
 @import '../styles/typog';
+
+.small-screen-title {
+  display: flex;
+
+  @media (min-width: 1001px) {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+    width: 4rem;
+    padding: 0 1rem;
+    margin-right: 1rem;
+    border-right: 1px solid var(--primary);
+  }
+
+  .logo {
+    display: block;
+  }
+
+  .name {
+    font-size: 1.4rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+}
 
 .sci-fi-bg {
   position: absolute;
@@ -387,10 +420,6 @@ $appHeight: 150vh;
 
 h1.name {
   margin-bottom: 0;
-
-  @media (max-width: 800px) {
-    text-align: center;
-  }
 }
 
 h2.tagline {
@@ -399,7 +428,6 @@ h2.tagline {
 
   @media (max-width: 800px) {
     font-size: 1.25rem;
-    text-align: center;
   }
 }
 
