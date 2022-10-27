@@ -157,6 +157,7 @@ export default {
 
 .small-screen-title {
   display: flex;
+  position: relative;
 
   @media (min-width: 1001px) {
     display: none;
