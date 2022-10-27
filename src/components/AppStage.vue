@@ -528,8 +528,9 @@ h2.tagline {
   max-height: 50rem;
   overflow-x: auto;
   padding: 1rem;
-  border-top: 3px solid var(--accent);
-  border-bottom: 3px solid var(--accent);
+  border-top: 5px solid var(--accent);
+  border-bottom: 5px solid var(--accent);
+  position: relative;
 
   @media (max-width: 700px) {
     padding: 1rem 0;
