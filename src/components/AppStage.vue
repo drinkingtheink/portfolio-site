@@ -4,8 +4,8 @@
       <div class="small-screen-title">
         <JHMonogram class="logo small-screen" />
         <div>
-          <h1 class="name mobile-display">Jason M. Harrison </h1>
-          <h2 class="fancy tagline  mobile-display">Over a Decade Working Where Art + Science Meet</h2>
+          <h1 class="name mobile-display">{{ title }}</h1>
+          <h2 class="fancy tagline  mobile-display">{{ tagline }}</h2>
         </div>
       </div>
       
@@ -14,8 +14,8 @@
           <div class="flexer">
             <JHMonogram class="logo side-menu" />
             <div class="header-text">
-              <h1 class="name">Jason M. Harrison </h1>
-              <h2 class="fancy tagline">Over a Decade Working Where Art + Science Meet</h2>
+              <h1 class="name">{{ title }}</h1>
+              <h2 class="fancy tagline">{{ tagline }}</h2>
             </div>
           </div>
           <div class="me-wrapper">
@@ -70,6 +70,7 @@
     <!-- Img Preload List -->
     <img src="../assets/bg/woodgrain.svg" style="display: none;" />
     <img src="../assets/bg/sci-fi-pattern.svg" style="display: none;" />
+    <img src="../assets/bg/grass-texture.svg" style="display: none;" />
   </div>
 </template>
 
@@ -107,6 +108,8 @@ export default {
         'music',
         'futbol',
       ],
+      tagline: 'Over a Decade Working Where Art + Science Meet',
+      title: 'Jason M Harrison'
     }
   },
   mounted() {
@@ -365,12 +368,37 @@ $appHeight: 150vh;
       color: white;
     }
 
+    .name {
+      color: black;
+    }
+
+    .side-menu {
+      h3 {
+        color: black;
+      }
+    }
+
     .JH-monogram.logo.side-menu {
       border-color: var(--secondary);
 
       .cls-1 {
         fill: var(--secondary) !important;
       }
+    }
+  }
+
+  &.futbol::before {
+    background-color: transparent;
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: calc($appHeight - 20px);
+    background-image: url("../assets/bg/grass-texture.svg");
+    border-top: 5px solid var(--tertiary);
+    filter: opacity(0.8);
+
+     @media (max-width: 1000px) {
+      background-size: cover;
     }
   }
 
