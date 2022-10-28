@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="list-tray">
     <div 
       v-for="(link, index) in appList" 
       class="link-list fade" 
@@ -42,6 +42,10 @@ export default {
 <style lang="scss">
 @import '../styles/palette';
 @import '../styles/animations';
+
+.list-tray {
+  padding-bottom: 30rem;
+}
 
 .link-list {
   position: relative;
