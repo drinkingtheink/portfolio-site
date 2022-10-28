@@ -22,6 +22,8 @@
       <img src="/banners/illu-banner.png" style="display:none;" />
       <img src="/banners/music-banner.png" style="display:none;" />
       <img src="/banners/qol-banner.png" style="display:none;" />
+      <img src="/banners/colour-banner.png" style="display:none;" />
+      <img src="/banners/svg-brand-banner.png" style="display:none;" />
       <img src="/banners/warp-banner.png" style="display:none;" />
       <img src="/banners/non-public-banner.png" style="display:none;" />
   </div>

@@ -62,6 +62,20 @@ const appList = [
         tech: ['React', 'APIs'],
         img: 'https://i.ibb.co/v4djTBm/Screen-Shot-2022-10-14-at-4-13-56-PM.png',
     },
+    {
+        name: 'Configurable SVG Branding',
+        desc: 'Explore options in allowing users to configure SVGs with brand elements',
+        href: 'https://icon-playground.netlify.app/',
+        tech: ['Ember.js', 'SVG', 'Prototyping'],
+        img: '../../banners/svg-brand-banner.png',
+    },
+    {
+        name: 'Colour with a YOU',
+        desc: 'Exploring color combinations and mutations with Chroma.js',
+        href: 'https://color-with-a-you.netlify.app/',
+        tech: ['Vue.js', 'Color Math', 'APIs'],
+        img: '../../banners/colour-banner.png',
+    },
 ]
 
 const social = [
