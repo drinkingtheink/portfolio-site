@@ -1,8 +1,9 @@
 <template>
   <div class="me-stage">
-    <MeCode v-show="currentInterest === 'coding' || currentInterest === 'music'" class="me" />
+    <MeCode v-show="currentInterest === 'coding'" class="me" />
     <MeSciFi v-show="currentInterest === 'sci-fi'" class="me" />
     <MeFB v-show="currentInterest === 'futbol'" class="me" />
+    <MeMusic v-show="currentInterest === 'music'" class="me" />
     <div class="nametag">
       {{ currentInterest === 'coding' ? 'Console Cowboy' : null }}
       {{ currentInterest === 'sci-fi' ? 'Explorer' : null }}
@@ -16,6 +17,7 @@
 import MeCode from './MeCode.vue'
 import MeSciFi from './MeSciFi.vue'
 import MeFB from './MeFB.vue'
+import MeMusic from './MeMusic.vue'
 
 export default {
   name: 'Me',
@@ -26,6 +28,7 @@ export default {
     MeCode,
     MeSciFi,
     MeFB,
+    MeMusic,
   },
 }
 </script>
