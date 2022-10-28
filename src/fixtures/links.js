@@ -130,7 +130,7 @@ const artList = [
         desc: 'Character studies of some of my favorite people/things/entities',
         href: 'https://www.behance.net/gallery/155077365/Illustrations',
         img: '../../banners/illu-banner.png',
-        tech: ['Handdrawn', 'Analog', 'Old School'],
+        tech: ['Hand Drawn', 'Analog', 'Old School'],
     },
     {
         name: 'Austin FC Matchday Poster Collection',
