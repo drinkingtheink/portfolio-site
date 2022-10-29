@@ -892,6 +892,7 @@ export default {
 }
 
 .me-music-wrapper {
+   margin-top: -20px;
 
    #NOTES {
       * {
@@ -925,7 +926,7 @@ export default {
       #NOTES {
          * {
             animation-name: drift;
-            animation-duration: 2.5s;
+            animation-duration: 1.5s;
             animation-iteration-count: infinite;
             animation-fill-mode: backwards;
          }
