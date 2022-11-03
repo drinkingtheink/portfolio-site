@@ -56,7 +56,7 @@ export default {
 
 .me {
   animation-name: blurz;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 
