@@ -43,10 +43,14 @@ export default {
 @keyframes blurz {
   from {
     filter: blur(10px);
+    opacity: 0.2;
+    transform: translateY(20px);
   }
 
   to {
     filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
