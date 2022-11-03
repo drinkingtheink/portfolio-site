@@ -760,7 +760,7 @@ export default {
    width: 110%;
    margin-top: -20px;
    position: relative;
-   left: -22px;
+   left: -20px;
 
    &:hover {
       #TENTACLE-RIGHT {
