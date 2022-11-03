@@ -15,7 +15,7 @@
     </p>
 
      <p class="body" :class="{ 'comp' : needsCompFont }">
-        Thanks so much for visiting. Cheers. - JMH
+        Thanks so much for visiting. Cheers. - J(a)SON
     </p>
     <JHMonogram class="about-logo" />
   </div>
