@@ -12,7 +12,7 @@
       {{ currentInterest === 'coding' ? 'Console Cowboy' : null }}
       {{ currentInterest === 'sci-fi' ? 'Explorer' : null }}
       {{ currentInterest === 'futbol' ? 'Futbolero' : null }}
-      {{ currentInterest === 'music' ? 'Songsmith' : null }}
+      {{ currentInterest === 'music' ? 'Tunesmith' : null }}
     </div>
   </div>
 </template>
