@@ -70,7 +70,6 @@
     <!-- Img Preload List -->
     <img src="../assets/bg/woodgrain.svg" style="display: none;" />
     <img src="../assets/bg/sci-fi-pattern.svg" style="display: none;" />
-    <img src="../assets/bg/grass-texture.svg" style="display: none;" />
   </div>
 </template>
 
@@ -393,7 +392,7 @@ $appHeight: 150vh;
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: calc($appHeight - 20px);
-    background-image: url("../assets/bg/grass-texture.svg");
+    // background-image: url("../assets/bg/grass-texture.svg");
     border-top: 5px solid var(--tertiary);
     filter: opacity(0.8);
 
