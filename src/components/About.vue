@@ -2,7 +2,21 @@
   <div class="about-stage fade">
     <h2>About Me</h2>
     <p class="intro" :class="{ 'comp' : needsCompFont }">{{ intro }}</p>
-    <p class="body" :class="{ 'comp' : needsCompFont }">{{ body }}</p>
+    <p class="body" :class="{ 'comp' : needsCompFont }">
+        I'm a Software Developer at <a href="https://www.q2.com/" alt="Visit Q2 Software">Q2</a> where we strengthen communities by providing modern banking solutions for community and independent banks and credit unions. I use this to host some of the fun, one-off projects I do, among other things.
+    </p>
+
+    <p class="body" :class="{ 'comp' : needsCompFont }">
+        I started as a designer and I'm still drawn to the calling. I like to illustrate, design posters or music-related artwork, play with photography and, well, anything else that gets the rods and cones going.
+    </p>
+
+    <p class="body" :class="{ 'comp' : needsCompFont }">
+        As soon as I realized coding was basically puzzle solving, I was immediately drawn to it as well. Organizing data, catering exciting experiences and pushing the artistic boundaries of the browser joined my other passions that you see played out before you on my site.
+    </p>
+
+     <p class="body" :class="{ 'comp' : needsCompFont }">
+        Thanks so much for visiting. Cheers. - JMH
+    </p>
     <JHMonogram class="about-logo" />
   </div>
 </template>
@@ -21,7 +35,6 @@ export default {
   data() {
       return {
           intro: 'Hi, I\'m Jason. I\'m a Software Engineer && UI/UX/U∞ Designer from Austin, TX.',
-          body: 'I\'m a Software Developer at Q2 where we strengthen communities by providing modern banking solutions for community and independent banks and credit unions. I use this to host some of the fun, one-off projects I do, among other things.'
       }
   }
 }
@@ -49,6 +62,16 @@ export default {
         right: 2rem;
         opacity: 0.25;
         color: var(--accent);
+    }
+
+    a {
+        color: var(--accent);
+        font-weight: bold;
+        transition: all 0.2s;
+
+        &:hover {
+            color: var(--primary);
+        }
     }
 }
 

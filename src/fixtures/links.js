@@ -36,7 +36,7 @@ const appList = [
     },
     {
         name: 'The Circler',
-        desc: 'SVG-driven generative art',
+        desc: 'SVG-driven generative art - create your own Circlescapes',
         href: 'https://circler.netlify.com/',
         tech: ['React', 'SVG', 'Animation'],
         img: 'https://i.ibb.co/zPQXgGj/Screen-Shot-2022-10-14-at-4-11-59-PM.png',
