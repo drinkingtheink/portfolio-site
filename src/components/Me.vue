@@ -1,14 +1,18 @@
 <template>
   <div class="me-stage">
-    <MeCode v-show="currentInterest === 'coding'" class="me" />
-    <MeSciFi v-show="currentInterest === 'sci-fi'" class="me" />
-    <MeFB v-show="currentInterest === 'futbol'" class="me" />
-    <MeMusic v-show="currentInterest === 'music'" class="me" />
+      <MeCode v-show="currentInterest === 'coding'" class="me" />
+
+      <MeSciFi v-show="currentInterest === 'sci-fi'" class="me" />
+
+      <MeFB v-show="currentInterest === 'futbol'" class="me" />
+
+      <MeMusic v-show="currentInterest === 'music'" class="me" />
+
     <div class="nametag">
       {{ currentInterest === 'coding' ? 'Console Cowboy' : null }}
       {{ currentInterest === 'sci-fi' ? 'Explorer' : null }}
       {{ currentInterest === 'futbol' ? 'Futbolero' : null }}
-      {{ currentInterest === 'music' ? 'ACL Headliner' : null }}
+      {{ currentInterest === 'music' ? 'Songsmith' : null }}
     </div>
   </div>
 </template>
@@ -35,6 +39,22 @@ export default {
 
 <style lang="scss">
 @import '../styles/typog';
+
+@keyframes blurz {
+  from {
+    filter: blur(10px);
+  }
+
+  to {
+    filter: blur(0);
+  }
+}
+
+.me {
+  animation-name: blurz;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
 
 .me-stage {
   position: relative;
