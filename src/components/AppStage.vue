@@ -69,6 +69,7 @@
 
     <!-- Img Preload List -->
     <img src="../assets/bg/woodgrain.svg" style="display: none;" />
+    <img src="../assets/bg/grass-texture.png" style="display: none;" />
   </div>
 </template>
 
@@ -387,6 +388,8 @@ $appHeight: 150vh;
 
   &.futbol::before {
     background-color: transparent;
+    background-image: url("../assets/bg/grass-texture.png");
+    background-repeat: repeat;
     content: '';
     position: absolute;
     top: 0; left: 0;
