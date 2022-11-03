@@ -128,8 +128,9 @@ export default {
       let topicQuery = queryParams.get('topic');
       if (intQuery) this.currentInterest = intQuery;
       else { 
-        this.currentInterest = this.interests[0];
-        this.updateIntUrlQueryStrings(this.interests[0]);
+        let randoInt = this.interests[Math.floor(Math.random()*this.interests.length)];
+        this.currentInterest = randoInt;
+        this.updateIntUrlQueryStrings(randoInt);
       }
       if (topicQuery) this.currentTopic = topicQuery;
       else {  
