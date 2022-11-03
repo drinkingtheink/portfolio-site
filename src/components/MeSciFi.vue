@@ -757,23 +757,28 @@ export default {
 }
 
 .me-sci-fi-wrapper  {
-   overflow: hidden;
-   max-height: 17.25rem;
-   margin-bottom: -20px;
+   width: 110%;
+   margin-top: -20px;
+   position: relative;
+   left: -22px;
 
    &:hover {
       #TENTACLE-RIGHT {
          animation-name: tentRise;
-         animation-duration: 5s;
+         animation-duration: 7s;
          opacity: 1;
+         animation-direction: alternate;
+         animation-iteration-count: infinite;
       }
 
       #TENTACLE-LEFT {
          animation-name: tentRise2;
-         animation-duration: 5s;
+         animation-duration: 8s;
          opacity: 1;
          transform: scale(0.8);
          transform-origin: bottom left;
+         animation-direction: alternate;
+         animation-iteration-count: infinite;
       }
    }
 
