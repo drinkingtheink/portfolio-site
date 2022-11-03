@@ -15,4 +15,15 @@ export default {
 
 <style lang="scss">
 @import './styles/base';
+
+.app-stage.futbol {
+
+    .JH-monogram.logo.side-menu {
+      border-color: var(--secondary);
+
+      .mono-cls-1 {
+        fill: white;
+      }
+    }
+  }
 </style>

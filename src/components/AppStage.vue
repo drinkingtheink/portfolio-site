@@ -376,14 +376,6 @@ $appHeight: 150vh;
         color: black;
       }
     }
-
-    .JH-monogram.logo.side-menu {
-      border-color: var(--secondary);
-
-      .cls-1 {
-        fill: var(--secondary) !important;
-      }
-    }
   }
 
   &.futbol::before {
