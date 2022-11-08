@@ -795,11 +795,11 @@ $lrgLight: 200px;
          width: $smallLight;
          border-radius: 50%;
          position: absolute;
-         background-color: red;
+         background-color: darken(maroon, 10%);
          margin: auto;
          right: 0;
          left: 0;
-         bottom: 95px;
+         bottom: 92px;
       }
    }
 }
