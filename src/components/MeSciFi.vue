@@ -676,7 +676,7 @@
       </svg>
       
       <div class="alarm">
-         <span class="alarm-light" />
+         <span class="alarm-light"><span class="small-light" /></span>
       </div>
    </div>
 </template>
@@ -759,7 +759,7 @@ export default {
    }
 }
 
-$smallLight: 100px;
+$smallLight: 10px;
 $lrgLight: 200px;
 
 @keyframes alert {
@@ -789,6 +789,18 @@ $lrgLight: 200px;
       animation-duration: 1s;
       transform-origin: center;
       animation-iteration-count: none;
+
+      .small-light {
+         height: $smallLight;
+         width: $smallLight;
+         border-radius: 50%;
+         position: absolute;
+         background-color: red;
+         margin: auto;
+         right: 0;
+         left: 0;
+         bottom: 95px;
+      }
    }
 }
 
