@@ -674,7 +674,10 @@
          c-2.6,0-5.2,0-7.8,0.1c-5.3,7.4-9.2,15.7-11.4,24.5C480.6,346.2,480.4,347.1,480.2,348z"/>
       <path class="st5" d="M345.9,311c-26.2,2.9-55.4,7.6-73.8,24.6c18.7,2.3,38,4.3,57.7,6C331.2,329.9,336.7,318.6,345.9,311z"/>
       </svg>
-
+      
+      <div class="alarm">
+         <span class="alarm-light" />
+      </div>
    </div>
 </template>
 
@@ -756,6 +759,39 @@ export default {
    }
 }
 
+$smallLight: 100px;
+$lrgLight: 200px;
+
+@keyframes alert {
+   from {
+      background: radial-gradient(circle, rgba(242,7,7,0) 2%, rgba(0,0,0,0) 10%);
+   }
+
+   to {
+      background: radial-gradient(circle, rgba(242,7,7,0.5) 20%, rgba(0,0,0,0) 81%);
+   }
+}
+
+.alarm {
+   display: flex;
+   justify-content: center;
+   margin-top: -150px;
+   position: relative;
+   pointer-events: none;
+
+   .alarm-light {
+      border-radius: 50%;
+      display: block;
+      transition: all 0.2s;
+      height: $lrgLight;
+      width: $lrgLight;
+      animation-name: alert;
+      animation-duration: 1s;
+      transform-origin: center;
+      animation-iteration-count: none;
+   }
+}
+
 .me-sci-fi-wrapper  {
    width: 110%;
    margin-top: -20px;
@@ -765,7 +801,7 @@ export default {
    ellipse, path, .star {
       transition: all 0.2s;
    }
-   
+
    &:hover {
       #TENTACLE-RIGHT {
          animation-name: tentRise;
@@ -787,6 +823,14 @@ export default {
 
       .left-eyebrow {
          transform: translateY(-15px);
+      }
+
+      .alarm-light {
+         // animation-name: alert;
+         // animation-duration: 1s;
+         // animation-iteration-count: infinite;
+         // transform-origin: center;
+         animation-iteration-count: infinite;
       }
    }
 
