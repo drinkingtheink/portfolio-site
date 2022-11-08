@@ -843,6 +843,10 @@ $lrgLight: 200px;
          // animation-iteration-count: infinite;
          // transform-origin: center;
          animation-iteration-count: infinite;
+
+         .small-light {
+            background-color: lighten(red, 10%);
+         }
       }
    }
 
