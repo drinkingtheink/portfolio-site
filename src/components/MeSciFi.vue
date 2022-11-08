@@ -838,10 +838,6 @@ $lrgLight: 200px;
       }
 
       .alarm-light {
-         // animation-name: alert;
-         // animation-duration: 1s;
-         // animation-iteration-count: infinite;
-         // transform-origin: center;
          animation-iteration-count: infinite;
 
          .small-light {
