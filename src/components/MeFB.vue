@@ -1688,6 +1688,7 @@ export default {
             animation-name: yell;
             animation-duration: 5s;
             animation-iteration-count: infinite;
+            fill: white;
          }
 
          #LISTO {
@@ -1695,6 +1696,7 @@ export default {
             animation-duration: 5s;
             animation-iteration-count: infinite;
             animation-delay: 2.5s;
+            fill: white;
          }
       }
    }
