@@ -514,7 +514,7 @@ h2.tagline {
     width: 3rem;
     padding: 0.5rem 0.5rem 0.5rem 0;
     position: absolute;
-    border-right: 1px solid var(--primary);
+    border-right: 1px solid var(--secondary);
 
     @media (max-width: 1000px) {
       display: none;
