@@ -1,22 +1,26 @@
 <template>
   <div>
     <main class="app-stage" :class="[currentInterest]">
-      <div class="small-screen-title">
-        <JHMonogram class="logo small-screen" />
-        <div>
-          <h1 class="name mobile-display">{{ title }}</h1>
-          <h2 class="fancy tagline  mobile-display">{{ tagline }}</h2>
+        <div class="small-screen-title">
+          <a href="/" alt="My Portfolio">
+            <JHMonogram class="logo small-screen" />
+            <div>
+              <h1 class="name mobile-display">{{ title }}</h1>
+              <h2 class="fancy tagline  mobile-display">{{ tagline }}</h2>
+            </div>
+          </a>
         </div>
-      </div>
       
       <section class="side-menu">
         <div class="side-menu-display first">
           <div class="flexer">
-            <JHMonogram class="logo side-menu" />
-            <div class="header-text">
-              <h1 class="name">{{ title }}</h1>
-              <h2 class="fancy tagline">{{ tagline }}</h2>
-            </div>
+            <a href="/" alt="My Portfolio">
+              <JHMonogram class="logo side-menu" />
+              <div class="header-text">
+                <h1 class="name">{{ title }}</h1>
+                <h2 class="fancy tagline">{{ tagline }}</h2>
+              </div>
+            </a>
           </div>
           <div class="me-wrapper">
             <Me class="me-img" :currentInterest="currentInterest" />
@@ -465,6 +469,10 @@ h2.tagline {
   max-width: 20rem;
   position: relative;
   z-index: 10;
+
+  a {
+    text-decoration: none;
+  }
 
   @media (max-width: 1000px) {
     display: flex;
