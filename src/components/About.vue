@@ -3,7 +3,7 @@
     <h2>About Me</h2>
     <p class="intro" :class="{ 'comp' : needsCompFont }">{{ intro }}</p>
     <p class="body" :class="{ 'comp' : needsCompFont }">
-        I'm a Staff Software Engineer at <a href="https://www.q2.com/" alt="Visit Q2 Software">Q2</a> where we strengthen communities by providing modern banking solutions for community and independent banks and credit unions. I use this to host some of the fun, one-off projects I do, among other things.
+        I'm a Staff Software Engineer at <a href="https://www.q2.com/" alt="Visit Q2 Software">Q2</a> where we strengthen communities by providing modern banking solutions for community and independent banks and credit unions. I write core features for millions of users across multiple teams and in multiple repos. I use this to host some of the fun, one-off projects I do, among other things.
     </p>
 
     <p class="body" :class="{ 'comp' : needsCompFont }">
