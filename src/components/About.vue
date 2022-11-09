@@ -3,7 +3,7 @@
     <h2>About Me</h2>
     <p class="intro" :class="{ 'comp' : needsCompFont }">{{ intro }}</p>
     <p class="body" :class="{ 'comp' : needsCompFont }">
-        I'm a Software Developer at <a href="https://www.q2.com/" alt="Visit Q2 Software">Q2</a> where we strengthen communities by providing modern banking solutions for community and independent banks and credit unions. I use this to host some of the fun, one-off projects I do, among other things.
+        I'm a Staff Software Engineer at <a href="https://www.q2.com/" alt="Visit Q2 Software">Q2</a> where we strengthen communities by providing modern banking solutions for community and independent banks and credit unions. I use this to host some of the fun, one-off projects I do, among other things.
     </p>
 
     <p class="body" :class="{ 'comp' : needsCompFont }">
@@ -34,7 +34,7 @@ export default {
   },
   data() {
       return {
-          intro: 'Hi, I\'m Jason. I\'m a Software Engineer && UI/UX/U∞ Designer from Austin, TX.',
+          intro: 'Hi, I\'m Jason. I\'m a Software Engineer && UI/UX/U∞ Designer from Austin, TX. The combination of this skill set is starting to be referred to as a Design Technologist. Whatever you want to call it; I like to design it and I like to make it work beautifully. And for as many people as possible.',
       }
   }
 }
