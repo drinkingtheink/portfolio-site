@@ -646,10 +646,12 @@ export default {
          animation-name: fade-in;
          animation-duration: 2.5s;
          animation-iteration-count: infinite;
+         filter: blur(10px);
       }
 
       .star-2 {
          animation-delay: 0.2s;
+         filter: blur(5px);
       }
 
       .left-eyebrow {
