@@ -69,6 +69,7 @@
 
     <!-- Img Preload List -->
     <img src="../assets/bg/woodgrain.svg" style="display: none;" />
+    <img src="../assets/bg/space.svg" style="display: none;" />
     <img src="../assets/bg/grass-texture.png" style="display: none;" />
   </div>
 </template>
@@ -352,6 +353,8 @@ $appHeight: 150vh;
       width: 100%; height: calc($appHeight - 15px);
       border-top: 5px solid white;
       filter:opacity(1);
+      background-image: url("../assets/bg/space.svg");
+      background-size: cover;
     }
   }
 
