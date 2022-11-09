@@ -112,6 +112,11 @@ export default {
       title: 'Jason M Harrison'
     }
   },
+  computed: {
+    firstInterests() {
+      return this.interests.filter((int) => int !== 'futbol');
+    }
+  },
   mounted() {
     this.checkForQueryStrings();
   },
@@ -130,7 +135,7 @@ export default {
       let topicQuery = queryParams.get('topic');
       if (intQuery) this.currentInterest = intQuery;
       else { 
-        let randoInt = this.interests[Math.floor(Math.random()*this.interests.length)];
+        let randoInt = this.firstInterests[Math.floor(Math.random()*this.firstInterests.length)];
         this.currentInterest = randoInt;
         this.updateIntUrlQueryStrings(randoInt);
       }
