@@ -440,6 +440,10 @@ $appHeight: 150vh;
     .social {
       background-color: var(--color4);
       color: white;
+
+      &:hover {
+        background-color: var(--accent);
+      }
     }
   }
 
