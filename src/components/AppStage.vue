@@ -2,7 +2,7 @@
   <div>
     <main class="app-stage" :class="[currentInterest]">
         <div class="small-screen-title">
-          <a href="/" alt="My Portfolio">
+          <a class="home-link" href="/" alt="My Portfolio">
             <JHMonogram class="logo small-screen" />
             <div>
               <h1 class="name mobile-display">{{ title }}</h1>
@@ -174,6 +174,14 @@ export default {
 
   @media (min-width: 1001px) {
     display: none;
+  }
+
+  .home-link {
+    display: flex;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   .logo {
