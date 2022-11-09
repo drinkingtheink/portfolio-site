@@ -1638,12 +1638,20 @@ export default {
    }
 
    #WORDS {
-      transform: translateY(75px);
+      transform: translateY(150px);
    }
 
    #VERDE, #LISTO {
       opacity: 0;
       transition: all 0.2s;
+   }
+
+   #VERDE {
+      transform: translateX(20px);
+   }
+
+   #LISTO {
+      transform: translateX(-20px);
    }
 
    &:hover {
@@ -1689,6 +1697,7 @@ export default {
             animation-duration: 5s;
             animation-iteration-count: infinite;
             fill: white;
+            transform: translateX(20px);
          }
 
          #LISTO {
@@ -1697,6 +1706,7 @@ export default {
             animation-iteration-count: infinite;
             animation-delay: 2.5s;
             fill: white;
+            transform: translateX(-20px);
          }
       }
    }
