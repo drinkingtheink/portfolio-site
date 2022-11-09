@@ -115,6 +115,10 @@ const social = [
         name: 'spotify',
         href: 'https://open.spotify.com/artist/3f6p4SQJXhJGWdPHL8NoKF?si=e8MCRaubQxaSKKmNwiZjZA',
     },
+    {
+        name: 'youtube',
+        href: 'https://www.youtube.com/channel/UCq4djdWj45kvLQKFduslQ4g/videos',
+    }
 ]
 
 const artList = [
