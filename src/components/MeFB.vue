@@ -1607,11 +1607,11 @@ export default {
 }
 
 @keyframes yell {
-   from {
+   70% {
       opacity: 0;
    }
 
-   to {
+   90% {
       opacity: 1;
       transform: translateY(-10px);
    }
@@ -1645,7 +1645,7 @@ export default {
       opacity: 0;
       transition: all 0.2s;
    }
-   
+
    &:hover {
       .left-eyebrow {
          transform: translateY(-15px);
@@ -1686,15 +1686,15 @@ export default {
       #WORDS {
          #VERDE {
             animation-name: yell;
-            animation-duration: 4s;
+            animation-duration: 5s;
             animation-iteration-count: infinite;
          }
 
          #LISTO {
             animation-name: yell;
-            animation-duration: 4s;
+            animation-duration: 5s;
             animation-iteration-count: infinite;
-            animation-delay: 2s;
+            animation-delay: 2.5s;
          }
       }
    }
