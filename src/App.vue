@@ -1,15 +1,32 @@
 <template>
+  <Loading v-show="showLoading" />
   <AppStage />
 </template>
 
 <script>
 import AppStage from './components/AppStage.vue'
+import Loading from './components/Loading.vue'
 
 export default {
   name: 'App',
   components: {
-    AppStage
-  }
+    AppStage,
+    Loading,
+  },
+  data() {
+    return {
+      showLoading: false,
+    }
+  },
+  mounted() {
+    let hasVisited = sessionStorage.getItem('dti-visited');
+
+    if (!hasVisited) {
+      this.showLoading = true;
+    }
+
+    this.showLoading = !hasVisited;
+  },
 }
 </script>
 

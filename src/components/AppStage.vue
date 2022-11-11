@@ -409,7 +409,7 @@ $appHeight: 150vh;
     border-top: 5px solid var(--tertiary);
     filter: opacity(0.8);
 
-     @media (max-width: 1000px) {
+    @media (max-width: 1000px) {
       background-size: cover;
     }
   }
