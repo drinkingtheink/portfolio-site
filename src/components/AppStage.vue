@@ -408,9 +408,10 @@ $appHeight: 200vh;
     width: 100%; height: calc($appHeight - 20px);
     border-top: 5px solid var(--tertiary);
     filter: opacity(0.8);
+    background-size: 50%;
 
-    @media (max-width: 1000px) {
-      background-size: cover;
+    @media (max-width: 500px) {
+      background-size: 50%;
     }
   }
 
