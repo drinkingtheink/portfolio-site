@@ -210,7 +210,7 @@ export default {
           sessionStorage.removeItem(storKey);
           sessionStorage.setItem(storKey, true);
           this.fullyLoaded = true
-      }, 3000);
+      }, 4000);
   }
 }
 </script>
