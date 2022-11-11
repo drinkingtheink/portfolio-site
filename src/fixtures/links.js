@@ -152,9 +152,9 @@ const artList = [
     },
     {
         name: 'Identity Design',
-        desc: 'Branding and other ephemera for mamy different industries',
+        desc: 'Branding and other ephemera for many different industries',
         href: 'https://www.behance.net/gallery/155058821/Identity-Design',
-        img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
+        img: '../../banners/branding-banner.png',
         tech: ['Digital', 'Illustration', 'Typography'],
     },
 ]
