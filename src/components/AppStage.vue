@@ -185,15 +185,11 @@ export default {
   }
 
   .logo {
-    display: none;
+    display: block;
     width: 4rem;
     padding: 0 1rem;
     margin-right: 1rem;
     border-right: 1px solid var(--primary);
-  }
-
-  .logo {
-    display: block;
   }
 
   .name {

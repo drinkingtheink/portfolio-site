@@ -307,6 +307,10 @@ export default {
         height: 0vh;
         padding: 0;
         border: none;
+
+        .loading-img {
+            display: none;
+        }
     }
 }
 </style>
