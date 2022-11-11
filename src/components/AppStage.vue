@@ -263,7 +263,7 @@ export default {
   background-color: var(--tertiary)
 }
 
-$appHeight: 150vh;
+$appHeight: 200vh;
 
 .app-stage {
   height: $appHeight;
