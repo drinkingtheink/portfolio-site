@@ -308,7 +308,7 @@ export default {
         padding: 0;
         border: none;
 
-        .loading-img {
+        * {
             display: none;
         }
     }
