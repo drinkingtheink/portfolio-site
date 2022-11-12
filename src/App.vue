@@ -1,6 +1,6 @@
 <template>
   <Loading v-show="showLoading" />
-  <AppStage v-if="showStage" />
+  <AppStage />
 </template>
 
 <script>
@@ -16,7 +16,6 @@ export default {
   data() {
     return {
       showLoading: false,
-      showStage: false,
     }
   },
   mounted() {
@@ -27,7 +26,6 @@ export default {
     }
 
     this.showLoading = !hasVisited;
-    this.showStage = true;
   },
 }
 </script>
