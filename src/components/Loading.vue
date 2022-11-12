@@ -200,7 +200,7 @@ export default {
   },
   data() {
       return {
-          text: 'Loading images, fonts, and other goodies...',
+          text: 'Loading images, fonts, pixels, codez, and other goodies...',
           fullyLoaded: false,
       }
   },
@@ -277,6 +277,7 @@ export default {
 
     .loading-right {
         padding-top: 4rem;
+        max-width: 500px;
 
         @media (max-width: 840px) {
             padding-top: 0rem;
