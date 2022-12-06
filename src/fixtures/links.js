@@ -124,7 +124,7 @@ const social = [
 const artList = [
     {
         name: 'Album/Release Artwork',
-        desc: 'Artwork to accompany musical releases of many generes',
+        desc: 'Promotional artwork for musical releases of many genres',
         href: 'https://www.behance.net/gallery/153105507/ALBUM-EP-COVERS',
         img: '../../banners/music-banner.png',
         tech: ['Illustration', 'Digital', 'Printing', 'Typography'],
