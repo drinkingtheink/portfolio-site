@@ -48,6 +48,8 @@
               target="_blank"
             >{{ link.name }}</a>
           </div>
+
+          <p class="copyright">Copyright ©{{ currentYear }} Jason M Harrison/DrinkingtheInk</p>
         </div>
       </section>
       <section class="main-stage">
@@ -119,7 +121,11 @@ export default {
   computed: {
     firstInterests() {
       return this.interests.filter((int) => int !== 'futbol');
-    }
+    },
+    currentYear() {
+      var dt = new Date();
+      return dt.getFullYear();
+    },
   },
   mounted() {
     this.checkForQueryStrings();
@@ -392,6 +398,10 @@ $appHeight: 200vh;
         color: black;
       }
     }
+
+    .copyright {
+      color: white;
+    }
   }
 
   &.futbol::before {
@@ -441,6 +451,10 @@ $appHeight: 200vh;
       &:hover {
         background-color: var(--accent);
       }
+    }
+
+    .copyright {
+      color: $colord4;
     }
   }
 
@@ -592,4 +606,14 @@ h2.tagline {
     margin-right: 10px;
   }
 }
+
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  padding: 0.25rem;
+  color: var(--tertiary);
+  border-radius: 10px;
+}
+
 </style>
