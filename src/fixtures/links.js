@@ -14,6 +14,13 @@ const appList = [
         img: 'https://i.ibb.co/sbXQ8my/Screen-Shot-2022-10-13-at-10-54-02-PM.png',
     },
     {
+        name: 'Live Examples of Non-Public Work',
+        desc: 'Non-public work delivered to Fortune 500 customers',
+        href: 'https://photos.app.goo.gl/otn77zHmQu8vzCir8',
+        tech: ['Vue.js', 'React', 'Animation', 'Prototyping'],
+        img: '../../banners/non-public-banner.png',
+    },
+    {
         name: 'Dogtastic',
         desc: 'Name and Claim Your Own Cyber Kennel',
         href: 'https://dogtastic.netlify.app/',
@@ -26,13 +33,6 @@ const appList = [
         href: 'https://annihilipsum.netlify.app/',
         tech: ['Vue.js', 'Animation'],
         img: 'https://i.ibb.co/HttBmLT/Screen-Shot-2022-10-13-at-10-56-29-PM.png',
-    },
-    {
-        name: 'Live Examples of Non-Public Work',
-        desc: 'Non-public work delivered to Fortune 500 customers',
-        href: 'https://photos.app.goo.gl/otn77zHmQu8vzCir8',
-        tech: ['Vue.js', 'React', 'Animation', 'Prototyping'],
-        img: '../../banners/non-public-banner.png',
     },
     {
         name: 'The Circler',
