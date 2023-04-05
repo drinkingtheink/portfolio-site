@@ -34,7 +34,7 @@ export default {
   },
   data() {
       return {
-          intro: 'Hi, I\'m Jason. I\'m a Software Engineer && UI/UX/U∞ Designer from Austin, TX. The combination of this skill set is starting to be referred to as a Design Technologist. Whatever you want to call it; I like to design it and I like to make it work beautifully. And for as many people as possible.',
+          intro: 'Hi, I\'m Jason. I\'m a Software Engineer && UI/UX/U∞ Designer from Austin, TX. I like to design it and I like to make it work beautifully. And for as many people as possible.',
       }
   }
 }
