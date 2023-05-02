@@ -63,7 +63,7 @@
         </div>
         <div class="link-list-wrapper" v-show="currentTopic === 'web'" >
           <div class="scroll-message">
-            Scroll down for more
+            {{ scrollMessage }} 
 
             <div class="arrow-down"></div>
           </div>
@@ -71,7 +71,7 @@
         </div>
         <div class="link-list-wrapper" v-show="currentTopic === 'art'">
           <div class="scroll-message">
-            Scroll down for more
+            {{ scrollMessage }} 
 
             <div class="arrow-down"></div>
           </div>
@@ -125,7 +125,8 @@ export default {
         'futbol',
       ],
       tagline: 'Over a Decade Working Where Art + Science Meet',
-      title: 'Jason M Harrison'
+      title: 'Jason M Harrison',
+      scrollMessage: 'Scroll for more',
     }
   },
   computed: {
@@ -619,7 +620,7 @@ h2.tagline {
 
 .scroll-message {
   animation: revealSelf 1s;
-  width: 40%;
+  width: 30%;
   color: white;
   text-align: center;
   position: sticky;
@@ -627,8 +628,8 @@ h2.tagline {
   background-color: var(--accent);
   margin: 0 auto;
   z-index: 100;
-  box-shadow: 0 2px 2px 2px rgba(black, 0.4);
-  padding: 5px 0 10px 0;
+  box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
+  padding: 5px 0 8px 0;
   border-bottom: 3px solid var(--primary);
 
   .arrow-down {
