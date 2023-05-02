@@ -62,9 +62,19 @@
           >{{ topic }}</button>
         </div>
         <div class="link-list-wrapper" v-show="currentTopic === 'web'" >
+          <div class="scroll-message">
+            Scroll down for more
+
+            <div class="arrow-down"></div>
+          </div>
           <AppList :appList="appList" />
         </div>
         <div class="link-list-wrapper" v-show="currentTopic === 'art'">
+          <div class="scroll-message">
+            Scroll down for more
+
+            <div class="arrow-down"></div>
+          </div>
           <AppList :appList="artList" />
         </div>
         <div class="about-wrapper" v-show="currentTopic === 'about'">
@@ -173,6 +183,7 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/palette';
 @import '../styles/typog';
+@import '../styles/animations';
 
 .small-screen-title {
   display: flex;
@@ -587,12 +598,51 @@ h2.tagline {
   max-height: 50rem;
   overflow-x: auto;
   padding: 1rem;
+  padding-top: 0;
   border-top: 5px solid var(--accent);
   border-bottom: 5px solid var(--accent);
   position: relative;
 
   @media (max-width: 700px) {
     padding: 1rem 0;
+  }
+}
+
+@keyframes revealSelf {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.scroll-message {
+  animation: revealSelf 1s;
+  width: 40%;
+  color: white;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: var(--accent);
+  margin: 0 auto;
+  z-index: 100;
+  box-shadow: 0 2px 2px 2px rgba(black, 0.4);
+  padding: 5px 0 10px 0;
+  border-bottom: 3px solid var(--primary);
+
+  .arrow-down {
+    position: absolute;
+    z-index: 99;
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    border-top: 20px solid var(--accent);
   }
 }
 
