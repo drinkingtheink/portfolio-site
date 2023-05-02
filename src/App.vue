@@ -1,6 +1,6 @@
 <template>
   <Loading v-show="showLoading" />
-  <AppStage />
+  <AppStage :showLoading="showLoading" />
 </template>
 
 <script>
@@ -23,6 +23,10 @@ export default {
 
     if (!hasVisited) {
       this.showLoading = true;
+
+      setTimeout(() => {
+        this.showLoading = false;
+      }, 5000);
     }
 
     this.showLoading = !hasVisited;

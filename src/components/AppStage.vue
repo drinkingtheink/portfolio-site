@@ -62,7 +62,7 @@
           >{{ topic }}</button>
         </div>
         <div class="link-list-wrapper" v-show="currentTopic === 'web'" >
-          <div class="scroll-message">
+          <div class="scroll-message" :class="{ delay: showLoading }">
             {{ scrollMessage }} 
 
             <div class="arrow-down"></div>
@@ -70,7 +70,7 @@
           <AppList :appList="appList" />
         </div>
         <div class="link-list-wrapper" v-show="currentTopic === 'art'">
-          <div class="scroll-message">
+          <div class="scroll-message" :class="{ delay: showLoading }">
             {{ scrollMessage }} 
 
             <div class="arrow-down"></div>
@@ -99,6 +99,7 @@ import JHMonogram from './JHMonogram.vue'
 
 export default {
   name: 'AppStage',
+  props: [ 'showLoading' ],
   components: {
     Me,
     AppList,
@@ -631,6 +632,10 @@ h2.tagline {
   box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
   padding: 5px 0 8px 0;
   border-bottom: 3px solid var(--primary);
+
+  &.delay {
+    animation-delay: 4.5s;
+  }
 
   .arrow-down {
     position: absolute;
