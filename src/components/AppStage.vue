@@ -62,19 +62,19 @@
           >{{ topic }}</button>
         </div>
         <div class="link-list-wrapper" v-show="currentTopic === 'web'" >
-          <div class="scroll-message" :class="{ delay: showLoading }">
+          <!-- <div class="scroll-message" :class="{ delay: showLoading }">
             {{ scrollMessage }} 
 
             <div class="arrow-down"></div>
-          </div>
+          </div> -->
           <AppList :appList="appList" />
         </div>
         <div class="link-list-wrapper" v-show="currentTopic === 'art'">
-          <div class="scroll-message" :class="{ delay: showLoading }">
+          <!-- <div class="scroll-message" :class="{ delay: showLoading }">
             {{ scrollMessage }} 
 
             <div class="arrow-down"></div>
-          </div>
+          </div> -->
           <AppList :appList="artList" />
         </div>
         <div class="about-wrapper" v-show="currentTopic === 'about'">
@@ -186,6 +186,22 @@ export default {
 @import '../styles/palette';
 @import '../styles/typog';
 @import '../styles/animations';
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.3);
+    border-radius: 20px;
+    display: block;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
 
 .small-screen-title {
   display: flex;
@@ -355,6 +371,10 @@ $appHeight: 200vh;
   &.sci-fi {
     background-color: var(--color1);
 
+    ::-webkit-scrollbar-thumb {
+        background: white;
+    }
+
     h1 {
       color: var(--accent);
     }
@@ -393,6 +413,10 @@ $appHeight: 200vh;
   &.futbol {
     background-color: var(--primary);
     border-top-color: white;
+
+    ::-webkit-scrollbar-thumb {
+        background: black;
+    }
 
     h2.fancy {
       color: white;
@@ -600,7 +624,6 @@ h2.tagline {
   max-height: 50rem;
   overflow-x: auto;
   padding: 1rem;
-  padding-top: 0;
   border-top: 5px solid var(--accent);
   border-bottom: 5px solid var(--accent);
   position: relative;
