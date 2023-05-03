@@ -606,7 +606,7 @@ h2.tagline {
   position: relative;
 
   @media (max-width: 700px) {
-    padding: 1rem 0;
+    padding: 0 0 1rem 0;
   }
 }
 
@@ -632,6 +632,10 @@ h2.tagline {
   box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
   padding: 5px 0 8px 0;
   border-bottom: 3px solid var(--primary);
+
+  @media (max-width: 700px) {
+    width: 100%;
+  }
 
   &.delay {
     animation-delay: 4.5s;
