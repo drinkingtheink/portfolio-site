@@ -194,13 +194,12 @@ export default {
 /* Track */
 ::-webkit-scrollbar-track {
     background: rgba(0,0,0,0.3);
-    border-radius: 20px;
-    display: block;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--primary);
+    border-radius: 20px;
 }
 
 .small-screen-title {
