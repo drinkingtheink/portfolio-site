@@ -626,7 +626,7 @@ h2.tagline {
   text-align: center;
   position: sticky;
   top: 0;
-  background-color: var(--accent);
+  background-color: var(--primary);
   margin: 0 auto;
   z-index: 100;
   box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
@@ -653,7 +653,7 @@ h2.tagline {
     left: 50%;
     transform: translate(-50%, -50%);
     
-    border-top: 20px solid var(--accent);
+    border-top: 20px solid var(--primary);
   }
 }
 
