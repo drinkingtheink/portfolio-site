@@ -621,7 +621,7 @@ h2.tagline {
 
 .scroll-message {
   animation: revealSelf 1s;
-  width: 30%;
+  width: 100%;
   color: white;
   text-align: center;
   position: sticky;
@@ -632,9 +632,10 @@ h2.tagline {
   box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
   padding: 5px 0 8px 0;
   border-bottom: 3px solid var(--primary);
+  font-size: 0.8rem;
 
   @media (max-width: 700px) {
-    width: 100%;
+    // width: 100%;
   }
 
   &.delay {
