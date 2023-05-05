@@ -62,19 +62,19 @@
           >{{ topic }}</button>
         </div>
         <div class="link-list-wrapper" v-show="currentTopic === 'web'" >
-          <!-- <div class="scroll-message" :class="{ delay: showLoading }">
+          <div class="scroll-message" :class="{ delay: showLoading }">
             {{ scrollMessage }} 
 
             <div class="arrow-down"></div>
-          </div> -->
+          </div>
           <AppList :appList="appList" />
         </div>
         <div class="link-list-wrapper" v-show="currentTopic === 'art'">
-          <!-- <div class="scroll-message" :class="{ delay: showLoading }">
+          <div class="scroll-message" :class="{ delay: showLoading }">
             {{ scrollMessage }} 
 
             <div class="arrow-down"></div>
-          </div> -->
+          </div>
           <AppList :appList="artList" />
         </div>
         <div class="about-wrapper" v-show="currentTopic === 'about'">
@@ -638,6 +638,7 @@ h2.tagline {
   max-height: 50rem;
   overflow-x: auto;
   padding: 1rem;
+  padding-top: 0;
   border-top: 5px solid var(--accent);
   border-bottom: 5px solid var(--accent);
   position: relative;
