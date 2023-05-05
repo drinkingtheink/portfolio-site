@@ -188,16 +188,31 @@ export default {
 @import '../styles/animations';
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 20px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.2);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 20px;
+}
+
+::-moz-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-moz-scrollbar-track {
+    background: rgba(0,0,0,0.1);
+}
+
+/* Handle */
+::-moz-scrollbar-thumb {
     background: var(--primary);
     border-radius: 20px;
 }
