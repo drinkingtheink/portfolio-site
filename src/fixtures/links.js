@@ -14,8 +14,8 @@ const appList = [
         img: 'https://i.ibb.co/sbXQ8my/Screen-Shot-2022-10-13-at-10-54-02-PM.png',
     },
     {
-        name: 'Live Examples of Non-Public Work',
-        desc: 'Non-public work delivered to Fortune 500 customers',
+        name: 'Charts, Dashboards, Interfaces and Wireframes',
+        desc: 'Non-public assets delivered to multiple Fortune 500 customers',
         href: 'https://photos.app.goo.gl/otn77zHmQu8vzCir8',
         tech: ['Vue.js', 'React', 'Animation', 'Prototyping'],
         img: '../../banners/non-public-banner.png',
