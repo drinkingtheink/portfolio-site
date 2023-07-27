@@ -15,8 +15,8 @@ const appList = [
     },
     {
         name: 'Charts, Dashboards, Interfaces and Wireframes',
-        desc: 'Non-public assets delivered to multiple Fortune 500 customers',
-        href: 'https://photos.app.goo.gl/otn77zHmQu8vzCir8',
+        desc: 'Professional work delivered to multiple Fortune 500 companies and millions of users',
+        href: 'http://jasonmharrison.info/',
         tech: ['Vue.js', 'React', 'Animation', 'Prototyping'],
         img: '../../banners/non-public-banner.png',
     },
