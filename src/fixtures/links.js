@@ -1,5 +1,12 @@
 const appList = [
     {
+        name: 'HSL Color Space Explorer',
+        desc: 'Explore the Color Space and compare colors in a variety of ways',
+        href: 'https://hslmfao.netlify.app/',
+        tech: ['Vue.js', 'Chroma.js', 'Color Math', 'Animation'],
+        img: 'https://i.ibb.co/ZcxX3ks/hslmfao-teaser.png',
+    },
+    {
         name: 'Watchful Eye',
         desc: 'Visualizing near-Earth objects using NASA APIs',
         href: 'https://watchful-eye.netlify.app/',
