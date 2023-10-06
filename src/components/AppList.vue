@@ -145,6 +145,12 @@ export default {
     z-index: 10;
   }
 
+  @media (max-width: 700px) {
+      .tech-display {
+        width: 100%;
+      }
+  }
+
   .link-img {
     position: absolute;
     height: 100%;
