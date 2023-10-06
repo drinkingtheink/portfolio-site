@@ -45,6 +45,10 @@ export default {
 
 .list-tray {
   padding-bottom: 30rem;
+
+  @media (max-width: 700px) {
+    overflow-x: hidden;
+  }
 }
 
 .link-list {
