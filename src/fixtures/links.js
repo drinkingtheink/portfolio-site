@@ -137,6 +137,13 @@ const social = [
 
 const artList = [
     {
+        name: 'Identity Design',
+        desc: 'Branding and other ephemera for many different industries',
+        href: 'https://www.behance.net/gallery/155058821/Identity-Design',
+        img: '../../banners/branding-banner.png',
+        tech: ['Digital', 'Illustration', 'Typography'],
+    },
+    {
         name: 'Album/Release Artwork',
         desc: 'Promotional artwork for musical releases of many genres',
         href: 'https://www.behance.net/gallery/153105507/ALBUM-EP-COVERS',
@@ -163,13 +170,6 @@ const artList = [
         href: 'https://www.behance.net/gallery/155075669/Warpchitecture-Digital-Collage-Collection',
         img: '../../banners/warp-banner.png',
         tech: ['Photography', 'Digital'],
-    },
-    {
-        name: 'Identity Design',
-        desc: 'Branding and other ephemera for many different industries',
-        href: 'https://www.behance.net/gallery/155058821/Identity-Design',
-        img: '../../banners/branding-banner.png',
-        tech: ['Digital', 'Illustration', 'Typography'],
     },
 ]
 
