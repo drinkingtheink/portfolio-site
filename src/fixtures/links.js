@@ -1,17 +1,17 @@
 const appList = [
     {
+        name: 'A11y Color Combinator',
+        desc: 'Fun with Accessible Color Combos Using Chroma.js',
+        href: 'https://a11y-color-combo.netlify.app/',
+        tech: ['Vue.js', 'Chroma.js', 'Color Math', 'Animation'],
+        img: 'https://i.ibb.co/Vjjsp2h/a11y-color-combo-meta.png',
+    },
+    {
         name: 'HSL Color Space Explorer',
-        desc: 'Explore the Color Space and compare colors in a variety of ways',
+        desc: 'Explore the HSL Color Space and compare colors in a variety of ways',
         href: 'https://hslmfao.netlify.app/',
         tech: ['Vue.js', 'Chroma.js', 'Color Math', 'Animation'],
         img: 'https://i.ibb.co/ZcxX3ks/hslmfao-teaser.png',
-    },
-    {
-        name: 'Watchful Eye',
-        desc: 'Visualizing near-Earth objects using NASA APIs',
-        href: 'https://watchful-eye.netlify.app/',
-        tech: ['Vue.js', 'APIs', 'SVG', 'Animation'],
-        img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
     },
     {
         name: 'Austin FC Kit Creator',
@@ -19,6 +19,13 @@ const appList = [
         href: 'https://austin-fc-kit-creator.netlify.app/',
         tech: ['Vue.js', 'SVG', 'Animation'],
         img: 'https://i.ibb.co/sbXQ8my/Screen-Shot-2022-10-13-at-10-54-02-PM.png',
+    },
+    {
+        name: 'Watchful Eye',
+        desc: 'Visualizing near-Earth objects using NASA APIs',
+        href: 'https://watchful-eye.netlify.app/',
+        tech: ['Vue.js', 'APIs', 'SVG', 'Animation'],
+        img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
     },
     {
         name: 'Charts, Dashboards, Interfaces and Wireframes',
