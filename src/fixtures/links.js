@@ -4,7 +4,7 @@ const appList = [
         desc: 'Fun with Accessible Color Combos Using Chroma.js',
         href: 'https://a11y-color-combo.netlify.app/',
         tech: ['Vue.js', 'Chroma.js', 'Color Math', 'Animation'],
-        img: 'https://i.ibb.co/Vjjsp2h/a11y-color-combo-meta.png',
+        img: 'https://i.ibb.co/qCxtWfh/Screenshot-2024-01-29-at-8-40-32-PM.png',
     },
     {
         name: 'HSL Color Space Explorer',
