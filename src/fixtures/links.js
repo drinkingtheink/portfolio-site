@@ -14,6 +14,13 @@ const appList = [
         img: 'https://i.ibb.co/ZcxX3ks/hslmfao-teaser.png',
     },
     {
+        name: 'Charts, Dashboards, Interfaces and Wireframes',
+        desc: 'Professional work delivered to multiple Fortune 500 companies and millions of users',
+        href: 'http://jasonmharrison.info/',
+        tech: ['Vue.js', 'React', 'Animation', 'Prototyping'],
+        img: '../../banners/non-public-banner.png',
+    },
+    {
         name: 'Austin FC Kit Creator',
         desc: 'Retro-style kit designer for true Verde ATXFC supporters',
         href: 'https://austin-fc-kit-creator.netlify.app/',
@@ -26,13 +33,6 @@ const appList = [
         href: 'https://watchful-eye.netlify.app/',
         tech: ['Vue.js', 'APIs', 'SVG', 'Animation'],
         img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
-    },
-    {
-        name: 'Charts, Dashboards, Interfaces and Wireframes',
-        desc: 'Professional work delivered to multiple Fortune 500 companies and millions of users',
-        href: 'http://jasonmharrison.info/',
-        tech: ['Vue.js', 'React', 'Animation', 'Prototyping'],
-        img: '../../banners/non-public-banner.png',
     },
     {
         name: 'Dogtastic',
