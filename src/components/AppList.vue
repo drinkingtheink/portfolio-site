@@ -17,16 +17,17 @@
               <img :style="{ backgroundImage: `url(${link.img})` }" class="link-img" />
           </div>
       </div>
-      <img src="/banners/atxfc-banner.png" style="display:none;" />
-      <img src="/banners/ge-banner.png" style="display:none;" />
-      <img src="/banners/illu-banner.png" style="display:none;" />
-      <img src="/banners/music-banner.png" style="display:none;" />
-      <img src="/banners/qol-banner.png" style="display:none;" />
-      <img src="/banners/colour-banner.png" style="display:none;" />
-      <img src="/banners/svg-brand-banner.png" style="display:none;" />
-      <img src="/banners/warp-banner.png" style="display:none;" />
-      <img src="/banners/non-public-banner.png" style="display:none;" />
   </div>
+
+    <img src="/banners/atxfc-banner.png" style="display:none;" />
+    <img src="/banners/ge-banner.png" style="display:none;" />
+    <img src="/banners/illu-banner.png" style="display:none;" />
+    <img src="/banners/music-banner.png" style="display:none;" />
+    <img src="/banners/qol-banner.png" style="display:none;" />
+    <img src="/banners/colour-banner.png" style="display:none;" />
+    <img src="/banners/svg-brand-banner.png" style="display:none;" />
+    <img src="/banners/warp-banner.png" style="display:none;" />
+    <img src="/banners/non-public-banner.png" style="display:none;" />
 </template>
 
 <script>
