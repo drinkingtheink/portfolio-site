@@ -474,6 +474,7 @@ $appHeight: 200vh;
 
   .main-stage {
     width: 100%;
+    max-width: 1100px;
   }
 
   &.music {
