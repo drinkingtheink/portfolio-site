@@ -151,6 +151,13 @@ const artList = [
         tech: ['Illustration', 'Digital', 'Printing', 'Typography'],
     },
     {
+        name: 'Remote Viewers Club',
+        desc: 'Animated vignettes inspired by military and astronomical mission badges and other ephemera',
+        href: 'https://remote-viewers-club.netlify.app/',
+        img: 'https://i.ibb.co/rHcMRYq/remote-viewers-club-preview.png',
+        tech: ['Animation', 'Illustration', 'SVG'],
+    },
+    {
         name: 'Illustrations',
         desc: 'Character studies of some of my favorite people/things/entities',
         href: 'https://www.behance.net/gallery/155077365/Illustrations',
