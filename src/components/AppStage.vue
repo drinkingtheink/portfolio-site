@@ -124,7 +124,7 @@ export default {
         'music',
         'futbol',
       ],
-      tagline: 'Creatively Driven, Technology-Focused',
+      tagline: 'Swinging Wildly from Canvas to Code',
       title: 'Jason M Harrison',
       scrollMessage: 'Scroll for more',
     }
