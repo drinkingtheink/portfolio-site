@@ -125,7 +125,7 @@ export default {
         'music',
         'futbol',
       ],
-      tagline: 'Over a Decade Working Where Art + Science Meet',
+      tagline: 'Explorer of canvases and code',
       title: 'Jason M Harrison',
       scrollMessage: 'Scroll for more',
     }
