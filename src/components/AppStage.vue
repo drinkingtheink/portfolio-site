@@ -108,7 +108,6 @@ export default {
   },
   data() {
     return {
-      stuff: 'ynwa',
       appList: appList,
       socialLinks: social,
       currentTopic: null,
@@ -125,7 +124,7 @@ export default {
         'music',
         'futbol',
       ],
-      tagline: 'Explorer of canvases and code',
+      tagline: 'Creatively Driven, Technology-Focused',
       title: 'Jason M Harrison',
       scrollMessage: 'Scroll for more',
     }
