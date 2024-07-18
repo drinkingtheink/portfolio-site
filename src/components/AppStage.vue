@@ -124,7 +124,7 @@ export default {
         'music',
         'futbol',
       ],
-      tagline: 'Swinging Wildly from Canvas to Code',
+      tagline: 'Design / Develop / Devour',
       title: 'Jason M Harrison',
       scrollMessage: 'Scroll for more',
     }
