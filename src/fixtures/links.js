@@ -35,6 +35,13 @@ const appList = [
         img: 'https://i.ibb.co/dJzKV02/Screen-Shot-2022-10-13-at-10-55-52-PM.png',
     },
     {
+        name: 'Pixelphonic',
+        desc: 'Visualizing Audio Into Configurable Artwork',
+        href: 'https://pixelphonic.netlify.app/',
+        tech: ['AI', 'Vue.js', 'Chroma.js', 'Animation'],
+        img: 'https://i.ibb.co/m4nQ83S/cover-img.png',
+    },
+    {
         name: 'Dogtastic',
         desc: 'Name and Claim Your Own Cyber Kennel',
         href: 'https://dogtastic.netlify.app/',
