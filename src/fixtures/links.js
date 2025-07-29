@@ -62,6 +62,13 @@ const appList = [
         tech: ['Vue.js', 'Animation'],
         img: 'https://i.ibb.co/HttBmLT/Screen-Shot-2022-10-13-at-10-56-29-PM.png',
     },
+    {
+        name: 'Remote Viewers Club',
+        desc: 'Gallery of metaphysical explorations, tests, and challenges accented by engaging animations',
+        href: 'https://remote-viewers-club.jasonmharrison.info/',
+        img: 'https://i.ibb.co/rHcMRYq/remote-viewers-club-preview.png',
+        tech: ['Animation', 'Illustration', 'SVG'],
+    },
     // {
     //     name: 'The Circler',
     //     desc: 'SVG-driven generative art - create your own Circlescapes',
@@ -100,7 +107,7 @@ const appList = [
     {
         name: 'Colour with a YOU',
         desc: 'Exploring color combinations and mutations with Chroma.js',
-        href: 'https://color-with-a-you.netlify.app/',
+        href: 'https://color-with-a-you.jasonmharrison.info/',
         tech: ['Vue.js', 'Color Math', 'APIs'],
         img: '../../banners/colour-banner.png',
     },
@@ -174,7 +181,7 @@ const artList = [
     {
         name: 'Remote Viewers Club',
         desc: 'Gallery of metaphysical explorations, tests, and challenges accented by engaging animations',
-        href: 'https://remote-viewers-club.netlify.app/',
+        href: 'https://remote-viewers-club.jasonmharrison.info/',
         img: 'https://i.ibb.co/rHcMRYq/remote-viewers-club-preview.png',
         tech: ['Animation', 'Illustration', 'SVG'],
     },
