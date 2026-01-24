@@ -179,6 +179,13 @@ const artList = [
         tech: ['Illustration', 'Animation', 'SVG'],
     },
     {
+        name: 'Illustrations',
+        desc: 'Character studies of some of my favorite people/things/entities',
+        href: 'https://www.behance.net/gallery/155077365/Illustrations',
+        img: '../../banners/illu-banner.png',
+        tech: ['Hand Drawn', 'Analog', 'Old School'],
+    },
+    {
         name: 'The Circler',
         desc: 'Generative art app that creates interactable "Circlescapes" using SVGs',
         href: 'https://circler.jasonmharrison.info/',
@@ -191,13 +198,6 @@ const artList = [
         href: 'https://remote-viewers-club.jasonmharrison.info/',
         img: 'https://i.ibb.co/rHcMRYq/remote-viewers-club-preview.png',
         tech: ['Animation', 'Illustration', 'SVG'],
-    },
-    {
-        name: 'Illustrations',
-        desc: 'Character studies of some of my favorite people/things/entities',
-        href: 'https://www.behance.net/gallery/155077365/Illustrations',
-        img: '../../banners/illu-banner.png',
-        tech: ['Hand Drawn', 'Analog', 'Old School'],
     },
     {
         name: 'Austin FC Matchday Poster Collection',
