@@ -131,12 +131,12 @@ const social = [
         href: 'https://dribbble.com/DrinkingtheInk',
     },
     {
-        name: 'goodreads',
-        href: 'https://www.goodreads.com/user/show/124215009-jason-harrison',
+        name: 'Codepen',
+        href: 'https://codepen.io/drinkingtheink',
     },
     {
-        name: 'twitter',
-        href: 'https://twitter.com/DrinkingtheInk',
+        name: 'goodreads',
+        href: 'https://www.goodreads.com/user/show/124215009-jason-harrison',
     },
     {
         name: 'my band',
