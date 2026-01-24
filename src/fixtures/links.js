@@ -172,6 +172,13 @@ const artList = [
         tech: ['Illustration', 'Digital', 'Printing', 'Typography'],
     },
     {
+        name: 'Looping Animations',
+        desc: 'Animated loading animations for brands',
+        href: 'https://codepen.io/collection/PobZOw',
+        img: 'https://i.ibb.co/hxvQCngT/loop-animations-bg.png',
+        tech: ['Illustration', 'Animation', 'SVG'],
+    },
+    {
         name: 'The Circler',
         desc: 'Generative art app that creates interactable "Circlescapes" using SVGs',
         href: 'https://circler.jasonmharrison.info/',
