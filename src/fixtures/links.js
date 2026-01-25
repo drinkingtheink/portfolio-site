@@ -173,7 +173,7 @@ const artList = [
     },
     {
         name: 'Looping Animations',
-        desc: 'Animated loading animations for brands',
+        desc: 'Animated branding for Financial Institutions',
         href: 'https://codepen.io/collection/PobZOw',
         img: 'https://i.ibb.co/k28BZZyf/loop-animations-bg.png',
         tech: ['Illustration', 'Animation', 'SVG'],
