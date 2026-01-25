@@ -175,7 +175,7 @@ const artList = [
         name: 'Looping Animations',
         desc: 'Animated loading animations for brands',
         href: 'https://codepen.io/collection/PobZOw',
-        img: 'https://i.ibb.co/hxvQCngT/loop-animations-bg.png',
+        img: 'https://i.ibb.co/FLHsqcWN/loop-animations-bg.png',
         tech: ['Illustration', 'Animation', 'SVG'],
     },
     {
