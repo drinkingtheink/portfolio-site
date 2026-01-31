@@ -1754,7 +1754,10 @@ export default {
 }
 
 .me-futbol-wrapper {
-   margin-top: -20px;
+   width: 90%;
+   max-width: 290px;
+   position: absolute;
+   bottom: 65px;
 
    ellipse, path {
       transition: all 0.2s;

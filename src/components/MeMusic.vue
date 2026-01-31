@@ -897,7 +897,15 @@ export default {
 }
 
 .me-music-wrapper {
-   margin-top: -20px;
+   width: 90%;
+   max-width: 290px;
+   position: absolute;
+   bottom: 82px;
+   overflow: hidden;
+
+   @media (max-width: 1000px) {
+      bottom: 62px;
+   }
 
    ellipse, path {
       transition: all 0.2s;

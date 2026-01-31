@@ -64,6 +64,9 @@ export default {
   position: relative;
   height: 100%;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .me-img {

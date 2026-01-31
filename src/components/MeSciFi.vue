@@ -809,10 +809,11 @@ $lrgLight: 200px;
 }
 
 .me-sci-fi-wrapper  {
-   width: 110%;
-   margin-top: -20px;
-   position: relative;
-   left: -20px;
+   width: 90%;
+   max-width: 290px;
+   position: absolute;
+   bottom: 0;
+   display: flex;
 
    ellipse, path, .star {
       transition: all 0.2s;
@@ -821,6 +822,14 @@ $lrgLight: 200px;
    svg {
       transition: transform 1s ease-in-out;
       overflow: visible;
+      position: absolute;
+      bottom: 80px;
+      right: 0;
+      left: 0;
+
+      @media (max-width: 1000px) {
+         bottom: 68px;
+      }
    }
 
    .upper-eyelid {

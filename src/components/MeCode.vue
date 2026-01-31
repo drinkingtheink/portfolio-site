@@ -618,7 +618,14 @@ export default {
 .st12{fill:#00D0C5;}
 
 .me-code-wrapper {
-   margin-top: -20px;
+   width: 90%;
+   max-width: 290px;
+   position: absolute;
+   bottom: 83px;
+
+   @media (max-width: 1000px) {
+      bottom: 62px;
+   }
 }
 
 .me-code {
