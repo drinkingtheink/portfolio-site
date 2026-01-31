@@ -1755,7 +1755,7 @@ export default {
 
 .me-futbol-wrapper {
    width: 90%;
-   max-width: 290px;
+   max-width: 320px;
    position: absolute;
    bottom: 65px;
 

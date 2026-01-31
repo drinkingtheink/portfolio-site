@@ -898,7 +898,7 @@ export default {
 
 .me-music-wrapper {
    width: 90%;
-   max-width: 290px;
+   max-width: 320px;
    position: absolute;
    bottom: 82px;
    overflow: hidden;

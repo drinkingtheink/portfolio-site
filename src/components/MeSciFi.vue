@@ -810,7 +810,7 @@ $lrgLight: 200px;
 
 .me-sci-fi-wrapper  {
    width: 90%;
-   max-width: 290px;
+   max-width: 320px;
    position: absolute;
    bottom: 0;
    display: flex;
