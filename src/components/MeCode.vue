@@ -618,7 +618,7 @@ export default {
 .st12{fill:#00D0C5;}
 
 .me-code-wrapper {
-   width: 90%;
+   width: 95%;
    max-width: 290px;
    position: absolute;
    bottom: 83px;

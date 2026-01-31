@@ -95,14 +95,19 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  left: -1rem;
-  right: 0;
-  padding: 0 1rem;
+  left: 0;
+  padding: 0;
   font-family: $fancyFont;
   font-size: 1.5rem;
+  text-align: center;
   transition: all 0.5s;
-  border-bottom: 3px solid var(--tertiary);
   z-index: 10;
+  box-shadow:
+    inset 40px 0 30px -30px rgba(0, 0, 0, 0.3),
+    inset -40px 0 30px -30px rgba(0, 0, 0, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.2);
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 
   @media (max-width: 1000px) {
     bottom: 0;
@@ -114,6 +119,8 @@ export default {
     .nametag {
       background-color: var(--secondary);
       color: var(--primaryDark);
+      border-top-color: var(--primaryDark);
+      border-bottom-color: var(--primaryDark);
     }
   }
 
@@ -121,6 +128,8 @@ export default {
     .nametag {
       background-color: var(--accent);
       color: var(--color6);
+      border-top-color: gold;
+      border-bottom-color: goldenrod;
     }
   }
 
