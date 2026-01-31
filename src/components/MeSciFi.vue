@@ -1,6 +1,6 @@
 <template>
    <div class="me-sci-fi-wrapper">
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      <svg ref="portrait" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 1120.4 1020.7" style="enable-background:new 0 0 1120.4 1020.7;" xml:space="preserve">
       <g id="TENTACLE-LEFT">
          <path class="st0" d="M452.7,657.1c-30.8-26.6-59.9-56.6-77-93.5s-20.4-82.1-0.5-117.6c23.9-42.6,81.3-62.8,126.6-44.4
@@ -684,6 +684,32 @@
 <script>
 export default {
   name: 'MeSciFi',
+  data() {
+    return {
+      shiftInterval: null
+    }
+  },
+  mounted() {
+    this.startIdleShift();
+  },
+  beforeUnmount() {
+    if (this.shiftInterval) {
+      clearInterval(this.shiftInterval);
+    }
+  },
+  methods: {
+    startIdleShift() {
+      const shift = () => {
+        const x = (Math.random() - 0.5) * 4;
+        const y = (Math.random() - 0.5) * 4;
+        if (this.$refs.portrait) {
+          this.$refs.portrait.style.transform = `translate(${x}px, ${y}px)`;
+        }
+      };
+      shift();
+      this.shiftInterval = setInterval(shift, 6000);
+    }
+  }
 }
 </script>
 
@@ -813,6 +839,10 @@ $lrgLight: 200px;
 
    ellipse, path, .star {
       transition: all 0.2s;
+   }
+
+   svg {
+      transition: transform 1s ease-in-out;
    }
 
    .upper-eyelid {

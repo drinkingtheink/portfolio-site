@@ -1,6 +1,6 @@
 <template>
    <div class="me-music-wrapper">
-      <svg version="1.1" class="me-music" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      <svg ref="portrait" version="1.1" class="me-music" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 974.5 953.3" style="enable-background:new 0 0 974.5 953.3;" xml:space="preserve">
          <path class="st0" d="M475.8,546.6c0,0-154.6-13-304.7,97.9c0,0-99.7,57.8-123.9,152.5S19.6,960.1,19.6,960.1h939
             c0,0-32.5-310.7-204.1-332.6C754.4,627.5,617.5,525.6,475.8,546.6z"/>
@@ -838,6 +838,32 @@
 <script>
 export default {
   name: 'MeMusic',
+  data() {
+    return {
+      shiftInterval: null
+    }
+  },
+  mounted() {
+    this.startIdleShift();
+  },
+  beforeUnmount() {
+    if (this.shiftInterval) {
+      clearInterval(this.shiftInterval);
+    }
+  },
+  methods: {
+    startIdleShift() {
+      const shift = () => {
+        const x = (Math.random() - 0.5) * 4;
+        const y = (Math.random() - 0.5) * 4;
+        if (this.$refs.portrait) {
+          this.$refs.portrait.style.transform = `translate(${x}px, ${y}px)`;
+        }
+      };
+      shift();
+      this.shiftInterval = setInterval(shift, 6000);
+    }
+  }
 }
 </script>
 
@@ -898,6 +924,10 @@ export default {
 
    ellipse, path {
       transition: all 0.2s;
+   }
+
+   .me-music {
+      transition: transform 1s ease-in-out;
    }
 
    .upper-eyelid {

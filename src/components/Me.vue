@@ -63,6 +63,7 @@ export default {
 .me-stage {
   position: relative;
   height: 100%;
+  overflow: hidden;
 }
 
 .me-img {
@@ -85,18 +86,20 @@ export default {
 
 .nametag {
   position: absolute;
-  bottom: 25px;
-  height: 2rem;
+  bottom: 20px;
+  height: calc(2rem + 30px);
   width: 100%;
-  text-align: center;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   left: -1rem;
   right: 0;
-  padding: 0.25rem 1rem 0.5rem 1rem;
+  padding: 0 1rem;
   font-family: $fancyFont;
   font-size: 1.5rem;
   transition: all 0.5s;
   border-bottom: 3px solid var(--tertiary);
+  z-index: 10;
 }
 
 .app-stage {

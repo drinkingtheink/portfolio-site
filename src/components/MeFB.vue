@@ -1,6 +1,6 @@
 <template>
    <div class="me-futbol-wrapper">
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      <svg ref="portrait" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 974.5 953.3" style="enable-background:new 0 0 974.5 953.3;" xml:space="preserve">
          <polygon id="STARBURST" class="st1" points="479.6,364.4 511.6,162 511.5,366.9 574.7,172 542.6,374.3 635.5,191.8 572.1,386.6 
 	692.4,220.8 599.3,403.2 744.1,258.3 623.6,424 789.3,303.5 644.3,448.3 826.8,355.2 661,475.5 855.8,412.1 673.3,505 875.6,472.9 
@@ -1711,6 +1711,32 @@
 <script>
 export default {
   name: 'MeFB',
+  data() {
+    return {
+      shiftInterval: null
+    }
+  },
+  mounted() {
+    this.startIdleShift();
+  },
+  beforeUnmount() {
+    if (this.shiftInterval) {
+      clearInterval(this.shiftInterval);
+    }
+  },
+  methods: {
+    startIdleShift() {
+      const shift = () => {
+        const x = (Math.random() - 0.5) * 4;
+        const y = (Math.random() - 0.5) * 4;
+        if (this.$refs.portrait) {
+          this.$refs.portrait.style.transform = `translate(${x}px, ${y}px)`;
+        }
+      };
+      shift();
+      this.shiftInterval = setInterval(shift, 6000);
+    }
+  }
 }
 </script>
 
@@ -1755,6 +1781,10 @@ export default {
 
    ellipse, path {
       transition: all 0.2s;
+   }
+
+   svg {
+      transition: transform 1s ease-in-out;
    }
 
    .upper-eyelid {

@@ -1,6 +1,6 @@
 <template>
 <div class="me-code-wrapper">
-   <svg version="1.1" class="me-code" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   <svg ref="portrait" version="1.1" class="me-code" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 974.5 953.3" style="enable-background:new 0 0 974.5 953.3;" xml:space="preserve">
       <path class="st0" d="M349.1,445.4c0,0,5.2,150.1,57.1,248.8s64.2,118.4,64.2,118.4L551,693.3c0,0,45.7-163.5,47-247.9H349.1z"/>
       <path class="st1" d="M428.5,472.2c0,0,0.2,6.3,1.1,17.1c13.9-0.9,27.8,0.7,41.2,4.6c7.5,2,14.6,5.1,21.2,9.2
@@ -593,6 +593,32 @@
 <script>
 export default {
   name: 'MeCode',
+  data() {
+    return {
+      shiftInterval: null
+    }
+  },
+  mounted() {
+    this.startIdleShift();
+  },
+  beforeUnmount() {
+    if (this.shiftInterval) {
+      clearInterval(this.shiftInterval);
+    }
+  },
+  methods: {
+    startIdleShift() {
+      const shift = () => {
+        const x = (Math.random() - 0.5) * 4;
+        const y = (Math.random() - 0.5) * 4;
+        if (this.$refs.portrait) {
+          this.$refs.portrait.style.transform = `translate(${x}px, ${y}px)`;
+        }
+      };
+      shift();
+      this.shiftInterval = setInterval(shift, 6000);
+    }
+  }
 }
 </script>
 
@@ -620,6 +646,7 @@ export default {
 
 .me-code {
    position: relative;
+   transition: transform 1s ease-in-out;
 
    ellipse, path, .star {
       transition: all 0.2s;
