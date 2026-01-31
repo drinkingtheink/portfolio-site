@@ -7,7 +7,7 @@
       :style="{ animationDelay: `0.${index}s` }"
     >
           <div class="arrow-right" />
-          <div class="link-info">
+          <div class="link-info" @click="openLink(link.href)">
               <h4 class="name"><a :href="link.href" target="_blank">{{ link.name }}</a></h4>
               <p class="desc fancy">{{ link.desc }}</p>
               <section class="tech-display">
@@ -37,6 +37,11 @@ export default {
     currentInterest: String,
     appList: Array,
   },
+  methods: {
+    openLink(href) {
+      window.open(href, '_blank');
+    }
+  }
 }
 </script>
 
@@ -140,6 +145,7 @@ export default {
   z-index: 10;
   overflow: hidden;
   padding: 1rem 2rem;
+  cursor: pointer;
 
   .desc, .name, .tech-display {
     position: relative;
