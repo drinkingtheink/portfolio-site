@@ -901,7 +901,8 @@ export default {
    }
 
    .upper-eyelid {
-      animation: blink 4s infinite;
+      animation: blink 7s infinite;
+      transform-box: fill-box;
       transform-origin: center;
    }
 
