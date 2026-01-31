@@ -821,7 +821,7 @@ $lrgLight: 200px;
 
    svg {
       transition: transform 1s ease-in-out;
-      overflow: visible;
+      overflow: hidden;
       position: absolute;
       bottom: 80px;
       right: 0;
