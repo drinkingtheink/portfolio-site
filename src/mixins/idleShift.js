@@ -14,7 +14,11 @@ export const idleShiftMixin = {
   },
   methods: {
     startIdleShift() {
+      const shiftProbability = 0.7;
+
       const shift = () => {
+        if (Math.random() > shiftProbability) return;
+
         const x = (Math.random() - 0.5) * 4;
         const y = (Math.random() - 0.5) * 4;
         if (this.$refs.portrait) {
