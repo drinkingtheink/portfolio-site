@@ -647,6 +647,7 @@ export default {
 .me-code {
    position: relative;
    transition: transform 1s ease-in-out;
+   overflow: visible;
 
    ellipse, path, .star {
       transition: all 0.2s;

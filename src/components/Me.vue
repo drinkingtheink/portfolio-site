@@ -100,6 +100,10 @@ export default {
   transition: all 0.5s;
   border-bottom: 3px solid var(--tertiary);
   z-index: 10;
+
+  @media (max-width: 1000px) {
+    bottom: 0;
+  }
 }
 
 .app-stage {

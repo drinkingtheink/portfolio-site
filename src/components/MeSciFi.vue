@@ -843,6 +843,7 @@ $lrgLight: 200px;
 
    svg {
       transition: transform 1s ease-in-out;
+      overflow: visible;
    }
 
    .upper-eyelid {
