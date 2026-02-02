@@ -887,12 +887,23 @@ export default {
 }
 
 @keyframes bop {
-   from {
-      transform: translate(0, -2px);
+   0%, 100% {
+      transform: translateY(0);
    }
+   40% {
+      transform: translateY(4px);
+   }
+}
 
-   to {
-      transform: translate(0, 2px);
+@keyframes headBop {
+   0%, 100% {
+      transform: translateY(0);
+   }
+   20% {
+      transform: translateY(-2px);
+   }
+   50% {
+      transform: translateY(5px);
    }
 }
 
@@ -944,16 +955,12 @@ export default {
 
    &:hover {
       .me-music {
-         animation-name: bop;
-         animation-duration: 1.5s;
-         animation-iteration-count: infinite;
+         animation: bop 0.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
       }
 
       #HEAD {
-         animation-name: bop;
-         animation-duration: 0.5s;
-         animation-iteration-count: infinite;
-         animation-delay: 0.5s;
+         animation: headBop 0.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+         animation-delay: 0.05s;
       }
 
       #NOTES {
