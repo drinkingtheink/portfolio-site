@@ -58,6 +58,10 @@ export default {
   animation-name: blurz;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+
+  svg {
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+  }
 }
 
 .me-stage {
