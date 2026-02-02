@@ -37,7 +37,8 @@ export const idleShiftMixin = {
       const raiseEyebrow = () => {
         if (!this.$refs.portrait) return;
 
-        const eyebrow = this.$refs.portrait.querySelector('.left-eyebrow');
+        const eyebrowClass = Math.random() < 0.5 ? '.left-eyebrow' : '.right-eyebrow';
+        const eyebrow = this.$refs.portrait.querySelector(eyebrowClass);
         if (!eyebrow) return;
 
         const raiseAmount = 3 + Math.random() * 3;
