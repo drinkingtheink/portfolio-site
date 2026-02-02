@@ -683,6 +683,8 @@ export default {
    }
 
    #THOUGHTS {
+      transform: translateY(8px);
+
       ellipse, path {
          fill: transparent;
          transition: all 0.3s;
