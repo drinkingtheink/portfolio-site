@@ -683,7 +683,7 @@ export default {
    }
 
    #THOUGHTS {
-      transform: translateY(8px);
+      transform: translateY(20px);
 
       ellipse, path {
          fill: transparent;
