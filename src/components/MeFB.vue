@@ -1774,6 +1774,10 @@ export default {
       transform-origin: center;
    }
 
+   .left-eyebrow {
+      transition: transform 0.3s ease-out;
+   }
+
    #STARBURST {
       fill: white;
       filter: blur(10px);

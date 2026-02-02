@@ -643,6 +643,10 @@ export default {
       transform-origin: center;
    }
 
+   .left-eyebrow {
+      transition: transform 0.3s ease-out;
+   }
+
    .star {
       opacity: 0;
    }

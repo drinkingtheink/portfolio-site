@@ -922,6 +922,10 @@ export default {
       transform-origin: center;
    }
 
+   .left-eyebrow {
+      transition: transform 0.3s ease-out;
+   }
+
    #NOTES {
       * {
          fill: var(--primary);

@@ -838,6 +838,10 @@ $lrgLight: 200px;
       transform-origin: center;
    }
 
+   .left-eyebrow {
+      transition: transform 0.3s ease-out;
+   }
+
    &:hover {
       #TENTACLE-RIGHT {
          animation-name: tentRise;
