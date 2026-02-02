@@ -47,7 +47,7 @@ export const idleShiftMixin = {
 
         setTimeout(() => {
           eyebrow.style.transition = 'transform 0.5s ease-in';
-          eyebrow.style.transform = 'translateY(0)';
+          eyebrow.style.transform = '';
         }, 1500 + Math.random() * 1500);
       };
 
