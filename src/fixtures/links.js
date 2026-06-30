@@ -104,13 +104,13 @@ const appList = [
         tech: ['Ember.js', 'SVG', 'Prototyping'],
         img: '../../banners/svg-brand-banner.png',
     },
-    {
-        name: 'Colour with a YOU',
-        desc: 'Exploring color combinations and mutations with Chroma.js',
-        href: 'https://color-with-a-you.jasonmharrison.info/',
-        tech: ['Vue.js', 'Color Math', 'APIs'],
-        img: '../../banners/colour-banner.png',
-    },
+    // {
+    //     name: 'Colour with a YOU',
+    //     desc: 'Exploring color combinations and mutations with Chroma.js',
+    //     href: 'https://color-with-a-you.jasonmharrison.info/',
+    //     tech: ['Vue.js', 'Color Math', 'APIs'],
+    //     img: '../../banners/colour-banner.png',
+    // },
 ]
 
 const social = [
