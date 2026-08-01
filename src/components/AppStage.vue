@@ -355,7 +355,7 @@ $appHeight: 200vh;
   
   h3 {
     padding: 0 0 0.25rem 0;
-    margin: 0 0 0 0.25rem 0;
+    margin: 0 0 0 0.25rem;
     border-bottom: 2px solid var(--secondary);
     color: var(--primaryDark);
 
