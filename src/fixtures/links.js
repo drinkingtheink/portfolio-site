@@ -179,6 +179,13 @@ const artList = [
         tech: ['Illustration', 'Animation', 'SVG'],
     },
     {
+        name: 'Promotional Posters',
+        desc: 'Promotional artwork for musical acts and other genres',
+        href: 'https://www.behance.net/gallery/251878709/Promotional-Posters',
+        img: 'https://i.ibb.co/nFQyghL/george-triclops-jones-closeup.png',
+        tech: ['Illustration', 'Promo'],
+    },
+    {
         name: 'Illustrations',
         desc: 'Character studies of some of my favorite people/things/entities',
         href: 'https://www.behance.net/gallery/155077365/Illustrations',
