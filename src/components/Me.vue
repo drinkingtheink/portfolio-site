@@ -1,12 +1,12 @@
 <template>
   <div class="me-stage">
-      <MeCode v-show="currentInterest === 'coding'" class="me" />
+      <MeCode v-if="currentInterest === 'coding'" class="me" />
 
-      <MeSciFi v-show="currentInterest === 'sci-fi'" class="me" />
+      <MeSciFi v-if="currentInterest === 'sci-fi'" class="me" />
 
-      <MeFB v-show="currentInterest === 'futbol'" class="me" />
+      <MeFB v-if="currentInterest === 'futbol'" class="me" />
 
-      <MeMusic v-show="currentInterest === 'music'" class="me" />
+      <MeMusic v-if="currentInterest === 'music'" class="me" />
 
     <div class="nametag">
       {{ currentInterest === 'coding' ? 'Console Cowboy' : null }}
