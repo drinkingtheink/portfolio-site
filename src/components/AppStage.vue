@@ -23,7 +23,7 @@
             </a>
           </div>
           <div class="me-wrapper">
-            <Me class="me-img" :currentInterest="currentInterest" />
+            <Me class="me-img" :currentInterest="currentInterest" :isIdle="isIdle" />
           </div>
         </div>
         <div class="side-menu-display second">
@@ -133,6 +133,8 @@ export default {
       tagline: 'Design / Develop / Devour',
       title: 'Jason M Harrison',
       scrollMessage: 'Scroll for more',
+      isIdle: false,
+      idleTimer: null,
     }
   },
   computed: {
@@ -152,8 +154,25 @@ export default {
   },
   mounted() {
     this.checkForQueryStrings();
+    this.resetIdleTimer();
+    window.addEventListener('mousemove', this.resetIdleTimer);
+    window.addEventListener('click', this.resetIdleTimer);
+    window.addEventListener('keydown', this.resetIdleTimer);
+    window.addEventListener('touchstart', this.resetIdleTimer);
+  },
+  beforeUnmount() {
+    clearTimeout(this.idleTimer);
+    window.removeEventListener('mousemove', this.resetIdleTimer);
+    window.removeEventListener('click', this.resetIdleTimer);
+    window.removeEventListener('keydown', this.resetIdleTimer);
+    window.removeEventListener('touchstart', this.resetIdleTimer);
   },
   methods: {
+    resetIdleTimer() {
+      this.isIdle = false;
+      clearTimeout(this.idleTimer);
+      this.idleTimer = setTimeout(() => { this.isIdle = true; }, 45000);
+    },
     setTopic: function(topic) {
       this.currentTopic = topic;
       this.updateTopicUrlQueryStrings(topic);
