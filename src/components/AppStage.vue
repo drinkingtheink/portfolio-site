@@ -83,10 +83,10 @@
       </section>
     </main>
 
-    <!-- Img Preload List -->
-    <img src="../assets/bg/woodgrain.svg" style="display: none;" />
-    <img src="../assets/bg/space.svg" style="display: none;" />
-    <img src="../assets/bg/grass-texture.png" style="display: none;" />
+    <!-- Img Preload List — visibility:hidden loads the image; display:none does not -->
+    <img src="../assets/bg/woodgrain.svg" style="visibility:hidden;position:absolute;width:0;height:0;" alt="" />
+    <img src="../assets/bg/space.svg" style="visibility:hidden;position:absolute;width:0;height:0;" alt="" />
+    <img src="../assets/bg/grass-texture.png" style="visibility:hidden;position:absolute;width:0;height:0;" alt="" />
   </div>
 </template>
 
