@@ -1,5 +1,5 @@
 <template>
-   <div class="me-futbol-wrapper">
+   <div class="me-futbol-wrapper" :class="{ 'is-idle': isIdle }">
       <svg ref="portrait" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 974.5 953.3" style="enable-background:new 0 0 974.5 953.3;" xml:space="preserve">
          <polygon id="STARBURST" class="st1" points="479.6,364.4 511.6,162 511.5,366.9 574.7,172 542.6,374.3 635.5,191.8 572.1,386.6 
@@ -1713,7 +1713,10 @@ import { idleShiftMixin } from '../mixins/idleShift';
 
 export default {
   name: 'MeFB',
-  mixins: [idleShiftMixin]
+  mixins: [idleShiftMixin],
+  props: {
+    isIdle: Boolean,
+  },
 }
 </script>
 
@@ -1809,7 +1812,7 @@ export default {
       transform: translateX(-20px);
    }
 
-   &:hover {
+   &:hover, &.is-idle {
       .left-eyebrow {
          transform: translateY(-15px);
       }
