@@ -1,6 +1,6 @@
 <template>
 <div class="me-code-wrapper">
-   <svg ref="portrait" version="1.1" class="me-code" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   <svg ref="portrait" version="1.1" class="me-code" :class="{ 'is-idle': isIdle }" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 974.5 953.3" style="enable-background:new 0 0 974.5 953.3;" xml:space="preserve">
       <path class="st0" d="M349.1,445.4c0,0,5.2,150.1,57.1,248.8s64.2,118.4,64.2,118.4L551,693.3c0,0,45.7-163.5,47-247.9H349.1z"/>
       <path class="st1" d="M428.5,472.2c0,0,0.2,6.3,1.1,17.1c13.9-0.9,27.8,0.7,41.2,4.6c7.5,2,14.6,5.1,21.2,9.2
@@ -595,7 +595,10 @@ import { idleShiftMixin } from '../mixins/idleShift';
 
 export default {
   name: 'MeCode',
-  mixins: [idleShiftMixin]
+  mixins: [idleShiftMixin],
+  props: {
+    isIdle: Boolean,
+  },
 }
 </script>
 
@@ -652,7 +655,7 @@ export default {
       opacity: 0;
    }
 
-   &:hover {
+   &:hover, &.is-idle {
       #THOUGHTS {
          ellipse {
             fill: white;
