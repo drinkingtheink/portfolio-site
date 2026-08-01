@@ -14,20 +14,11 @@
                   <span v-for="tech in link.tech" :key="tech" class="pill">{{ tech }}</span>
               </section>
               <div class="fade-over" />
-              <img :style="{ backgroundImage: `url(${link.img})` }" class="link-img" />
+              <img :src="link.img" class="link-img" loading="lazy" alt="" />
           </div>
       </div>
   </div>
 
-    <img src="/banners/atxfc-banner.png" style="display:none;" />
-    <img src="/banners/ge-banner.png" style="display:none;" />
-    <img src="/banners/illu-banner.png" style="display:none;" />
-    <img src="/banners/music-banner.png" style="display:none;" />
-    <img src="/banners/qol-banner.png" style="display:none;" />
-    <img src="/banners/colour-banner.png" style="display:none;" />
-    <img src="/banners/svg-brand-banner.png" style="display:none;" />
-    <img src="/banners/warp-banner.png" style="display:none;" />
-    <img src="/banners/non-public-banner.png" style="display:none;" />
 </template>
 
 <script>
@@ -167,7 +158,7 @@ export default {
     z-index: 1;
     filter: saturate(5);
     transition: all 0.4s;
-    background-size: cover;
+    object-fit: cover;
     scale: 1.1;
   }
 }
@@ -175,7 +166,7 @@ export default {
 .link-list:hover {
   .link-img {
     filter: saturate(1);
-    background-position: 20%;
+    object-position: 20% center;
     scale: 1;
   }
 
