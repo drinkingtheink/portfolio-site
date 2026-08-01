@@ -182,7 +182,7 @@ const artList = [
         name: 'Promotional Posters',
         desc: 'Promotional artwork for musical acts and other genres',
         href: 'https://www.behance.net/gallery/251878709/Promotional-Posters',
-        img: 'https://i.ibb.co/nFQyghL/george-triclops-jones-closeup.png',
+        img: 'https://i.ibb.co/GZjq3Nt/george-triclops-jones-closeup-2.png',
         tech: ['Illustration', 'Promo'],
     },
     {
