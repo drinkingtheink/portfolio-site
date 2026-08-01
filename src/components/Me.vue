@@ -1,12 +1,12 @@
 <template>
   <div class="me-stage">
-      <MeCode v-if="currentInterest === 'coding'" class="me" />
+      <MeCode v-if="currentInterest === 'coding'" class="me" :isIdle="isIdle" />
 
-      <MeSciFi v-if="currentInterest === 'sci-fi'" class="me" />
+      <MeSciFi v-if="currentInterest === 'sci-fi'" class="me" :isIdle="isIdle" />
 
-      <MeFB v-if="currentInterest === 'futbol'" class="me" />
+      <MeFB v-if="currentInterest === 'futbol'" class="me" :isIdle="isIdle" />
 
-      <MeMusic v-if="currentInterest === 'music'" class="me" />
+      <MeMusic v-if="currentInterest === 'music'" class="me" :isIdle="isIdle" />
 
     <div class="nametag">
       {{ currentInterest === 'coding' ? 'Console Cowboy' : null }}
@@ -26,7 +26,8 @@ import MeMusic from './MeMusic.vue'
 export default {
   name: 'Me',
   props: {
-    currentInterest: String
+    currentInterest: String,
+    isIdle: Boolean,
   },
   components: {
     MeCode,
