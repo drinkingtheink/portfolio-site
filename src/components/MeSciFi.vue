@@ -1,5 +1,5 @@
 <template>
-   <div class="me-sci-fi-wrapper">
+   <div class="me-sci-fi-wrapper" :class="{ 'is-idle': isIdle }">
       <svg ref="portrait" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 1120.4 1020.7" style="enable-background:new 0 0 1120.4 1020.7;" xml:space="preserve">
       <g id="TENTACLE-LEFT">
@@ -686,7 +686,10 @@ import { idleShiftMixin } from '../mixins/idleShift';
 
 export default {
   name: 'MeSciFi',
-  mixins: [idleShiftMixin]
+  mixins: [idleShiftMixin],
+  props: {
+    isIdle: Boolean,
+  },
 }
 </script>
 
@@ -843,7 +846,7 @@ $lrgLight: 200px;
       transition: transform 0.3s ease-out;
    }
 
-   &:hover {
+   &:hover, &.is-idle {
       #TENTACLE-RIGHT {
          animation-name: tentRise;
          animation-duration: 7s;
