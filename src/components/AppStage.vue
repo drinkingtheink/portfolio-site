@@ -124,6 +124,12 @@ export default {
         'music',
         'futbol',
       ],
+      interestTitles: {
+        'coding': 'Console Cowboy',
+        'sci-fi': 'Explorer',
+        'music': 'Tunesmith',
+        'futbol': 'Futbolero',
+      },
       tagline: 'Design / Develop / Devour',
       title: 'Jason M Harrison',
       scrollMessage: 'Scroll for more',
@@ -136,6 +142,12 @@ export default {
     currentYear() {
       var dt = new Date();
       return dt.getFullYear();
+    },
+  },
+  watch: {
+    currentInterest(val) {
+      const label = this.interestTitles[val];
+      document.title = label ? `DrinkingtheInk | ${label}` : 'DrinkingtheInk';
     },
   },
   mounted() {
