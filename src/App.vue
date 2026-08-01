@@ -26,7 +26,7 @@ export default {
 
       setTimeout(() => {
         this.showLoading = false;
-      }, 5000);
+      }, 3000);
     }
 
     this.showLoading = !hasVisited;

@@ -678,7 +678,7 @@ h2.tagline {
   }
 
   &.delay {
-    animation-delay: 4.5s;
+    animation-delay: 3s;
   }
 
   .arrow-down {
