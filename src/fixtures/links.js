@@ -42,6 +42,13 @@ const appList = [
         img: 'https://i.ibb.co/m4nQ83S/cover-img.png',
     },
     {
+        name: 'Gen·Art - Generative Art Gallery',
+        desc: 'Create your own Fine Art piece from thousands of parameters - and get it printed',
+        href: 'https://gen-art.jasonmharrison.info/',
+        img: 'https://i.ibb.co/RkzP13FX/Screenshot-2026-10-02-at-7-49-19-AM.png',
+        tech: ['Illustration', 'Digital', 'Printing', 'SVG'],
+    },
+    {
         name: 'The Circler',
         desc: 'Generative art app that creates interactable "Circlescapes" using SVGs',
         href: 'https://circler.jasonmharrison.info/',
@@ -90,13 +97,13 @@ const appList = [
         tech: ['Vue', 'Animation', 'SVG'],
         img: '../../banners/ge-banner.png',
     },
-    {
-        name: 'Subbreddit Surfer',
-        desc: 'Explore Reddit content via quick search and browse',
-        href: 'https://subreddit-surfer.netlify.com/',
-        tech: ['React', 'APIs'],
-        img: 'https://i.ibb.co/v4djTBm/Screen-Shot-2022-10-14-at-4-13-56-PM.png',
-    },
+    // {
+    //     name: 'Subbreddit Surfer',
+    //     desc: 'Explore Reddit content via quick search and browse',
+    //     href: 'https://subreddit-surfer.netlify.com/',
+    //     tech: ['React', 'APIs'],
+    //     img: 'https://i.ibb.co/v4djTBm/Screen-Shot-2022-10-14-at-4-13-56-PM.png',
+    // },
     {
         name: 'Configurable SVG Branding',
         desc: 'Explore options in allowing users to configure SVGs with brand elements',
@@ -163,6 +170,13 @@ const artList = [
         href: 'https://www.behance.net/gallery/155058821/Identity-Design',
         img: '../../banners/branding-banner.png',
         tech: ['Digital', 'Illustration', 'Typography'],
+    },
+    {
+        name: 'Gen·Art - Generative Art Gallery',
+        desc: 'Create your own Fine Art piece from thousands of parameters - and get it printed',
+        href: 'https://gen-art.jasonmharrison.info/',
+        img: 'https://i.ibb.co/RkzP13FX/Screenshot-2026-10-02-at-7-49-19-AM.png',
+        tech: ['Illustration', 'Digital', 'Printing', 'SVG'],
     },
     {
         name: 'Album/Release Artwork',
