@@ -21,6 +21,13 @@ const appList = [
         img: '../../banners/non-public-banner.png',
     },
     {
+        name: 'Gen·Art - Generative Art Gallery',
+        desc: 'Create your own Fine Art piece from thousands of parameters - and get it printed',
+        href: 'https://gen-art.jasonmharrison.info/',
+        img: 'https://i.ibb.co/RkzP13FX/Screenshot-2026-10-02-at-7-49-19-AM.png',
+        tech: ['Illustration', 'Digital', 'Printing', 'SVG'],
+    },
+    {
         name: 'Austin FC Kit Creator',
         desc: 'Retro-style kit designer for true Verde ATXFC supporters',
         href: 'https://austin-fc-kit-creator.jasonmharrison.info/',
@@ -40,13 +47,6 @@ const appList = [
         href: 'https://pixelphonic.jasonmharrison.info/',
         tech: ['AI', 'Vue.js', 'Chroma.js', 'Animation'],
         img: 'https://i.ibb.co/m4nQ83S/cover-img.png',
-    },
-    {
-        name: 'Gen·Art - Generative Art Gallery',
-        desc: 'Create your own Fine Art piece from thousands of parameters - and get it printed',
-        href: 'https://gen-art.jasonmharrison.info/',
-        img: 'https://i.ibb.co/RkzP13FX/Screenshot-2026-10-02-at-7-49-19-AM.png',
-        tech: ['Illustration', 'Digital', 'Printing', 'SVG'],
     },
     {
         name: 'The Circler',
