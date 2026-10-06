@@ -187,7 +187,7 @@ const artList = [
     },
     {
         name: 'One Wax Wing Music Visualizer',
-        desc: 'Branding and other ephemera for many different industries',
+        desc: 'Retro music visualiser that reacts to the music in real time via psychedlic animations',
         href: 'https://onewaxwing.com',
         img: '../../banners/branding-banner.png',
         tech: ['SVG', 'Illustration', 'Audio API'],
