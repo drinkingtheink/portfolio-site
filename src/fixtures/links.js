@@ -172,13 +172,6 @@ const artList = [
         tech: ['Digital', 'Illustration', 'Typography'],
     },
     {
-        name: 'Gen·Art - Generative Art Gallery',
-        desc: 'Create your own Fine Art piece from thousands of parameters - and get it printed',
-        href: 'https://gen-art.jasonmharrison.info/',
-        img: 'https://i.ibb.co/RkzP13FX/Screenshot-2026-10-02-at-7-49-19-AM.png',
-        tech: ['Illustration', 'Digital', 'Printing', 'SVG'],
-    },
-    {
         name: 'Album/Release Artwork',
         desc: 'Promotional artwork for musical releases of many genres',
         href: 'https://www.behance.net/gallery/153105507/ALBUM-EP-COVERS',
