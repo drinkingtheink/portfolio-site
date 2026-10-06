@@ -1,5 +1,12 @@
 const appList = [
     {
+        name: 'Gen·Art - Generative Art Gallery',
+        desc: 'Create your own Fine Art piece from thousands of parameters - and get it printed',
+        href: 'https://gen-art.jasonmharrison.info/',
+        img: 'https://i.ibb.co/RkzP13FX/Screenshot-2026-10-02-at-7-49-19-AM.png',
+        tech: ['Illustration', 'Digital', 'Printing', 'SVG'],
+    },
+    {
         name: 'A11y Color Combinator',
         desc: 'Fun with Accessible Color Combos Using Chroma.js',
         href: 'https://a11y-color-combo.jasonmharrison.info/',
@@ -19,13 +26,6 @@ const appList = [
         href: 'http://jasonmharrison.info/',
         tech: ['Vue.js', 'React', 'Animation', 'Prototyping'],
         img: '../../banners/non-public-banner.png',
-    },
-    {
-        name: 'Gen·Art - Generative Art Gallery',
-        desc: 'Create your own Fine Art piece from thousands of parameters - and get it printed',
-        href: 'https://gen-art.jasonmharrison.info/',
-        img: 'https://i.ibb.co/RkzP13FX/Screenshot-2026-10-02-at-7-49-19-AM.png',
-        tech: ['Illustration', 'Digital', 'Printing', 'SVG'],
     },
     {
         name: 'Austin FC Kit Creator',
@@ -216,7 +216,7 @@ const artList = [
     {
         name: 'Remote Viewers Club',
         desc: 'Gallery of metaphysical explorations, tests, and challenges accented by engaging animations',
-        href: 'https://remote-viewers-club.jasonmharrison.info/',
+        href: 'https://remote-viewers-club.jasonmharrison.info/gallery',
         img: 'https://i.ibb.co/rHcMRYq/remote-viewers-club-preview.png',
         tech: ['Animation', 'Illustration', 'SVG'],
     },
