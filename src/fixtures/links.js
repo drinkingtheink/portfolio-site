@@ -1,7 +1,7 @@
 const appList = [
     {
         name: 'Gen·Art - Generative SVG Gallery',
-        desc: 'Create your own Fine Art piece from varied sets of parameters - then hang it in your home or office',
+        desc: 'Create your own Fine Art piece from varied parameters - then hang it in your home or office',
         href: 'https://gen-art.jasonmharrison.info/',
         img: 'https://i.ibb.co/RkzP13FX/Screenshot-2026-10-02-at-7-49-19-AM.png',
         tech: ['Illustration', 'Digital', 'Printing', 'SVG'],
